@@ -3,7 +3,7 @@
 \newpage
 \section{The System}
 
-The system that we built consists of multiple components: 
+The system we present here is that of an open ecosystem: an API at the center allows for varisou implementations of the different components \cite{Lungu16}. However, in order to bootstrap and show its usefulness, we present here our own implementation of several of the components: 
 
 \begin{itemize}
   \item A feed subscription mechanism
@@ -27,7 +27,7 @@ When the user indicates that he would like to subscribe to a new source, as expl
 
 
 \newpage
-\subsection{Article Recommender}
+\subsection{Article Browser}
 
 Article listing presents the source, a summary of the article, and an estimated difficulty level of the article.
 
@@ -74,6 +74,8 @@ Since there might be multiple translations possible in a context, one must provi
   \caption{A translated word is inserted after the tapped word.}~\label{fig:registrations}
 \end{figure}
 
+Moreover, when none of the automatically proposed alternatives is appropriate, the user can upload their own translation.
+
 
 \subsubsection{Pronounciation}
 One of the important features, which was suggested by one of the early expert beta-testers was pronounciation of the given word. Currently this is implemented as a tap on the translated word.
@@ -117,15 +119,11 @@ The various interactive elements (IEs) that are present in this exercise (and in
   \caption{One of the exercise types with which the user is presented. Multiple exercise types are taken from the users past reading context}
 \end{figure}
 
-The scheduling algorithm is based on Mettler et al. \cite{Mettler14-ARTS}
 
-An adaptive, response-time-based scheduling algorithm was developed to increase the efficiency of perceptual learning.
 
-Perceptual learning was demonstrated in a real-world perceptual category domain.
+\subsubsection{Scheduling Exercises}
 
-Learning gains were present with familiar, seen items as well as with new, unseen instances.
-
-The benefits of adaptive scheduling were present at an immediate test as well as at a delay.
+The scheduling algorithm is based on an adaptive, response-time-based scheduling algorithm was developed to increase the efficiency of perceptual learning by Mettler et al. \cite{Mettler14-ARTS}. After evaluating several alternative scheduling strategies we settled on the Mettler one since it has been proven to have gains with both familiar, seen items as well as with new, unseen instances and the benefits of adaptive scheduling were present at an immediate test as well as at a delay \cite{Mettler14-ARTS}.
 
 
 
