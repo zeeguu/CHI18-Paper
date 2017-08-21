@@ -1,4 +1,4 @@
-\documentclass{sigchi}
+\documentclass[chi_draft]{sigchi}
 
 % Use this section to set the ACM copyright statement (e.g. for
 % preprints).  Consult the conference website for the camera-ready
@@ -79,6 +79,7 @@
 
 
 \def\plaintitle{The Language Learning of the Future: Personal, Interesting, Adaptive}
+% Enabling Personalized Free Reading for Second Language Acquisition
 
 % The Textbook of the Present: Personal, Adaptable, Interesting
 % The Textbook for the Generation Y: Contextual, Personal, Adaptable
@@ -138,6 +139,7 @@
 % \newcommand\tabhead[1]{\small\textbf{#1}}
 
 \input{commands}
+\input{useful_defines}
 
 % End of preamble. Here it comes the document.
 \begin{document}
@@ -163,20 +165,7 @@
 \maketitle
 
 \input{preamble}
-
-\newpage
-\section{Introduction}
-
-It is well known that free reading is one of the best ways of improving the vocabulary. The Internet contains vast amounts of information in all the possible languages that somebody would want to learn. However, there are two problems with allowing a reader to read materials on the internet: 
-\begin{itemize}
-  \item The materials might be too difficult for them
-  \item The reading tools might not be appropriate
-\end{itemize}
-
-Moreover, textbooks usually come with exercises at the end of a text. However, if one allows the readers to read whatever they like: how are they going to do exercises? Can we generate exercises that are tailored based on the past experience of students free reading?
-
-
-
+\input{intro}
 \input{system}
 \input{demographics}
 \input{results}
