@@ -62,12 +62,14 @@ A user clicks on a word, a translation is inserted right after the word. As in t
 \centering
   \includegraphics[width=0.8\columnwidth]{figures/translated_words1}
   \includegraphics[width=0.8\columnwidth]{figures/translated_words2}
-  \caption{If adjacent words are tapped, this extends the ``translation bubble'' accordingly}~\label{fig:registrations}
+  \caption{If adjacent words are tapped, this extends the ``translation bubble'' accordingly}~\label{fig:translation_extension}
 \end{figure}
 
-The user can chain a few consecutive words into a single translation if it’s either a phrase that’s new, or if the initially obtained translation needs more words combined with it, to deliver the correct contextual meaning. Again, everything works by tapping the words, as consecutive words will be automati- cally merged into a ’translation bubble’, unifying the entire interaction mode to simple taps on the words (Figure 3). Moreover, this minimalistic interaction model serves another purpose - it is easy to use for words and phrases, but it discourages users to translate entire sentences or even paragraphs, following McCarthy’s [1] idea presented before - extensive reading should discourage intensive use of translations.
+The user can chain a few consecutive words into a single translation by simply tapping adjacent words which are automatically merged in a translation bubble (Figure \ref{fig:translation_extension}). This is useful for collocations and in cases where by expanding the translated set of words the precision of the translation increases. 
 
-One of the limitations of this interaction, that we are still trying to improve is the presence of expressions that are composed of words which are not adjacent (e.g. particle verbs in German and Dutch)
+This minimalistic interaction model serves a double purpose - it enables and eases the translation of several chained words but it discourages users from translating entire sentences or phrases. This is good because it is in line with the recommendations of the literature (e.g. Renandya argues that extensive reading should discourage intensive use of translations\cite{renadya07-power}) but also because it reduces the amount of characters which are being translated by the learner (and thus the costs of the system, since some of the translation services have a per-character fee). 
+
+One of the limitations of this interaction is that it is not intuitive (at least at the moment) how to expand it for the situations in whichexpressions are present that are composed of words which are not adjacent (e.g. particle verbs in German and Dutch).
 
 
 \subsubsection{Alternate Translations}
