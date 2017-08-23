@@ -38,7 +38,7 @@ When the user indicates that they would like to subscribe to a new source, as ex
 
 Article listing presents the source, a summary of the article, and an estimated difficulty level of the article.
 
-In order to properly visualize the reading difficulty of an article in an intuitive manner, there are two levels of information displayed here. First we allow the user to rapidly judge difficulty on an intuitive level by color coding the difficulty from green to yellow to red. When a particular article has grasped the user's attention, we allow for a more cognitive judgment by scoring the article from 1 to 10 in difficulty.
+In order to properly visualize the reading difficulty of an article in an intuitive manner, there are two levels of information displayed here. First we allow the user to rapidly judge difficulty on an intuitive level by color coding the difficulty from green to yellow to red. When a particular article has grasped the user's attention, we allow for a more cognitive judgment by scoring the article from 0 to 5 in difficulty.\footnote{Besides the color code and the numerical grade, we also provide a flag since the reader can actually subscribe to multiple languages. This is not the focus of this article however}
 
 \begin{figure}[h!]
 \centering
@@ -67,14 +67,15 @@ Ohter alternatives that we explored and eventually dropped for each had disadvan
   \item Piggybacking on the native selection mechanism. This is different on different mobile platforms, and it usually requires almost a second to activate on some platforms (e.g. Android).
 \end{itemize}
 
-\begin{figure}[h!]
-\centering
-  \includegraphics[width=0.8\columnwidth]{figures/translated_words1}
-  \includegraphics[width=0.8\columnwidth]{figures/translated_words2}
-  \caption{When adjacent words are tapped the translation bubble is extended accordingly}~\label{fig:translation_extension}
-\end{figure}
 
 The user can chain a few consecutive words into a single translation by simply tapping adjacent words which are automatically merged in a translation bubble (Figure \ref{fig:translation_extension}). This is useful for collocations and in cases where by expanding the translated set of words the precision of the translation increases. 
+
+    \begin{figure}[h!]
+    \centering
+      \includegraphics[width=0.8\columnwidth]{figures/translated_words1}
+      \includegraphics[width=0.8\columnwidth]{figures/translated_words2}
+      \caption{When adjacent words are tapped the translation bubble is extended accordingly}~\label{fig:translation_extension}
+    \end{figure}
 
 This minimalistic interaction model serves a double purpose - it enables and eases the translation of several chained words but it discourages users from translating entire sentences or phrases. This is good because it is in line with the recommendations of the literature (e.g. Renandya argues that extensive reading should discourage intensive use of translations\cite{renadya07-power}) but also because it reduces the amount of characters which are being translated by the learner (and thus the costs of the system, since some of the translation services have a per-character fee). 
 
@@ -124,11 +125,21 @@ The various interactive elements (IEs) that are present in this exercise (and in
   \caption{One of the exercise types with which the user is presented. Multiple exercise types are taken from the users past reading context}
 \end{figure}
 
+\subsubsection{Words Good for Study}
 
+The words good for study are the ones that are either starred by the user, or are important and of quality based on a set of heuristics. 
+
+\begin{description}
+
+  \item [Important words] are the ones which appear frequently in the language. 
+  
+  \item [Quality words] are most of the times single words or at most two adjacent words. They come with a context which is not too short but not too long. 
+
+\end{description}
 
 \subsubsection{Scheduling Exercises}
 
-The scheduling algorithm is based on an adaptive, response-time-based scheduling algorithm was developed to increase the efficiency of perceptual learning by Mettler et al. \cite{Mettler14-ARTS}. After evaluating several alternative scheduling strategies we settled on the Mettler one since it has been proven to have gains with both familiar, seen items as well as with new, unseen instances and the benefits of adaptive scheduling were present at an immediate test as well as at a delay \cite{Mettler14-ARTS}.
+The scheduling algorithm is based on an adaptive, response-time-based scheduling algorithm [was developed] to increase the efficiency of perceptual learning by Mettler et al. \cite{Mettler14-ARTS}. After evaluating several alternative scheduling strategies we settled on the Mettler one since it has been proven to have gains with both familiar, seen items as well as with new, unseen instances and the benefits of adaptive scheduling were present at an immediate test as well as at a delay \cite{Mettler14-ARTS}.
 
 
 
