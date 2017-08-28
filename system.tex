@@ -7,20 +7,20 @@ For the long term, we envision an open educational ecosystem in which different 
 
 However, in order to bootstrap, experiment with, and show the potential of such an ecosystem, we present here our basic implementation of each of the components. In particular we describe our own implementation of: 
 
-\begin{itemize}
+\begin{description}
 
-  \item A Recommender -- which consists of a feed subscription mechanism, an article browser that presents the results of crawling the selected feeds that the user is interested in
+  \item [Text Recommender] -- which consists of a feed subscription mechanism, an article browser that presents the results of crawling the selected feeds that the user is interested in
 
-  \item A Reader -- which is a web-based interactive text reader which provides seamless in place translations
+  \item [Text Reader] -- which is a web-based interactive text reader which provides seamless in place translations
   
-  \item A Vocabulary Trainer -- which consists of an exercise platform which generates exercises based on a reader's past reading experience
+  \item [Vocabulary Trainer] -- which consists of an exercise platform which generates exercises based on a reader's past reading experience
 
-\end{itemize}
+\end{description}
 
 The components that we present here are implemented using HTML5 and Javascript technologies for the front end and Python and Flask for the backend. For the frontend, we have experienced in the past with writing native applications, however, the interaction with the native elements was too clumsy. Moreover, maintaining multiple systems for multiple platforms is too expensive for an academic environment. The decision turned out to be practical since the users of our system come from multiple platforms.
 
 
-\subsection{The Reading Recommender}
+\subsection{The Text Recommender}
 \ml{make sure that this flows well for the reader while also keeping it short}
 The reading recommender is simple at the moment. It consists of a Feed Subscription and an Article Browser.
 
@@ -38,7 +38,9 @@ When the user indicates that they would like to subscribe to a new source, as ex
 
 Article listing presents the source, a summary of the article, and an estimated difficulty level of the article.
 
-In order to properly visualize the reading difficulty of an article in an intuitive manner, there are two levels of information displayed here. First we allow the user to rapidly judge difficulty on an intuitive level by color coding the difficulty from green to yellow to red. When a particular article has grasped the user's attention, we allow for a more cognitive judgment by scoring the article from 0 to 5 in difficulty.\footnote{Besides the color code and the numerical grade, we also provide a flag since the reader can actually subscribe to multiple languages. This is not the focus of this article however}
+In order to properly visualize the reading difficulty of an article in an intuitive manner, there are three levels of information displayed here. First we display a flag representing the language of the article. This is so because a learner could be actually registered to feeds in multiple languages. Second, we allow the user to rapidly judge difficulty on an intuitive level by color coding the difficulty from green to yellow to red. When a particular article has grasped the user's attention, we allow for a more cognitive judgment by scoring the article from 0 to 5 in difficulty.
+
+\ml{TODO: write about how is difficulty estimation done currently}
 
 \begin{figure}[h!]
 \centering
@@ -47,7 +49,7 @@ In order to properly visualize the reading difficulty of an article in an intuit
 \end{figure}
 
 
-\subsection{Article Reader}
+\subsection{The Text Reader}
 
 The goal of the reader is to make reading as facile as possible. To do this we optimized for the most frequent action that a reader might want to perform. Translating a word. 
 
@@ -64,10 +66,11 @@ Ohter alternatives that we explored and eventually dropped for each had disadvan
 
   \item Showing a popup of the translation, and then hiding it again. This had the disadvantage of in the case of a more difficult sentence the reader forgetting the word at the begining of the sentence by the time he arrived to the end, and having to re-translate it. 
 
-  \item Piggybacking on the native selection mechanism. This is different on different mobile platforms, and it usually requires almost a second to activate on some platforms (e.g. Android).
+  \item Piggybacking on the native selection mechanism. We experimented with allowing the learner to select a word in the same way this is normally done on the corresponding platform and to add the translation as an option in the corresponding popup menu. The problem with this is that native selection is slow, requiring about one second before it is activated. 
 \end{itemize}
 
 
+\subsubsection{Chaining Multiple Adjacent Translations}
 The user can chain a few consecutive words into a single translation by simply tapping adjacent words which are automatically merged in a translation bubble (Figure \ref{fig:translation_extension}). This is useful for collocations and in cases where by expanding the translated set of words the precision of the translation increases. 
 
     \begin{figure}[h!]
@@ -79,7 +82,7 @@ The user can chain a few consecutive words into a single translation by simply t
 
 This minimalistic interaction model serves a double purpose - it enables and eases the translation of several chained words but it discourages users from translating entire sentences or phrases. This is good because it is in line with the recommendations of the literature (e.g. Renandya argues that extensive reading should discourage intensive use of translations\cite{renadya07-power}) but also because it reduces the amount of characters which are being translated by the learner (and thus the costs of the system, since some of the translation services have a per-character fee). 
 
-One of the limitations of this interaction is that it is not clear (at least at the moment) how to expand it for the situations in whichexpressions are present that are composed of words which are not adjacent (e.g. particle verbs in German and Dutch).
+One of the limitations of this interaction is that it is not clear (at least at the moment) how to expand it for the situations in which expressions are present that are composed of words which are not adjacent (e.g. particle verbs in German and Dutch).
 
 
 \subsubsection{Alternate Translations}
@@ -94,16 +97,7 @@ Based on telemetry from the system it seems that \ml{must check and limit this o
 \end{figure}
 
 \subsubsection{Pronounciation}
-One of the important features, which was suggested by early beta-testers and added to the system after that was the option of having pronounciation of the given word. Currently this is the action associated with tapping on the highlighted translated word.
-
-
-\subsection {Translation Service}
-
-The translations are provided by our server. The main advantage of this indirection is that this allows the server to track the words that are looked up and the context (sentence) in which they are being looked up. This information is then used for estimating learner knowledge and for generating later personalied exercises. 
-
-To avoid depending on a single service and to also increase the likelihood that at least one of the alternative translations is the correct one, the translation service dispatches in parallel requests to at least three third party translation APIs: Google Translate, Microsoft Translate, and Glosbe -- a free translation API. The first two provide contextual translations and multi-word translations, while the third is a simple dictionary. 
-
-The dependency of the translation service on multiple third party APIs allows for a higher reliability and a chance to guarantee a low response time: when a service is down or too slow to respond, the results from it are ignored.
+One of the important features, which was suggested by early beta-testers and added to the system after that was the option of having pronounciation of the given word. Currently this is the action associated with tapping on the highlighted translated word. Although no user has yet complained about it, this means that a user can not pronounce word without it being translated first. It might also be that for some languages this is more important than for others, and we just did not have users learning those languages (e.g. Danish is notoriously hard to pronounce). In the future we plan to expand the interaction modes to allow pronounciation 
 
 \subsection{The Vocabulary Trainer}
 
@@ -144,4 +138,22 @@ The scheduling algorithm is based on an adaptive, response-time-based scheduling
 
 
 One of the problems with this is that sometimes the context is too long and sometimes 
+
+
+\subsection{Translation Service}
+
+The translations are provided by our server. The main advantage of this indirection is that this allows the server to track the words that are looked up and the context (sentence) in which they are being looked up. This information is then used for estimating learner knowledge and for generating later personalied exercises. 
+
+To avoid depending on a single service and to also increase the likelihood that at least one of the alternative translations is the correct one, the translation service dispatches in parallel requests to at least three third party translation APIs: Google Translate, Microsoft Translate, and Glosbe -- a free translation API. The first two provide contextual translations and multi-word translations, while the third is a simple dictionary. 
+
+The dependency of the translation service on multiple third party APIs allows for a higher reliability and a chance to guarantee a low response time: when a service is down or too slow to respond, the results from it are ignored.
+
+\subsection{The Teacher Dashboard}
+
+Although not the focus of this paper, the system has also a dashboard for the teacher. The teacher can see the history of what his students have read. 
+
+
+
+
+
 
