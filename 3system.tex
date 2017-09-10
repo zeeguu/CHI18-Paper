@@ -2,22 +2,26 @@
 
 \newpage
 \section{The System}
+\label{sec:system}
 
-For the long term, we envision an open educational ecosystem in which different creators can integrate their applications by interacting with a core API that provides the basic contextual translations, user knowledge estimation, and recommendations for words to be studied and texts to be read \cite{Lungu16}. 
+Our vision for the long term is that of an open educational ecosystem in which different creators can share information among their applications in order to maximize the level of personalization that learners percieve. Various reader applications could share information with various vocabulary training applications all mediated by a common API that would track an evolving knowledge model of the learners\cite{Lungu16}.
 
-However, in order to bootstrap, experiment with, and show the potential of such an ecosystem, we present here our basic implementation of each of the components. In particular we describe our own implementation of: 
+% by interacting with a core API that provides the basic contextual translations, user knowledge estimation, and recommendations for words to be studied and texts to be read \cite{Lungu16}. 
+
+To show the potential of such an ecosystem we started by implementing ourselves several of the basic components of the ecosystem which together provide the full experience of a {\em personalized language textbook}: 
 
 \begin{description}
 
-  \item [Text Recommender] -- which consists of a feed subscription mechanism, an article browser that presents the results of crawling the selected feeds that the user is interested in
-
-  \item [Text Reader] -- which is a web-based interactive text reader which provides seamless in place translations
+  \item [Text Reader] -- consists of a feed subscription mechanism, an article browser that presents the results of crawling the selected feeds that the user is interested in and a web-based interactive text reader which provides seamless in place translations
   
   \item [Vocabulary Trainer] -- which consists of an exercise platform which generates exercises based on a reader's past reading experience
 
 \end{description}
 
-The components that we present here are implemented using HTML5 and Javascript technologies for the front end and Python and Flask for the backend. For the frontend, we have experienced in the past with writing native applications, however, the interaction with the native elements was too clumsy. Moreover, maintaining multiple systems for multiple platforms is too expensive for an academic environment. The decision turned out to be practical since the users of our system come from multiple platforms.
+
+The components that we present here are implemented using HTML5 and Javascript technologies for the front end and Python and Flask for the backend. For the frontend, we have experienced in the past with writing native applications, however, the interaction with the native elements was too clumsy. Therefore, the user interface elements that we present here are designed as a responsive HTML that can be used on any device. 
+
+Moreover, maintaining multiple systems for multiple platforms is too expensive for an academic environment. The decision turned out to be practical since the users of our system come from multiple platforms.
 
 
 \subsection{The Text Recommender}
