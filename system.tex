@@ -30,7 +30,7 @@ When the user indicates that they would like to subscribe to a new source, as ex
 \begin{figure}[h!]
 \centering
   \includegraphics[width=0.4\columnwidth]{figures/available_sources}
-  \caption{Different users subscribe to different sources}~\label{fig:registrations}
+  \caption{Different users subscribe to different sources}~\label{fig:system_subscriptions}
 \end{figure}
 
 
@@ -86,7 +86,7 @@ One of the limitations of this interaction is that it is not clear (at least at 
 
 
 \subsubsection{Alternate Translations}
-Due to the limitations of machine translations, it can be the case that multiple translations might seem appropriate in a context. In such a case the system will insert the most likely alternative but allow the reader to discover the others. With a click on the translation, a drop-down menu appears in which alternatives are presented. Besides the alternatives, there's also an input box in which the learner can provide is own version if none of the offered alternatives are correct. 
+Due to the limitations of machine translations, it can be the case that multiple translations might seem appropriate in a context. In such a case the system will insert the most likely alternative but allow the reader to discover the others. With a click on the translation, a drop-down menu appears in which alternatives are presented. Besides the alternatives, there's also an input box in which the learner can provide his own version if none of the offered alternatives are correct. 
 
 Based on telemetry from the system it seems that \ml{must check and limit this only to the french-learning kids} the alternative translations menu is opened one in every eight translations. 
 
@@ -97,7 +97,7 @@ Based on telemetry from the system it seems that \ml{must check and limit this o
 \end{figure}
 
 \subsubsection{Pronounciation}
-One of the important features, which was suggested by early beta-testers and added to the system after that was the option of having pronounciation of the given word. Currently this is the action associated with tapping on the highlighted translated word. Although no user has yet complained about it, this means that a user can not pronounce word without it being translated first. It might also be that for some languages this is more important than for others, and we just did not have users learning those languages (e.g. Danish is notoriously hard to pronounce). In the future we plan to expand the interaction modes to allow pronounciation 
+One of the important features, which was suggested by early beta-testers and added to the system after that, was the option of having pronounciation of the given word. Currently this is the action associated with tapping on the highlighted translated word. Although no user has yet complained about it, this means that a user can not pronounce a word without it being translated first. It might also be that for some languages this is more important than for others, and we just did not have users learning those languages (e.g. Danish is notoriously hard to pronounce). In the future we plan to expand the interaction modes to allow pronounciation to exist seperately from translation.
 
 \subsection{The Vocabulary Trainer}
 
@@ -106,11 +106,11 @@ Given the list of words that a user does not know we can generate exercises for 
 The various interactive elements (IEs) that are present in this exercise (and in some of the other exericses are): 
 
 \begin{description}
-	\item A hint button (IE1) --
-	\item Check the answer (IE2) -- 
-	\item Word pronunciation (IE3) -- 
-	\item Control over the exercise card: report or delete the exercise (IE4) -- 
-	\item Input box (IE5) -- 
+	\item [A hint button (IE1)] will present the user with the correct answer.
+	\item [Check the answer (IE2)] will verify the correctness of the answer.
+	\item [Word pronunciation (IE3)] will sound the pronounciation.
+	\item [Control (IE4)] over the exercise card allows for reporting or deleting the exercise.
+	\item [Input box (IE5)] allows for entering a solution.
 \end{description}
 
 \begin{figure}[h!]
