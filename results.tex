@@ -4,7 +4,7 @@
 \section{Do The Readers Find Personally Interesting Articles?}
 
 \subsection {Feed Subscriptions}
-Figure \ref{fig:registrations} represents an incidence matrix collected at the end of the study interval: the columns represent students, and the rows represent news feeds; if a student is registered to a given feed, at the intersection of the corresponding row and column we place an x. 
+Figure \ref{fig:registrations} represents an incidence matrix collected at the end of the study interval: the columns represent students, and the rows represent news feeds; if a student is registered to a given feed, at the intersection of the corresponding row and column we place $\Diamond$. 
 
 We would expect to see fully continuous horizontal rows of data-points if every user subscribed to the same feed, and fully continuous vertical rows if every user subscribed to all of the feeds available. The notion that these patterns are largely absent in Figure 4 supports our assumption that different individuals prefer to subscribe to different reading sources.
 
@@ -16,7 +16,7 @@ The figure illustrates that giving the students the freedom to choose the source
   \caption{Different users subscribe to different sources}~\label{fig:registrations}
 \end{figure}
 
-Of course some feeds are more popular than others. Projecting the data- points into the vertical axis results in the histogram of Figure 5.
+Of course some feeds are more popular than others. Projecting the data- points into the vertical axis and sorting the results leaves us with a histogram as can be seen in Figure 5.
 
 \begin{figure}[h!]
 \centering
@@ -25,7 +25,7 @@ Of course some feeds are more popular than others. Projecting the data- points i
 \end{figure}
 
 
-Feed {\em 1Jour1Actu} is the most popular French feed, and feed Le Figaro - Sant\'e is the least popular French feed. In order to see whether or not this might be related to how they are presented in the dialog window of our system, we can compare the order of popularity with the order in which they are displayed.
+Feed {\em 1Jour1Actu} is the most popular French feed, and feed Le Figaro - Sant\'e is the least popular French feed. In order to see whether or not this might be related to how they are presented in the dialog window of our system (see Figure \ref{fig:system_subscriptions}), we can compare the order of popularity with the order in which they are displayed.
 
 \begin{figure}[h!]
 \centering
@@ -33,6 +33,7 @@ Feed {\em 1Jour1Actu} is the most popular French feed, and feed Le Figaro - Sant
   \caption{The popularity of the feeds vs. their ranking in the UI}~\label{fig:registrations}
 \end{figure}
 
+One can see how the second-to-last presented feed, Le Monde, is the second most popular feed by measure of subscriptions. Conversely, the feed listed above Le Monde is actually the least subscribed-to feed in our listing.
 
 \subsection{Article Interactions}
 If we investigate the articles that the users interact with, we see the same pattern: each user explores their own interest, and there is no one article that is interesting for all of them. 
@@ -49,15 +50,14 @@ We tracked the usage of the various features in the interactive reader. What we 
 
 The third most used feature is the text to speech feature. This was a feature that was recommended by one of our expert beta-testers. 
 
-
 \begin{figure}[h!]
 \centering
-  \includegraphics[width=0.7\columnwidth]{figures/reader_feature_usage}
-  \caption{... }
+  \includegraphics[width=0.9\columnwidth]{figures/reader_feature_usage}
+  \caption{Popularity of features by their recorded usage-events}
 \end{figure}
+\todo{We should sort this graph similarly to the graph below. - Luc}
 
-To see how widespread are the various features among our users, we also looked at 
-
+To see how widespread the various features are among our users, we also looked at the number of distinct users for each category of events. A larger number of distinct users indicates that the feauture is useful to the broadest number of students.
 
 \begin{figure}[h!]
 \centering
@@ -65,7 +65,7 @@ To see how widespread are the various features among our users, we also looked a
   \caption{The usage of the various reader features by the various users }
 \end{figure}
 
-We also looked at the number of times the same word or phrase was pronounced by the same user. This data ranges from one single pronunciation to 14 pronunciations for the same word (phrase). The size of this interval is mostly due to the users’ different proficiency in a certain language and the difficulty in pronunciation of the word (phrase) itself. Nevertheless, on average, the number approaches 1.66 pronunciation requests for the same
+In addition, we looked at the number of times the same word or phrase was pronounced by the same user. This data ranges from one single pronunciation to 14 pronunciations for the same word (phrase). The size of this interval is mostly due to the users' different proficiency in a certain language and the difficulty in pronunciation of the word (phrase) itself. Nevertheless, on average, the number approaches 1.66 pronunciation requests for the same
 piece of text, suggesting that users are generally sufficiently content with a pronunciation after hearing it the first time.
 
 
@@ -92,7 +92,7 @@ Besides the analysis that we did based on the observed user data, we also asked 
 
 \section{Threats to Validity}
 
-Threat to external validity: the students that we worked with are representative we believe for the Dutch highschool student population. 
+Threat to external validity: we believe that the students we worked with are representative for the Dutch highschool student population. 
 
 We presented a system, and we showed that it has the potential to generate user involvement. However the study we performed is not sufficient to reach a strong conclusion about the impact of the system we present... 
 
