@@ -12,9 +12,11 @@ To show the potential of such an ecosystem we started by implementing ourselves 
 
 \begin{description}
 
-  \item [Text Reader] -- consists of a feed subscription mechanism, an article browser that presents the results of crawling the selected feeds that the user is interested in and a web-based interactive text reader which provides seamless in place translations
+  \item [Article Reader] -- consists of a feed subscription mechanism, an article browser that presents the results of crawling the selected feeds that the user is interested in and a web-based interactive text reader which provides seamless in place translations
   
   \item [Vocabulary Trainer] -- which consists of an exercise platform which generates exercises based on a reader's past reading experience
+
+  \item [Translation Service] -- a component responsible with automatically translating words and groups of words from online texts is critical to the system
 
 \end{description}
 
@@ -24,38 +26,49 @@ The components that we present here are implemented using HTML5 and Javascript t
 Moreover, maintaining multiple systems for multiple platforms is too expensive for an academic environment. The decision turned out to be practical since the users of our system come from multiple platforms.
 
 
-\subsection{The Text Recommender}
-\ml{make sure that this flows well for the reader while also keeping it short}
-The reading recommender is simple at the moment. It consists of a Feed Subscription and an Article Browser.
+\subsection{Article Reader}
 
-\subsubsection{Feed Subscription}
-When the user indicates that they would like to subscribe to a new source, as explained above, the subscription dialog is displayed. Zeeguu categorizes feeds by their language, and thus we allow users to select any language available and retrieve a list of that language's sources. Languages are represented by flags, as their compact and iconic representation should be universally understood.
+The Article Reader allows the learners to subscribe to various sources of articles (e.g. websites, blogs) and provides a convenient interaction for reading and translating unknown words. It consists of several components:
 
-\begin{figure}[h!]
-\centering
-  \includegraphics[width=0.4\columnwidth]{figures/available_sources}
-  \caption{Different users subscribe to different sources}~\label{fig:system_subscriptions}
-\end{figure}
+\newpage
+\subsubsection{Subscription Mechanism}
+\ml{make sure that we use source consistently in the text; not feed for example.}
+From the user's point of view, the Article reader is organized around sources. When the user indicates that they would like to subscribe to a new source the subscription dialog is displayed. The system categorizes sources by their language and users can select different article sources every language. 
 
+    \begin{figure}[h!]
+    \centering
+      \includegraphics[width=0.4\columnwidth]{figures/available_sources}
+      \caption{Different users subscribe to different sources}~\label{fig:system_subscriptions}
+    \end{figure}
+
+
+Figure \ref{fig:system_subscriptions} illustrates multiple sources for the French language, which is being selected at the moment. 
+% , as their compact and iconic representation should be universally understood.
+At the moment, multiple sources for every language are pre-loaded in the system and if a reader wants to add a new source they have to send an email to the maintainers of the system. 
+
+A multi-lingual learner can subscribe to multiple sources in different languages. 
 
 \subsubsection{Article Browser}
 
 Article listing presents the source, a summary of the article, and an estimated difficulty level of the article.
 
+    \begin{figure}[h!]
+    \centering
+      \includegraphics[width=0.95\columnwidth]{figures/article_listing}
+      \caption{Article listing presents the source, a summary of the article, and an estimated difficulty level of the article }~
+      \label{fig:registrations}
+    \end{figure}
+
+
 In order to properly visualize the reading difficulty of an article in an intuitive manner, there are three levels of information displayed here. First we display a flag representing the language of the article. This is so because a learner could be actually registered to feeds in multiple languages. Second, we allow the user to rapidly judge difficulty on an intuitive level by color coding the difficulty from green to yellow to red. When a particular article has grasped the user's attention, we allow for a more cognitive judgment by scoring the article from 0 to 5 in difficulty.
 
 \ml{TODO: write about how is difficulty estimation done currently}
 
-\begin{figure}[h!]
-\centering
-  \includegraphics[width=0.95\columnwidth]{figures/article_listing}
-  \caption{Article listing presents the source, a summary of the article, and an estimated difficulty level of the article }~\label{fig:registrations}
-\end{figure}
 
 
 \subsection{The Text Reader}
 
-The goal of the reader is to make reading as facile as possible. To do this we optimized for the most frequent action that a reader might want to perform. Translating a word. 
+The goal of the reader is to make reading as facile as possible. To do this we optimized for the most frequent action that a reader might want to perform: translating a word. 
 
 We explored several types of interactions and we settled on the following: a user clicks on a word, a translation is inserted right after the word, as Figure \ref{fig:translated_word} illustrates: 
 
@@ -66,12 +79,12 @@ We explored several types of interactions and we settled on the following: a use
 \end{figure}
 
 Ohter alternatives that we explored and eventually dropped for each had disadvantages were: 
-\begin{itemize}
+\begin{description}
 
-  \item Showing a popup of the translation, and then hiding it again. This had the disadvantage of in the case of a more difficult sentence the reader forgetting the word at the begining of the sentence by the time he arrived to the end, and having to re-translate it. 
+  \item [Temporarily showing a popup of the translation] and then hiding it again. This had the disadvantage of in the case of a more difficult sentence the reader forgetting the word at the begining of the sentence by the time he arrived to the end, and having to re-translate it. 
 
-  \item Piggybacking on the native selection mechanism. We experimented with allowing the learner to select a word in the same way this is normally done on the corresponding platform and to add the translation as an option in the corresponding popup menu. The problem with this is that native selection is slow, requiring about one second before it is activated. 
-\end{itemize}
+  \item [Using the native selection mechanism] to select text as opposed to click / touch. We experimented with allowing the learner to select a word in the same way this is normally done on the corresponding platform. This is not a viable solution since native selection is clumsy and slow (e.g. on Android a user must hold their fingertip down for almost a second before the contextual menu is displayed). 
+\end{description}
 
 
 \subsubsection{Chaining Multiple Adjacent Translations}
@@ -90,9 +103,8 @@ One of the limitations of this interaction is that it is not clear (at least at 
 
 
 \subsubsection{Alternate Translations}
-Due to the limitations of machine translations, it can be the case that multiple translations might seem appropriate in a context. In such a case the system will insert the most likely alternative but allow the reader to discover the others. With a click on the translation, a drop-down menu appears in which alternatives are presented. Besides the alternatives, there's also an input box in which the learner can provide his own version if none of the offered alternatives are correct. 
+Due to the limitations of machine translation multiple translations might be possible in a given context. In such a case the system will insert the most likely alternative as described earlier right after the selected text, but it will allow the reader to discover alternatives. With a click on the translation, a drop-down menu appears in which alternatives are presented. Figure \ref{fig:registrations} shows that besides the predefined alternatives the learner can provide their own translation via an input box (the third line, ``took place'' is typed in by the learner in the figure). 
 
-Based on telemetry from the system it seems that \ml{must check and limit this only to the french-learning kids} the alternative translations menu is opened one in every eight translations. 
 
 \begin{figure}[h!]
 \centering
@@ -101,18 +113,20 @@ Based on telemetry from the system it seems that \ml{must check and limit this o
 \end{figure}
 
 \subsubsection{Pronounciation}
-One of the important features, which was suggested by early beta-testers and added to the system after that, was the option of having pronounciation of the given word. Currently this is the action associated with tapping on the highlighted translated word. Although no user has yet complained about it, this means that a user can not pronounce a word without it being translated first. It might also be that for some languages this is more important than for others, and we just did not have users learning those languages (e.g. Danish is notoriously hard to pronounce). In the future we plan to expand the interaction modes to allow pronounciation to exist seperately from translation.
+One of the features that we added following a suggestion of an early beta-tester was the pronounciation of a given word. It has turned out to be a popular feature. Currently the pronounciation of a word or a group of words is the action associated with tapping on the highlighted translated word. The pronounciation is being generated by the default text-to-speech engine of the Chrome browser. \ml{could ask the users if they are happy with it.}
+
+% Although no user has yet complained about it, this means that a user can not pronounce a word without it being translated first. It might also be that for some languages this is more important than for others, and we just did not have users learning those languages (e.g. Danish is notoriously hard to pronounce). In the future we plan to expand the interaction modes to allow pronounciation to exist seperately from translation.
 
 \subsection{The Vocabulary Trainer}
 
 Given the list of words that a user does not know we can generate exercises for them based on their past readings.
 
-The various interactive elements (IEs) that are present in this exercise (and in some of the other exericses are): 
+Figure \ref{exercise_translate} shows such a generated exercise which asks the reader to translate a given word in the context in which it was encountered in a past reading. The various interactive elements (IEs) that are present in this exercise (and in some of the other exericses are): 
 
 \begin{description}
-	\item [A hint button (IE1)] will present the user with the correct answer.
-	\item [Check the answer (IE2)] will verify the correctness of the answer.
-	\item [Word pronunciation (IE3)] will sound the pronounciation.
+	\item [A Hint button (IE1)] presents the correct answer.
+	\item [Check the answer (IE2)] verifies answer correctness.
+	\item [Word pronunciation (IE3)] sounds the pronounciation.
 	\item [Control (IE4)] over the exercise card allows for reporting or deleting the exercise.
 	\item [Input box (IE5)] allows for entering a solution.
 \end{description}
@@ -120,18 +134,22 @@ The various interactive elements (IEs) that are present in this exercise (and in
 \begin{figure}[h!]
 \centering
   \includegraphics[width=\columnwidth]{figures/exercise_translate}
-  \caption{One of the exercise types with which the user is presented. Multiple exercise types are taken from the users past reading context}
+  \caption{One of the exercise types with which the user is presented asks the user to translate a word in a context that is retrieved from the user's past readings}{
+  \label{exercise_translate}
+  }
 \end{figure}
 
-\subsubsection{Words Good for Study}
+\subsubsection{Prioritizing Words to Study}
 
-The words good for study are the ones that are either starred by the user, or are important and of quality based on a set of heuristics. 
+Since a learner might encounter many words that are not understood, we need to prioritize those that are to be studied in exercises. We use three aspects to prioritize words: 
+
+% The words good for study are the ones that are either starred by the user, or are important and of quality based on a set of heuristics. 
 
 \begin{description}
 
-  \item [Important words] are the ones which appear frequently in the language. 
+  \item [Important Words] are the ones which appear frequently in the language. For word frequencies we use frequencies computed based on movie subtitles which have been shown to be highly representative to frequencies in human interacitons \cite{New07-subtitles}. 
   
-  \item [Quality words] are most of the times single words or at most two adjacent words. They come with a context which is not too short but not too long. 
+  \item [Quality Context] we favor words that come with a context which is not too short but not too long. 
 
 \end{description}
 
@@ -154,7 +172,7 @@ The dependency of the translation service on multiple third party APIs allows fo
 
 \subsection{The Teacher Dashboard}
 
-Although not the focus of this paper, the system has also a dashboard for the teacher. The teacher can see the history of what his students have read. 
+Although not the focus of this paper, since the system does not need to be used in a formal classroom, the system has also a dashboard for the teacher. The teacher can see the history of what his students have read and observe their chosen translations in context.
 
 
 
