@@ -7,11 +7,7 @@
 \subsection{Deployed System}
 The system described in this paper is deployed online and available at \url{https://zeeguu.unibe.ch}. If the reader of this article would want to test it they are invited to use the ``CHI'' code word while following the  ``Become a Betatester'' link from the homepage.
 
-\begin{figure}[h!]
-\centering
-  \includegraphics[width=0.9\columnwidth]{figures/opinion_on_reading_platform}
-  \caption{The students appreciate the freedom of reading what is interesting to them }
-\end{figure}
+
 
 \subsection{Data}
 The anonymized data representing the user interactions of the \students that used the system for one month are available online in \todo{an anonymous link... dropbox?}. 
@@ -69,3 +65,5 @@ The system we presented here has a very limited teacher dashboard. It shows the 
 
 It also remains to be seen whether such an approach can be combined with a method that will ensure that the teacher does not have more work, or at least not considerably more work than when they had been using a textbook. 
 
+\subsection{Difficulty Ranking}
+The way we did difficulty ranking was sub-optimal. Most of the difficulties were very close to each other in value, between 1 and 4... This is too abstract, and hard for a reader to understand what it means. A more advanced strategy is needed. One approach would be to estimate the number of words that will need translation. Antoher would be to also show the number of words that are being learned at the moment, such that the learner, can choose a text that also gives them the chance to study. 
