@@ -1,10 +1,44 @@
 %!TEX root=paper.tex
 
+
 \newpage
-\section{Do The Readers Find Personally Interesting Articles?}
+\section{Which Interactive Features Are Most Used?}
+We tracked the usage of the various features in the interactive reader through a telemetry system that records all the interactions with a set of interactive elements of interest. During one month, from the high school students, we collected \eventCount event.s 
+
+Figure \ref{fig:feature_usage} shows the most used features of the system. With 6700 occurrences, requesting a translation for a word is the most used interactive feature of the system. 
+
+The second most used feature is opening the ``translation alternatives'' menu. This is a sign that machine translation is still not perfect enough. \ml{to continue}
+
+What we see is that in average, a students requests an alternate translation for one in every eight translations. 
+
+The third most used feature is the text to speech feature. This was a feature that was recommended by one of our expert beta-testers. 
+
+\begin{figure}[h!]
+\centering
+  \includegraphics[width=0.9\columnwidth]{figures/reader_feature_usage}
+  \caption{Popularity of features by their recorded usage-events}
+  \label{fig:feature_usage}
+\end{figure}
+\todo{We should sort this graph similarly to the graph below. - Luc}
+
+To see how widespread the various features are among our users, we also looked at the number of distinct users for each category of events. A larger number of distinct users indicates that the feauture is useful to the broadest number of students.
+
+\begin{figure}[h!]
+\centering
+  \includegraphics[width=0.7\columnwidth]{figures/reader_feature_usage_per_user}
+  \caption{The usage of the various reader features by the various users }
+\end{figure}
+
+In addition, we looked at the number of times the same word or phrase was pronounced by the same user. This data ranges from one single pronunciation to 14 pronunciations for the same word (phrase). The size of this interval is mostly due to the users' different proficiency in a certain language and the difficulty in pronunciation of the word (phrase) itself. Nevertheless, on average, the number approaches 1.66 pronunciation requests for the same
+piece of text, suggesting that users are generally sufficiently content with a pronunciation after hearing it the first time.
+
+
+
+\newpage
+\section{Do Students Take Advantage of the Possibility of Reading Personally Interesting Articles?}
 \label{sec:results}
 
-\subsection {Feed Subscriptions}
+% \subsection {Feed Subscriptions}
 Figure \ref{fig:registrations} represents an incidence matrix collected at the end of the study interval: the columns represent students, and the rows represent news feeds; if a student is registered to a given feed, at the intersection of the corresponding row and column we place $\Diamond$. 
 
 We would expect to see fully continuous horizontal rows of data-points if every user subscribed to the same feed, and fully continuous vertical rows if every user subscribed to all of the feeds available. The notion that these patterns are largely absent in Figure 4 supports our assumption that different individuals prefer to subscribe to different reading sources.
@@ -37,7 +71,7 @@ Feed {\em 1Jour1Actu} is the most popular French feed, and feed Le Figaro - Sant
 One can see how the second-to-last presented feed, Le Monde, is the second most popular feed by measure of subscriptions. Conversely, the feed listed above Le Monde is actually the least subscribed-to feed in our listing.
 
 \subsection{Article Interactions}
-If we investigate the articles that the users interact with, we see the same pattern: each user explores their own interest, and there is no one article that is interesting for all of them. 
+If we investigate the articles that the users interact with, we see the same pattern: each user explores their own interest, and there is no one article that is interesting for all of them. \ml{Can we provide a bit more information: which article is read by the most people, and how many people is that? Maybe we could sort this not by article ID, but reorder the article lines, in such a way that the most popular ones are at the bottom and the most unique ones at the top?}
 
 \begin{figure}[h!]
 \centering
@@ -45,33 +79,9 @@ If we investigate the articles that the users interact with, we see the same pat
   \caption{Every student has their own article reading preferences}~\label{fig:registrations}
 \end{figure}
 
-\newpage
-\section{Which of the Interactive Features Are Most Important When Reading?}
-We tracked the usage of the various features in the interactive reader. What we see is that in average, a students requests an alternate translation for one in every eight translations. 
-
-The third most used feature is the text to speech feature. This was a feature that was recommended by one of our expert beta-testers. 
-
-\begin{figure}[h!]
-\centering
-  \includegraphics[width=0.9\columnwidth]{figures/reader_feature_usage}
-  \caption{Popularity of features by their recorded usage-events}
-\end{figure}
-\todo{We should sort this graph similarly to the graph below. - Luc}
-
-To see how widespread the various features are among our users, we also looked at the number of distinct users for each category of events. A larger number of distinct users indicates that the feauture is useful to the broadest number of students.
-
-\begin{figure}[h!]
-\centering
-  \includegraphics[width=0.7\columnwidth]{figures/reader_feature_usage_per_user}
-  \caption{The usage of the various reader features by the various users }
-\end{figure}
-
-In addition, we looked at the number of times the same word or phrase was pronounced by the same user. This data ranges from one single pronunciation to 14 pronunciations for the same word (phrase). The size of this interval is mostly due to the users' different proficiency in a certain language and the difficulty in pronunciation of the word (phrase) itself. Nevertheless, on average, the number approaches 1.66 pronunciation requests for the same
-piece of text, suggesting that users are generally sufficiently content with a pronunciation after hearing it the first time.
 
 
-
-\section{Are the Personalized Exercises Useful?}
+\section{Do Students Use the Personalized Exercises?}
 
 The personalized exercises are a complement to the reading. To show that 
 users actually use them ... 
@@ -104,7 +114,11 @@ However, since they might have been more sincere when reporting to their teacher
   \item {\em ``Your vocabulary is really moving forward, but then you have to do it more often than a few times. Overall a nice website, easy and fun subjects''}
 \end{description}
 
-Based on this feedback, and also because other classes might not be bilingual, in the future we plan to investigate whether the system works well enough with Dutch.
+There main message in the feedback is that learners appreciate the freedom of chosing materials to read that are personally interesting for them. The second, implied observation is that they appreciate the translations, but they would want to have them in their native language. 
+
+The way forward is then, by providing better recommendations if possible, and by providing translations in their native languages.
+
+% In the future we plan to investigate whether the system works well enough with Dutch.
 
 
 \section{Limitations of this Study}
