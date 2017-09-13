@@ -1,41 +1,7 @@
 %!TEX root=paper.tex
 
-
 \newpage
-\section{Which Interactive Features Are Most Used?}
-We tracked the usage of the various features in the interactive reader through a telemetry system that records all the interactions with a set of interactive elements of interest. During one month, from the high school students, we collected \eventCount event.s 
-
-Figure \ref{fig:feature_usage} shows the most used features of the system. With 6700 occurrences, requesting a translation for a word is the most used interactive feature of the system. 
-
-The second most used feature is opening the ``translation alternatives'' menu. This is a sign that machine translation is still not perfect enough. \ml{to continue}
-
-What we see is that in average, a students requests an alternate translation for one in every eight translations. 
-
-The third most used feature is the text to speech feature. This was a feature that was recommended by one of our expert beta-testers. 
-
-\begin{figure}[h!]
-\centering
-  \includegraphics[width=0.9\columnwidth]{figures/reader_feature_usage}
-  \caption{Popularity of features by their recorded usage-events}
-  \label{fig:feature_usage}
-\end{figure}
-\todo{We should sort this graph similarly to the graph below. - Luc}
-
-To see how widespread the various features are among our users, we also looked at the number of distinct users for each category of events. A larger number of distinct users indicates that the feauture is useful to the broadest number of students.
-
-\begin{figure}[h!]
-\centering
-  \includegraphics[width=0.7\columnwidth]{figures/reader_feature_usage_per_user}
-  \caption{The usage of the various reader features by the various users }
-\end{figure}
-
-In addition, we looked at the number of times the same word or phrase was pronounced by the same user. This data ranges from one single pronunciation to 14 pronunciations for the same word (phrase). The size of this interval is mostly due to the users' different proficiency in a certain language and the difficulty in pronunciation of the word (phrase) itself. Nevertheless, on average, the number approaches 1.66 pronunciation requests for the same
-piece of text, suggesting that users are generally sufficiently content with a pronunciation after hearing it the first time.
-
-
-
-\newpage
-\section{Do Students Take Advantage of the Possibility of Reading Personally Interesting Articles?}
+\section{How Do Students Use the Possibility of Reading Personally Interesting Articles?}
 \label{sec:results}
 
 % \subsection {Feed Subscriptions}
@@ -79,20 +45,69 @@ If we investigate the articles that the users interact with, we see the same pat
   \caption{Every student has their own article reading preferences}~\label{fig:registrations}
 \end{figure}
 
+\subsection{Which Interactive Features Are Most Used?}
+We tracked the usage of the various features in the interactive reader through a telemetry system that records all the interactions with a set of interactive elements of interest. Figure \ref{fig:feature_usage} shows the most used features of the system. With 6700 occurrences, requesting a translation for a word is the most used interactive feature of the system. 
 
+The second most used feature is opening the ``translation alternatives'' menu. This is a sign that machine translation is still not perfect enough. \ml{to continue}
 
-\section{Do Students Use the Personalized Exercises?}
+What we see is that in average, a students requests an alternate translation for one in every eight translations. 
 
-The personalized exercises are a complement to the reading. To show that 
-users actually use them ... 
+The third most used feature is the text to speech feature. This was a feature that was recommended by one of our expert beta-testers. 
 
 \begin{figure}[h!]
 \centering
-  \includegraphics[width=\columnwidth]{figures/user_exercise_activity_vs_day.pdf}
-  \caption{The students are doing exercises at their own pace throughout the one month interval }
+  \includegraphics[width=\columnwidth]{figures/reader_feature_usage}
+  \caption{Popularity of features by their recorded usage-events}
+  \label{fig:feature_usage}
+\end{figure}
+\todo{We should sort this graph similarly to the graph below. - Luc}
+
+To see how widespread the various features are among our users, we also looked at the number of distinct users for each category of events. A larger number of distinct users indicates that the feauture is useful to the broadest number of students.
+
+\begin{figure}[h!]
+\centering
+  \includegraphics[width=\columnwidth]{figures/reader_feature_usage_per_user}
+  \caption{The usage of the various reader features by the various users }
 \end{figure}
 
-we could also show that they benefit from them... 
+In addition, we looked at the number of times the same word or phrase was pronounced by the same user. This data ranges from one single pronunciation to 14 pronunciations for the same word (phrase). The size of this interval is mostly due to the users' different proficiency in a certain language and the difficulty in pronunciation of the word (phrase) itself. Nevertheless, on average, the number approaches 1.66 pronunciation requests for the same
+piece of text, suggesting that users are generally sufficiently content with a pronunciation after hearing it the first time.
+
+
+
+\section{How Do Students Use the Personalized Vocabulary Exercises?}
+
+The four types of exercises that the system presented to the readers were used differently by the users. 
+
+\begin{tabular}{lrrrr}
+% source id: 
+% choose -- 5
+% find -- 4
+% translate -- 7
+% match -- 6
+                    & Choose  & Find & Translate & Match \\ \hline
+Total interactions  & 7180    & 6249 & 2643      & 2010\\
+Hint requests       & 29      & 529  & 847       & 16 \\ \hline
+
+
+\end{tabular}
+
+  \begin{figure}[h!]
+  \centering
+    \includegraphics[width=\columnwidth]{figures/exercise_interactions_count.png}
+    \caption{Some students are much more motivated than others in doing exercises }
+  \end{figure}
+
+The personalized exercises are a complement to the reading. 
+
+  \begin{figure}[h!]
+  \centering
+    \includegraphics[width=\columnwidth]{figures/user_exercise_activity_vs_day.pdf}
+    \caption{The students are doing exercises at their own pace throughout the one month interval }
+  \end{figure}
+
+
+
 
 
 
