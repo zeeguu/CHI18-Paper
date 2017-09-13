@@ -124,7 +124,7 @@ Figure \ref{exercise_translate} shows such a generated exercise which asks the r
 
 \begin{figure}[h!]
 \centering
-  \includegraphics[width=\columnwidth]{figures/exercise_translate}
+  \includegraphics[width=0.9\columnwidth]{figures/exercise_translate}
   \caption{One of the exercise types with which the user is presented asks the user to translate a word in a context that is retrieved from the user's past readings}{
   \label{exercise_translate}
   }
@@ -163,11 +163,17 @@ To avoid depending on a single service and to also increase the likelihood that 
 
 The dependency of the translation service on multiple third party APIs allows for a higher reliability and a chance to guarantee a low response time: when a service is down or too slow to respond, the results from it are ignored.
 
-\subsection{The Teacher Dashboard}
+\subsection{The Teacher View}
 
-Although not the focus of this paper, since the system does not need to be used in a formal classroom, the system has also a dashboard for the teacher. The teacher can see the history of what his students have read and observe their chosen translations in context.
+The teacher can see the history of what his students have read and observe their chosen translations in context. This chronological and contextual view is available also for the student, but they evidently can see only their own history.
 
-
+\begin{figure}[h!]
+\centering
+  \includegraphics[width=0.95\columnwidth]{figures/teacher_dashboard.png}
+  \caption{A teacher can see the log of the words that a student looked up, their chosen translations, and the corresponding contexts.}{
+  \label{exercise_translate}
+  }
+\end{figure}
 
 
 

@@ -46,17 +46,13 @@ If we investigate the articles that the users interact with, we see the same pat
 \end{figure}
 
 \subsection{Which Interactive Features Are Most Used?}
-We tracked the usage of the various features in the interactive reader through a telemetry system that records all the interactions with a set of interactive elements of interest. Figure \ref{fig:feature_usage} shows the most used features of the system. With 6700 occurrences, requesting a translation for a word is the most used interactive feature of the system. 
-
-The second most used feature is opening the ``translation alternatives'' menu. This is a sign that machine translation is still not perfect enough. \ml{to continue}
-
-What we see is that in average, a students requests an alternate translation for one in every eight translations. 
+We tracked the usage of the various features in the interactive reader through a telemetry system that records all the interactions with a set of interactive elements of interest. Figure \ref{fig:feature_usage} shows the most used features of the system. With 6700 occurrences, requesting a translation for a word is the most used interactive feature of the system. The second most used feature is opening the ``translation alternatives'' menu. The ratio of translations to alternate translation requests is six to one. 
 
 The third most used feature is the text to speech feature. This was a feature that was recommended by one of our expert beta-testers. 
 
 \begin{figure}[h!]
 \centering
-  \includegraphics[width=\columnwidth]{figures/reader_feature_usage}
+  \includegraphics[width=0.9\columnwidth]{figures/reader_feature_usage}
   \caption{Popularity of features by their recorded usage-events}
   \label{fig:feature_usage}
 \end{figure}
@@ -76,33 +72,39 @@ piece of text, suggesting that users are generally sufficiently content with a p
 
 \section{How Do Students Use the Personalized Vocabulary Exercises?}
 
-The four types of exercises that the system presented to the readers were used differently by the users. \ml{to be continued}
+The personalized exercises are a complement to the reading. 
 
-\begin{tabular}{lrrrr}
-% source id: 
-% choose -- 5
-% find -- 4
-% translate -- 7
-% match -- 6
-                    & Choose  & Find & Translate & Match \\ \hline
-Total interactions  & 7180    & 6249 & 2643      & 2010\\
-Hint requests       & 29      & 529  & 847       & 16 \\ \hline
+The system presented four types of vocabulary practice exercises to the students. In total, during the entire duration of the study we observed 18.082 exercises being presented to the students, leading to an average of 300 exercises per student. Figure \ref{fig:ex_interactions} shows one outlier student who did 3.000 (!) exercises during one month, and about six over-eager students who did close to 700 exercises. 
 
+The figure also highlights the difference between exercises which had a ``correct'' outcome vs. exercises which had a ``wrong'' outcome. 
 
-\end{tabular}
 
   \begin{figure}[h!]
   \centering
     \includegraphics[width=\columnwidth]{figures/exercise_interactions_count.png}
     \caption{Some students are much more motivated than others in doing exercises }
+    \label{fig:ex_interactions}
   \end{figure}
 
-The personalized exercises are a complement to the reading. 
+
+% \begin{tabular}{lrrrr}
+%   % source id: 
+%   % choose -- 5
+%   % find -- 4
+%   % translate -- 7
+%   % match -- 6
+%                       & Choose  & Find & Translate & Match \\ \hline
+%   Total interactions  & 7180    & 6249 & 2643      & 2010\\
+%   Hint requests       & 29      & 529  & 847       & 16 \\ \hline
+% \end{tabular}
+
+Figure 
 
   \begin{figure}[h!]
   \centering
     \includegraphics[width=\columnwidth]{figures/user_exercise_activity_vs_day.pdf}
     \caption{The students are doing exercises at their own pace throughout the one month interval }
+    \label{fig:activity_per_day}
   \end{figure}
 
 \newpage
