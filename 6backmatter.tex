@@ -3,8 +3,9 @@
 
 \newpage
 \section{Challenges}
+\label{sec:challenges}
 
-In this section we explore some of the challenges that we percieve need to be addressed by our system and similar personal textbook systems.
+In this section we explore some of the challenges that we percieve need to be addressed by our system and similar ``personal textbook'' systems. We base our list of challenges on our observations and on the feebdack that we received from our learners. The full list of recommendations from our users can be found in the GitHub repo online.
 
 \subsection{The lack of editorial work}
 The advantage of a textbook is the fact that the quality control is guaranteed. How are we going to ensure the quality of the texts, and the quality of the generated exercises? 
@@ -13,6 +14,15 @@ The advantage of a textbook is the fact that the quality control is guaranteed. 
 
 How do we automatically verify the ``learnability '' of an example in the context? It is a great responsibility automatically selecting a word to study. The situation where a user accepted a mistaken translation, and then the system ``teaches'' the learner that word would be disastruous. Currently we have a set of filters that try to avoid this, moreover, we also offer the learner the possibility of providing feedback in case he is not confident in a given translation. In the future, we consider using crowdsourcing to decrease even more the probability of wrong translations.
 \ml{alternate perspecitve: Do the learners choose the right translation? }
+
+\subsection{Scheduling Vocabulary Exercises}
+\ml{to think about...}
+We have implemented the vocabulary practice scheduler in such a way that it tries to optimize the times when the words are being repeated. However, we received multiple requests from the users who are asking for the possibility of rehearsing the words in a given text, once they are finished with its study. A few other types of improvement ideas that we have received from our beta-testers are: 
+\begin{itemize}
+	\item be forgiving with misspellings, allow retry if the learner was close instead of considering it a mistake
+	\item better provide hints than simply showing the answer
+	\item provide shorter sentences
+\end{itemize}
 
 
 \subsection{Evaluating the quality of an example}

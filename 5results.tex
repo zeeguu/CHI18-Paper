@@ -41,14 +41,19 @@ If we investigate the articles that the users interact with, we see the same pat
 
 \begin{figure}[h!]
 \centering
-  \includegraphics[width=\columnwidth]{figures/users_articles}
+  \includegraphics[width=0.8\columnwidth]{figures/users_articles}
   \caption{Every student has their own article reading preferences}~\label{fig:registrations}
 \end{figure}
 
 \subsection{Which Interactive Features Are Most Used?}
 We tracked the usage of the various features in the interactive reader through a telemetry system that records all the interactions with a set of interactive elements of interest. Figure \ref{fig:feature_usage} shows the most used features of the system. With 6700 occurrences, requesting a translation for a word is the most used interactive feature of the system. The second most used feature is opening the ``translation alternatives'' menu. The ratio of translations to alternate translation requests is six to one. 
 
-The third most used feature is the text to speech feature. This was a feature that was recommended by one of our expert beta-testers. 
+The third most used feature is the text to speech feature. On average, there are about 1.66 pronunciations for a given selection, suggesting that users are often asking for a second pronunciation after hearing it the first time. \ml{@dan, do you agree with this conclusion?}
+
+Undo-ing a translation is used when the user wants to remove the translation that he just added to the text. This seems to be a very popular action too. 
+
+A Like (\rightthumbsup) button can be found at the bottom of an article and it was clicked by the readers 174 times. This information is not used anywhere for now, although we plan to use it in the future for improving text recommendations and adding information about the number of ``likes'' other readers rated an article with. 
+
 
 \begin{figure}[h!]
 \centering
@@ -56,6 +61,8 @@ The third most used feature is the text to speech feature. This was a feature th
   \caption{Popularity of features by their recorded usage-events}
   \label{fig:feature_usage}
 \end{figure}
+
+\ml{like -- what does it mean for design? can we verify that they actually read those articles. how many did they read and didn't like?}
 
 To see how widespread the various features are among our users, we also looked at the number of distinct users for each category of events. A larger number of distinct users indicates that the feauture is useful to the broadest number of students.
 
@@ -141,6 +148,7 @@ There main message in the feedback is that learners appreciate the freedom of ch
 
 \newpage
 \section{Limitations of this Study}
+\label{sec:limitations}
 % We presented a system, and we showed that it has the potential to generate user involvement. However the study we performed is not sufficient to reach a strong conclusion about the impact of the system we present... 
 
 The feedback from the users was positive. However, they might have been influenced by our enthusiastic presentation of the system at the begining of the testing month. 

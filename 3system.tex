@@ -4,17 +4,19 @@
 \section{The System}
 \label{sec:system}
 
-Our vision for the long term is that of an open educational ecosystem in which different creators can share information among their applications in order to maximize the level of personalization that learners percieve. Various reader applications could share information with various vocabulary training applications all mediated by a common API that would track an evolving knowledge model of the learners\cite{Lungu16}.
+Our vision for the long term is that of an open educational ecosystem in which different creators can share information among their applications in order to maximize the level of personalization that learners percieve. 
+
+A central API \cite{Lungu16} would function as a multiplexer between reader applicatins -- which allow the readers to interact with texts in their preferred context (eBook reader, web browser, news reader, etc.), and vocabulary trainers -- which allow the readers to practice intensely vocabulary exercises. 
 
 % by interacting with a core API that provides the basic contextual translations, user knowledge estimation, and recommendations for words to be studied and texts to be read \cite{Lungu16}. 
 
-To show the potential of such an ecosystem we started by implementing ourselves several of the basic components of the ecosystem which together provide the full experience of a {\em personalized language textbook}: 
+To show the potential of such an ecosystem we first implemented ourselves the most basic components of such an ecosystem which together provide the full experience of a {\em personalized language textbook}: 
 
 \begin{description}
 
-  \item [Article Reader] -- consists of a feed subscription mechanism, an article browser that presents the results of crawling the selected feeds that the user is interested in and a web-based interactive text reader which provides seamless in place translations
+  \item [Article Reader] -- consists of 1) an article browser that presents articles from sources that the user registers their interest in and 2) a web-based interactive text reader which provides seamless translations
   
-  \item [Vocabulary Trainer] -- which consists of an exercise platform which generates exercises based on a reader's past reading experience
+  \item [Vocabulary Trainer] -- which consists of an exercise platform which generates interactive vocabulary practice exercises based on the past reading experience of the learner
 
   \item [Translation Service] -- a component responsible with automatically translating words and groups of words from online texts is critical to the system
 
