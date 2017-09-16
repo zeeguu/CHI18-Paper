@@ -48,28 +48,30 @@ If we investigate the articles that the users interact with, we see the same pat
 \subsection{Which Interactive Features Are Most Used?}
 We tracked the usage of the various features in the interactive reader through a telemetry system that records all the interactions with a set of interactive elements of interest. Figure \ref{fig:feature_usage} shows the most used features of the system. With 6700 occurrences, requesting a translation for a word is the most used interactive feature of the system. The second most used feature is opening the ``translation alternatives'' menu. The ratio of translations to alternate translation requests is six to one. 
 
-The third most used feature is the text to speech feature. On average, there are about 1.66 pronunciations for a given selection, suggesting that users are often asking for a second pronunciation after hearing it the first time. \ml{@dan, do you agree with this conclusion?}
+The third most used feature is the text to speech feature. On average, there are about 1.66 pronunciations for a given selection, suggesting that users are often asking for a second pronunciation after hearing it the first time. \ml{@dan, do you agree with this conclusion? it's opposite to your thesis, but I think it's correct}
 
 Undo-ing a translation is used when the user wants to remove the translation that he just added to the text. This seems to be a very popular action too. 
 
-A Like button (\rightthumbsup) can be found at the bottom of an article and it was clicked by the readers 174 times. This information is not used anywhere for now, although we plan to use it in the future for improving text recommendations and adding information about the number of ``likes'' other readers rated an article with. 
-
+A {\em like} button found at the bottom of an article  was clicked by the readers 174 times. Although currently this information is not used in a feture, it can be used to improve text recommendations and to add a social dimension to the system by providing information about how other people reacted to a given article.
 
 \begin{figure}[h!]
 \centering
-  \includegraphics[width=0.8\columnwidth]{figures/reader_feature_usage}
+  \includegraphics[width=0.9\columnwidth]{figures/reader_feature_usage}
   \caption{Popularity of features by their recorded usage-events}
   \label{fig:feature_usage}
 \end{figure}
 
-\ml{like -- what does it mean for design? can we verify that they actually read those articles. how many did they read and didn't like?}
+% \ml{like -- what does it mean for design? can we verify that they actually read those articles. how many did they read and didn't like?}
 
 To see how widespread the various features are among our users, we also looked at the number of distinct users for each category of events. A larger number of distinct users indicates that the feauture is useful to the broadest number of students.
 
+The least used feature presented in the Figure \ref{fig:feature_usage}, {\em translation suggestion}, allows users to contribute their own translations when they are not satisfied with the one automatically offered by the system. We see that the feature was used thirty times.  \ml{which brings me to: @Dan, what do you mean by alternatives here? :) Is it the number of times somebody selected an alternative, or the number of times they opened the menu. In any case, can we get the other number?}
+
 \begin{figure}[h!]
 \centering
-  \includegraphics[width=0.8\columnwidth]{figures/reader_feature_usage_per_user}
+  \includegraphics[width=0.9\columnwidth]{figures/reader_feature_usage_per_user}
   \caption{The usage of the various reader features by the various users }
+  \label{fig:usage_per_user}
 \end{figure}
 
 In addition, we looked at the number of times the same word or phrase was pronounced by the same user. This data ranges from one single pronunciation to 14 pronunciations for the same word (phrase). The size of this interval is mostly due to the users' different proficiency in a certain language and the difficulty in pronunciation of the word (phrase) itself. Nevertheless, on average, the number approaches 1.66 pronunciation requests for the same
