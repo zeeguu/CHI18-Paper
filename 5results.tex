@@ -4,12 +4,12 @@
 \section{How Do Students Use the Possibility of Reading Personally Interesting Articles?}
 \label{sec:results}
 
-% \subsection {Feed Subscriptions}
-Figure \ref{fig:registrations} represents an incidence matrix collected at the end of the study interval: the columns represent students, and the rows represent news feeds; if a student is registered to a given feed, at the intersection of the corresponding row and column we place $\Diamond$. 
+\subsection {Feed Subscriptions}
+Figure \ref{fig:registrations} represents an incidence matrix collected at the end of the study interval: the columns represent students, and the rows represent news feeds; if a student is registered to a given feed, at the intersection of the corresponding row and column we place a $\Diamond$. 
 
-We would expect to see fully continuous horizontal rows of data-points if every user subscribed to the same feed, and fully continuous vertical rows if every user subscribed to all of the feeds available. The notion that these patterns are largely absent in Figure 4 supports our assumption that different individuals prefer to subscribe to different reading sources.
+We would expect to see fully continuous horizontal rows of data-points if every user subscribed to the same feed, and fully continuous vertical rows if every user subscribed to all of the feeds available. The fact that these patterns are largely absent in Figure 4 supports our assumption that different individuals prefer to subscribe to different reading sources.
 
-The figure illustrates that giving the students the freedom to choose the sources they wanted, allowed each one of them to express their interest. 
+% The figure illustrates that giving the students the freedom to choose the sources they wanted, allowed each one of them to express their interest. 
 
 \begin{figure}[h!]
 \centering
@@ -36,51 +36,57 @@ Feed {\em 1Jour1Actu} is the most popular French feed, and feed Le Figaro - Sant
 
 One can see how the second-to-last presented feed, Le Monde, is the second most popular feed by measure of subscriptions. Conversely, the feed listed above Le Monde is actually the least subscribed-to feed in our listing.
 
+
+
 \subsection{Article Interactions}
-If we investigate the articles that the users interact with, we see the same pattern: each user explores their own interest, and there is no one article that is interesting for all of them. \ml{Can we provide a bit more information: which article is read by the most people, and how many people is that? Maybe we could sort this not by article ID, but reorder the article lines, in such a way that the most popular ones are at the bottom and the most unique ones at the top?}
+If we investigate the articles that the users interact with, we see a similar pattern: each user explores their own interest, and there is no one article that is interesting for all of them. 
 
 \begin{figure}[h!]
 \centering
-  \includegraphics[width=0.8\columnwidth]{figures/users_articles}
+  \includegraphics[width=\columnwidth]{figures/users_articles}
   \caption{Every student has their own article reading preferences}~\label{fig:registrations}
 \end{figure}
 
-\subsection{Which Interactive Features Are Most Used?}
+\subsection{Feature Usage}
+\newcommand{\feature}[1]{{\em #1}}
 We tracked the usage of the various features in the interactive reader through a telemetry system that records all the interactions with a set of interactive elements of interest. Figure \ref{fig:feature_usage} shows the six most used features of the system. 
 
-With 6.700 occurrences, requesting a translation for a word is the most used interactive feature of the system. The second most used feature is opening the ``translation alternatives'' menu. The ratio of translations to alternate translation requests is six to one. 
+  \begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.9\columnwidth]{figures/reader_feature_usage}
+    \caption{Popularity of features by their recorded usage-events}
+    \label{fig:feature_usage}
+  \end{figure}
 
-The third most used feature is {\em pronounciation}. On average, there are about 1.66 pronunciations for a given selection, suggesting that users are often asking for a second pronunciation after hearing it the first time. \ml{@dan, do you agree with this conclusion? it's opposite to your thesis, but I think it's correct}
+With 6.700 occurrences, \feature{requesting a translation for a word} is the most used interactive feature of the system. The second most used feature is \feature{opening the translation alternatives} drop-down list. The six-to-one ration between the two features is a sign of the limitations of the automatic translation.
 
-Undo-ing a translation is used when the user wants to remove the translation that he just added to the text. This seems to be a very popular action too. 
+The third most used feature is \feature{pronounciation}. On average, there are about 1.66 pronunciations for a given translation, suggesting that users are often asking for a second pronunciation after hearing it the first time. \ml{@dan, do you agree with this conclusion? it's opposite to your thesis, but I think this is the correct interpretation}
 
-A {\em like} button found at the bottom of an article  was clicked by the readers 174 times. Although currently this information is not used in a feture, it can be used to improve text recommendations and to add a social dimension to the system by providing information about how other people reacted to a given article.
+% In addition, we looked at the number of times the same word or phrase was pronounced by the same user. This data ranges from one single pronunciation to 14 pronunciations for the same word (phrase). The size of this interval is mostly due to the users' different proficiency in a certain language and the difficulty in pronunciation of the word (phrase) itself. Nevertheless, on average, the number approaches 1.66 pronunciation requests for the same piece of text, suggesting that users are generally sufficiently content with a pronunciation after hearing it the first time.
 
-\begin{figure}[h!]
-\centering
-  \includegraphics[width=0.9\columnwidth]{figures/reader_feature_usage}
-  \caption{Popularity of features by their recorded usage-events}
-  \label{fig:feature_usage}
-\end{figure}
 
-% \ml{like -- what does it mean for design? can we verify that they actually read those articles. how many did they read and didn't like?}
+\feature{Undo}-ing a translation is used when the user wants to remove the last translation that was inserted in the text. For the proposed interaction mechanism this feature seems to be useful. 
 
-To see how widespread the various features are among our users, we also looked at the number of distinct users for each category of events. A larger number of distinct users indicates that the feauture is useful to the broadest number of students.
+A {\em like} button found at the bottom of an article  was clicked by the readers 174 times. Although not used at the moment, this information can be used in the future to improve article recommendations.
+ % and maybe to add a social dimension to the system by providing information about how other people react to a given article.
 
-The least used feature presented in the Figure \ref{fig:feature_usage}, {\em translation suggestion}, allows users to contribute their own translations when they are not satisfied with the one automatically offered by the system. We see that the feature was used thirty times.  \ml{which brings me to: @Dan, what do you mean by alternatives here? :) Is it the number of times somebody selected an alternative, or the number of times they opened the menu. In any case, can we get the other number?}
-
-\begin{figure}[h!]
-\centering
-  \includegraphics[width=0.9\columnwidth]{figures/reader_feature_usage_per_user}
-  \caption{The usage of the various reader features by the various users }
-  \label{fig:usage_per_user}
-\end{figure}
-
-In addition, we looked at the number of times the same word or phrase was pronounced by the same user. This data ranges from one single pronunciation to 14 pronunciations for the same word (phrase). The size of this interval is mostly due to the users' different proficiency in a certain language and the difficulty in pronunciation of the word (phrase) itself. Nevertheless, on average, the number approaches 1.66 pronunciation requests for the same
-piece of text, suggesting that users are generally sufficiently content with a pronunciation after hearing it the first time.
+The least used feature presented in the Figure \ref{fig:feature_usage}, {\em translation suggestion} (allows users to contribute their own translations when they are not satisfied with the one automatically provided by the system). The feature was used thirty times.  \ml{which brings me to: @Dan, what do you mean by alternatives here? :) Is it the number of times somebody selected an alternative, or the number of times they opened the menu. In any case, can we get the other number?}
 
 
 
+
+To see how widespread the various features are among our users Figure \ref{fig:usage_per_user} shows the number of distinct users for each category of events. A larger number of distinct users indicates a feature that is more important to the students. The figure shows that \feature{undo} and \feature{translation suggestion} are used by few users. 
+
+  \begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.9\columnwidth]{figures/reader_feature_usage_per_user}
+    \caption{The usage of the various reader features by the various users }
+    \label{fig:usage_per_user}
+  \end{figure}
+
+
+
+\newpage
 \section{How Do Students Use the Personalized Vocabulary Exercises?}
 
 The personalized exercises are a complement to the reading. 
