@@ -1,6 +1,7 @@
 %!TEX root=paper.tex
 
-\subsection{The Web Vocabulary Trainer}
+\newpage
+\subsection{Web Vocabulary Trainer}
 
 Given the list of words that a user does not know we can generate exercises for them based on their past readings.
 
@@ -14,7 +15,9 @@ Figure \ref{exercise_translate} shows such a generated exercise which asks the r
   }
 \end{figure}
 
-\subsubsection{Prioritizing Words to Study}
+\ml{The system currently implements three other types of vocabulary practice exercises: one similar to the one in figure, but where the user has to select one of three possible translations, one where the user has to translate to the learned language, not to his known language. A third type of exericse asks the learner to match translations to originals}.
+
+\subsubsection{Selecting Words to Study}
 
 Since a learner might encounter many words that are not understood, we need to prioritize those that are to be studied in exercises. We use three aspects to prioritize words: 
 
