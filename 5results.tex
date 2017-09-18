@@ -85,44 +85,45 @@ The least used feature presented in the Figure \ref{fig:feature_usage}, {\em tra
   \end{figure}
 
 
-Figure \ref{fig:usage_per_user} shows the number of distinct users for each category of events. A larger number of distinct users indicates a feature that is more important to the students. We see that not all the users of the system used translations. The figure confirms that that \feature{translation suggestion} is used by very few users. It still is to be determined whether this is due to readers overwhelmingly being satisfied with the automatic translations and their alternatives, or due to a low involvement. 
+Figure \ref{fig:usage_per_user} shows the number of distinct users for each category of events. A larger number of distinct users indicates a feature that is more important to the students. We see that: 
+\begin{itemize}
+  \item not all the users of the system use translations
+  \item \feature{translation suggestion} is used by very few users. It still is to be determined whether this is due to readers overwhelmingly being satisfied with the automatic translations and their alternatives, or due to a low involvement. 
+\end{itemize}
 
 
 
 \newpage
 \section{How Do Students Use the Personalized Vocabulary Exercises?}
 
-The personalized exercises are a complement to the reading. 
-
-The system presented four types of vocabulary practice exercises to the students. In total, during the entire duration of the study we observed 18.082 exercises being presented to the students, leading to an average of 300 exercises per student. Figure \ref{fig:ex_interactions} shows one outlier student who did 3.000 (!) exercises during one month, and about six over-eager students who did close to 700 exercises. 
-
-The figure also highlights the difference between exercises which had a ``correct'' outcome vs. exercises which had a ``wrong'' outcome. 
-
+The system presented four types of vocabulary practice exercises to the students. In total, during the entire duration of the study we observed 18.082 exercises being presented to the students. Figure \ref{fig:ex_interactions} presents the number of exercises which had a ``correct'' outcome (red) vs. exercises which had a ``wrong'' outcome (blue). The figure shows one student who did 3.000 (!) exercises during one month, and about six over-eager students who did more than 700 exercises. 
 
   \begin{figure}[h!]
   \centering
     \includegraphics[width=\columnwidth]{figures/exercise_interactions_count.png}
-    \caption{Some students are much more motivated than others in doing exercises }
+    \caption{Correct (red) and wrong (blue) exercise outcomes per student}
     \label{fig:ex_interactions}
   \end{figure}
 
+The figure does not include one other type of outcome, {\em requesting a hint}, which is presented in the table below grouped per exercise type. The corresponding number of hints suggests that the multiple-choice exercises (i.e. Match, Choose) are simpler than free text entry exercises (i.e. Find, Translate).
 
-% \begin{tabular}{lrrrr}
-%   % source id: 
-%   % choose -- 5
-%   % find -- 4
-%   % translate -- 7
-%   % match -- 6
-%                       & Choose  & Find & Translate & Match \\ \hline
-%   Total interactions  & 7180    & 6249 & 2643      & 2010\\
-%   Hint requests       & 29      & 529  & 847       & 16 \\ \hline
-% \end{tabular}
+\begin{tabular}{lrrrr}
+  % source id: 
+  % choose -- 5
+  % find -- 4
+  % translate -- 7
+  % match -- 6
+                      & Choose  & Find & Translate & Match \\ \hline
+  Total interactions  & 7180    & 6249 & 2643      & 2010\\
+  Hint requests       & 29      & 529  & 847       & 16 \\ \hline
+  \label{tab:hints_per_ex_type}
+\end{tabular}
 
-Figure \ref{fig:activity_per_day} shows in which days are the individual learners using the exercises. What we see is a distribution over the entire period of the study, with a slightly more intensive period towards the end of the period which might signify cramming before the end of the semester.
+Figure \ref{fig:activity_per_day} shows the days when learners practice exercises. It suggests constant activity over the entire period of the study with a more intensive period towards the end.
 
   \begin{figure}[h!]
   \centering
-    \includegraphics[width=\columnwidth]{figures/user_exercise_activity_vs_day.pdf}
+    \includegraphics[width=0.8\columnwidth]{figures/user_exercise_activity_vs_day.pdf}
     \caption{The students are doing exercises at their own pace throughout the one month interval }
     \label{fig:activity_per_day}
   \end{figure}
