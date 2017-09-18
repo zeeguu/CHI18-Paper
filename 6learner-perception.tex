@@ -3,22 +3,74 @@
 \newpage
 \section{What is the Perception of the Learners?}
 
-\subsection{In App Feedback Request}
-Besides the analysis that we did based on the observed user data, we also asked the students a series of questions by popping up questions while they are using the sytem (by using an online tool called HotJar). Among the questions was whether they preferred the reading platform and why. Some of the qnswers can be seen in the screenshot below. It becomes clear that the students appreciate the possibility of reading what is interesting for them.
+\subsection{Post-Usage Survey}
+
+After the semester was over, we sent an email to the students, asking them to answer several questions about their experience. \surveyrespondents answered our survey. Figure \ref{fig:reader_use} shows that most of the respondents found the system easy to use and useful. 
+
+ \begin{figure}[h!]
+    \centering
+      \includegraphics[width=0.8\columnwidth]{figures/opinions/reader_ease_of_use}
+      \includegraphics[width=0.8\columnwidth]{figures/opinions/reader_usefulness}
+      \caption{Students assess ease of use and the usefulness of the reader}
+      \label{fig:reader_use}
+    \end{figure}
+
+We asked the participants what would make their experience better. Many thought that the system was good the way it was, and a few others had some more specific answers (e.g. night reading mode, etc.). \footnote{The complete feedback is available in the GitHub repository of the paper}. The most requrring requests were: 
+
+\begin{itemize}
+	\item Choice of Topics: 
+		\squote{Order in different subjects like animals, politics, fashion...}, 
+		\squote{Add a choice for different topics not only for the sources}, 
+		\squote{Better display of the articles and tags such as 'gaming' or 'news'}, etc.
+	\item More freedom for chosing materials: 
+		\squote{Would be nice to be able to add website to the list} and 
+		\squote{A search engine}. 
+\end{itemize}
+
+When asked what do they dislike about the Reader, the majority of feebdack was related to translations: two people complained about them being in English (\squote{The translations are always in English}), five people complained about the translation quality (e.g. \squote{Some weak translations}). The English translations are the reason for which one learner reported that they prefer the textbook: \squote{The translations are always in English. This is why I would grab a textbook first. I don't want to look up the (English to) Dutch translation.}
+
+Figure \ref{fig:ex_rating} shows that when asked to provide their personal rating of the the quality of the exercises, the majority of the respondents expresses their appreciation. 
+
+ \begin{figure}[h!]
+    \centering
+      \includegraphics[width=0.8\columnwidth]{figures/opinions/exercises_rating}
+      \caption{Students assessment  of the generated exercises}
+      \label{fig:ex_rating}
+    \end{figure}
+
+When asked about what they dislike about exericses, many said literally ``nothing''. However, several also had concrete feedback: 
+\begin{itemize}
+	\item During exercises, translations are disabled, so if one does not understand a word from the context, they will have a difficulty.
+		\squote{There arent translations},
+		\squote{Doesn't give the translations}
+	\item Difficulty is not always appropriate: \squote{Some exercises are too easy}
+	\item Contexts are always the same: \squote{I would like to see the words I practice in a different context}
+\end{itemize}
+
+Finally, we asked whether our learners would prefer our system to a textbook if offered the choice. We thus asked them what would they choose between the Zeeguu Reader (our system) and a textbook. We also gave them the possibility to answer something else with a free-form text field. Figure \ref{fig:preferred_reader} shows that the majority of the learners who answered our post-usage survey would prefer our system. However, some still prefer a textbook. 
+
+ \begin{figure}[h!]
+    \centering
+      \includegraphics[width=\columnwidth]{figures/opinions/reader_vs_textbook}
+      \caption{Answers to the question: ``If you wanted to read something in the language you study, what would you reach out for first?''}
+      \label{fig:preferred_reader}
+    \end{figure}
+
+
+
+\subsection{In-App Feedback}
+Besides the analysis  based on the observed telemetry data, we also asked the students a series of questions by popping up questions while they were using the sytem. To do this, we used an online tool called HotJar. Among the questions was whether they preferred the reading platform and why. Some of the answers can be seen in the screenshot below. It becomes clear that the students appreciate the possibility of reading what is interesting for them.
 
     \begin{figure}[h!]
     \centering
-      \includegraphics[width=0.9\columnwidth]{figures/opinion_on_reading_platform}
-      \caption{The students appreciate the freedom of reading what is interesting to them }
+      \includegraphics[width=\columnwidth]{figures/opinion_on_reading_platform}
+      \caption{The students appreciate the freedom of chosing what to read}
     \end{figure}
 
-\subsection{Post-Usage Survey}
 
-The majority of the students who answered our post-usage survey said that  they prefer our system to a textbook. However, we still think this is not very conclusive since the number of students who answered our survey was quite limited: 12 of the 60 students represent about 20\% of the participants. 
-
-
+\newpage
 \subsection{Reports to the Teacher}
-However, since they might have been more sincere when reporting to their teacher than directly to us, we report here also what they wrote in a separate evaluation of the tools they use in the class, which the teacher runs always at the end of the school year. Several of the answers are: 
+To triangulate the answers that they provided to us, we report here also what the students wrote in a separate evaluation of the tools they use in the class, which the teacher runs always at the end of the school year. Several of the answers are: 
 
 \begin{description}
   \item {\em ``It works well but it were better if the translation would have been in Dutch. It is good that you can choose yourself what to read.''}
