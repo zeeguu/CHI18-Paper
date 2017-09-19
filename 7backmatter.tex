@@ -23,8 +23,11 @@ The algorithms for scheduling vocabulary exercises are the state of the art in s
 
 In this section we explore some of the challenges that we percieve need to be addressed by our system and similar ``personal textbook'' systems. We base our list of challenges on our observations and on the feebdack that we received from our learners. The full list of recommendations from our users can be found in the GitHub repo online.
 
-\subsection{The lack of editorial work}
-The advantage of a textbook is the fact that the quality control of the texts in it is guaranteed. How are we going to ensure the quality of the texts that re to be found online? What we did was to limit the possible sources from where the students can read. Nevertheless, one of the students, wrote in the feedback form {\em ``I would like to avoid articles which have information about accidents with human casualties''}.
+\subsection{Registering for ``topics'' instead of ``sources''}
+Multiple learners asked for the possibility of registering to article topics rather than ``article sources''. A future system should consider this.
+
+\subsection{Ensuring the appropriateness of articles}
+The advantage of a textbook is the fact that the quality control of the texts in it is guaranteed by the editors. How are we going to ensure the quality of the texts that re to be found online? What we did was to limit the possible sources from where the students can read. Nevertheless, one of the students, wrote in the feedback form {\em ``I would like to avoid articles which have information about accidents with human casualties''}.
 
 % \subsection{The selection of vocabulary to study}
 
@@ -33,7 +36,7 @@ The advantage of a textbook is the fact that the quality control of the texts in
 
 
 \subsection{Scheduling vocabulary exercises}
-We have implemented the vocabulary practice scheduler in such a way that it tries to optimize the times when the words are being repeated based on the state of the art in spaced repetition. However, we received multiple requests from the users who are asking for the possibility of rehearsing the words in a given text, once they are finished with its study. 
+We have implemented the vocabulary practice scheduler in such a way that it tries to optimize the times when the words are being repeated based on the state of the art in spaced repetition. However, we received multiple requests from the users who are asking for the possibility of rehearsing the words in a given text, once they are finished with its study, more in the vein of traditional textbooks. It might be that in the future it would be useful to allow the learners to influence the scheduling algorithms. 
 
 % A few other types of improvement ideas that we have received from our beta-testers are: 
 % \begin{itemize}
@@ -42,23 +45,22 @@ We have implemented the vocabulary practice scheduler in such a way that it trie
 % \end{itemize}
 
 
-\subsection{Evaluating the quality of an example}
+\subsection{Evaluating the quality of examples}
 
 It is indeed desirable to find good examples of practice exercises from past readings. Sometimes, the context in which the learner looks up a word is too long and sometimes it is too short. How estimate the quality of an exercise? One measure that we are considering is: ensuring that all the words in the context are simpler than the tested word. 
 
 % For beginners, this is still not an option. So we can only do this for students who are already quite advanced. \todo{We should see whether there's a difference between the ones that were A2 vs. B1}
 
-\subsection{Article difficulty ranking}
-The way we did difficulty ranking was sub-optimal. Most of the difficulties were very close to each other in value, between 1 and 4... This is too abstract, and hard for a reader to understand what it means. A more advanced strategy is needed. One approach would be to estimate the number of words that will need translation. Antoher would be to also show the number of words that are being learned at the moment, such that the learner, can choose a text that also gives them the chance to study. 
+\subsection{Estimating article difficulty in a personal way}
+The way we did difficulty ranking was sub-optimal. Most of the difficulties were very close to each other in value, between 1 and 4 and they were generic instead of being personalized. We think that as a result, the difficulty estimations that the system presented were too abstract for the readers. A more advanced strategy is needed, and for sure, one that is personalized for the individual learner. One approach would be to estimate the number of words that are likely to be unknown in an article for a particular learner. A complementary information about the article could be the number of words that we know are being learned at the moment which are to be found in that article. In this way, a learner can choose a text that also gives them the chance to re{\"e}ncounter words being learned. 
 
 \subsection{The teacher perspective}
 The system we presented here has a (limited) teacher dashboard for those users who have a teacher. The dashboard currently shows a chronological log of the words that the student has looked up in the context. However, the system could present more advanced analytics that could enhance the teacher's understanding of the class. This is something that is a clear opportunity when moving to a digital textbook. 
 
-\subsection{Integrating the system in an classroom workflow}
+\subsection{Investigating more possible classroom workflows}
 The system was initially designed for self study. However, when invited to test it in a formal classroom we were happy to oblige. We plan to work more with teachers to better understand how to combine the individuality of the system with the shared experience of the learners in a classroom. Indeed, new workflows and classroom activities must be discovered.
 
-\subsection{Registering for ``topics'' instead of ``sources''}
-See whether allowing people to register to topics rather than sources (i.e. newspapers) would make more sense for them. 
+
 
 
 
@@ -73,7 +75,8 @@ The source code is open under a MIT license and available online at \url{https:/
 The anonymized telemetry data, representing the interactions of more than \students learners with the system for one month, is available as a MySQL database dump on GitHub at the following link: \url{https://github.com/zeeguu-ecosystem/CHI17-Paper}. The same link holds the full questionnaire data used in this paper. That data is also anonymized. 
 
 \section{Conclusion and Future Work}
-We have presented here a system that we aimed to be a minimal viable product for a personalized language textbook. We report on using the system with high school students for about one month. We observe that overall the students make use of the personalization features, and when asked about it they appreciated them. 
+We have presented here a system that we aimed to be a minimal viable product for a personalized language textbook. We report on using the system with high school students for about one month. We observe that overall the students make use of the personalization features, and when asked about it they appreciate them. The teacher of the class also appreciated the system, and decided to introduce it in the new academic year with a larger group of students. 
 
-Based on the experience, the teacher of the class decided that they want to introduce the system in the next academic year with a slightly larger group of students -- about one hundred and thirty for the entire academic year. This will give us a wealth of data that we plan to record and analyze the usage of the system and hope to learn even more about the possibilities and limitations of such a system. 
+
+% This will give us a wealth of data that we plan to record and analyze the usage of the system and hope to learn even more about the possibilities and limitations of such a system. 
 
