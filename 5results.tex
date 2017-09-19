@@ -43,13 +43,13 @@ Figure \ref{fig:articles_read} shows that the articles that the users interact w
 
 \begin{figure}[h!]
 \centering
-  \includegraphics[width=\columnwidth]{figures/users_articles}
+  \includegraphics[width=0.9\columnwidth]{figures/users_articles}
   \caption{Every student has their own article reading preferences}~\label{fig:articles_read}
 \end{figure}
 
 \subsection{Feature Usage}
 \newcommand{\feature}[1]{{\em #1}}
-We tracked the usage of the various features in the interactive reader through a telemetry system that records all the interactions with a set of interactive elements of interest. Telemetry is being used increasingly in game design \cite{Gagne11-telemetry} but also in other contexts as a method of user behavior analysis. 
+Recently, telemetry has been succesfully used for understanding user behavior in games \cite{Gagne11-telemetry} but also more generic contexts, such as automatically detecting personas from large scale interaction data \cite{Zhang16-telemetry}. In our study, we used telemetry to track the usage of various relevant features in the personalized textbook in order to better understand the usage of our system.
 
 Based on logging every interaction of every user, Figure \ref{fig:feature_usage} shows the six most used features of the system.\footnote{An extended analysis that includes more features is presented elsewhere \cite{Chirtoaca17-apollo}}
 
