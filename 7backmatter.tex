@@ -52,7 +52,9 @@ It is indeed desirable to find good examples of practice exercises from past rea
 % For beginners, this is still not an option. So we can only do this for students who are already quite advanced. \todo{We should see whether there's a difference between the ones that were A2 vs. B1}
 
 \subsection{Estimating article difficulty in a personal way}
-The way we did difficulty ranking was sub-optimal. Most of the difficulties were very close to each other in value, between 1 and 4 and they were generic instead of being personalized. We think that as a result, the difficulty estimations that the system presented were too abstract for the readers. A more advanced strategy is needed, and for sure, one that is personalized for the individual learner. One approach would be to estimate the number of words that are likely to be unknown in an article for a particular learner. A complementary information about the article could be the number of words that we know are being learned at the moment which are to be found in that article. In this way, a learner can choose a text that also gives them the chance to re{\"e}ncounter words being learned. 
+The way we did difficulty ranking was sub-optimal. Most of the difficulties were very close to each other in value, between 1 and 4 and they were generic instead of being personalized. We think that as a result, the difficulty estimations that the system presented were too abstract for the readers. And as a result, one of the readers reported that he disliked about the Reader the fact that \squote{My level of the language is quite low for now, so I clicked to get a translation very often. Too often.} 
+
+A more advanced strategy is needed, one that is less abstract, and personalized for the individual learner. One approach would be to estimate the number of words that are likely to be unknown in an article for a particular learner. A complementary information about the article could be the number of words that we know are being learned at the moment which are to be found in that article. In this way, a learner can choose a text that also gives them the chance to re{\"e}ncounter words being learned. 
 
 \subsection{The teacher perspective}
 The system we presented here has a (limited) teacher dashboard for those users who have a teacher. The dashboard currently shows a chronological log of the words that the student has looked up in the context. However, the system could present more advanced analytics that could enhance the teacher's understanding of the class. This is something that is a clear opportunity when moving to a digital textbook. 
@@ -61,7 +63,8 @@ The system we presented here has a (limited) teacher dashboard for those users w
 The system was initially designed for self study. However, when invited to test it in a formal classroom we were happy to oblige. We plan to work more with teachers to better understand how to combine the individuality of the system with the shared experience of the learners in a classroom. Indeed, new workflows and classroom activities must be discovered.
 
 
-
+\section{Conclusion and Future Work}
+We have presented here a system that we aimed to be a minimal viable product for a personalized language textbook. We report on using the system with high school students for about one month. We observe that overall the students make use of the personalization features, and when asked about it they appreciate them. The teacher of the class also appreciated the system, and decided to introduce it in the new academic year with a larger group of students. 
 
 
 \section{Availability of System, Code and Data}
@@ -73,10 +76,3 @@ The source code is open under a MIT license and available online at \url{https:/
 
 % \subsection{Data}
 The anonymized telemetry data, representing the interactions of more than \students learners with the system for one month, is available as a MySQL database dump on GitHub at the following link: \url{https://github.com/zeeguu-ecosystem/CHI17-Paper}. The same link holds the full questionnaire data used in this paper. That data is also anonymized. 
-
-\section{Conclusion and Future Work}
-We have presented here a system that we aimed to be a minimal viable product for a personalized language textbook. We report on using the system with high school students for about one month. We observe that overall the students make use of the personalization features, and when asked about it they appreciate them. The teacher of the class also appreciated the system, and decided to introduce it in the new academic year with a larger group of students. 
-
-
-% This will give us a wealth of data that we plan to record and analyze the usage of the system and hope to learn even more about the possibilities and limitations of such a system. 
-
