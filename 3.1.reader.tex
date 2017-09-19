@@ -9,7 +9,7 @@ The Web Article Reader allows the learners to subscribe to various sources of ar
 
 \subsubsection{Subscribing to Sources}
 % \ml{make sure that we use source consistently in the text; not feed for example.}
-From the user's point of view, the Reader is organized around {\em sources}of articles. The system categorizes sources by their language. Figure \ref{fig:system_subscriptions} presents the source subscription dialog, which in figure is displaying multiple sources for French. 
+From the user's point of view, the Reader is organized around {\em sources} of articles. The system categorizes sources by their language. Figure \ref{fig:system_subscriptions} presents the source subscription dialog, which in figure is displaying multiple sources for French. 
 
 
     \begin{figure}[h!]
@@ -36,7 +36,7 @@ Article listing presents the source, a summary of the article, and an estimated 
 
 In order to properly visualize the reading difficulty of an article in an intuitive manner, there are three levels of information displayed here. First we display a flag representing the language of the article. This is so because a learner could be actually registered to feeds in multiple languages. Second, we allow the user to rapidly judge difficulty on an intuitive level by color coding the difficulty from green to yellow to red. When a particular article has grasped the user's attention, we allow for a more cognitive judgment by scoring the article from 0 to 5 in difficulty.
 
-Difficulty estimation takes into account the frequency of the vocabulary items in the text. The system filters out articles that are too difficult given that it was deployed with non-advanced learners.\footnote{This is one of the limitations of the system that we discuss later}
+Difficulty estimation takes into account the frequency of the vocabulary items in the text. The system filters out articles that are too difficult given that it was deployed with non-advanced learners.\footnote{This is one of the limitations of the system that we discuss later.}
 
 \subsubsection{Translations}
 
@@ -48,14 +48,13 @@ To make reading as facile as possible, the reader is optimized for the most freq
   \caption{A translated word is inserted after the tapped word.}~\label{fig:translated_word}
 \end{figure}
 
-Ohter alternatives that we explored and eventually dropped for each had disadvantages were: 
+Other alternatives that we explored and eventually dropped (for each had disadvantages) were: 
 \begin{description}
 
-  \item [Temporarily showing a popup of the translation] and then hiding it again. This had the disadvantage of in the case of a more difficult sentence where multiple words must be translated, the reader forgetting the words at the begining by the time they arrived at the end, and re-translating it. 
-
+  \item [Temporarily showing a popup of the translation] and then hiding it again. This had a disadvantage for difficult sentences, where multiple words must be translated. The reader can forget translated words by the time they arrive at the end of an article, requiring them to re-translate.
   \item [Using the native selection mechanism] to select text as opposed to click / touch. 
   % We experimented with allowing the learner to select a word in the same way this is normally done on the corresponding platform. 
-  This had the disadvantage that native selection is not designed as a priority action and thus is slow (e.g. on Android a user must hold their fingertip down for almost a second before the contextual menu is displayed). 
+  This had the disadvantage that native selection is not designed as a priority action and thus is slow to respond (e.g. on Android a user must hold their fingertip down for almost a second before the contextual menu is displayed). 
 \end{description}
 
 
