@@ -3,22 +3,25 @@
 \newpage
 \subsection{Web Vocabulary Trainer}
 
-Given the list of words that a user does not know since they were looked  up in the past we can generate exercises for they user.
+Given the list of words that a user looked up -- and are thus likely to be unknown -- we can generate exercises for them. Given that our translation API captures the entire sentence together with the translation, exercises can use the original context in which the words have been encountered.
 
 Figure \ref{exercise_translate} shows such a generated exercise which asks the reader to translate a given word in the context in which it was encountered in a past reading. The main interactive elements (IEs) that are specific to this exercise are an input box that allows the user to enter a solution (IE5); a button for checking the correctness of the input answer (IE2); a hint button which presents the correct answer (IE1). Two types of control that span exercise types are: a word pronunciation option (IE3) and a feedback option (IE4) which allows the user to provide feebdack about the exercise.
 
 \begin{figure}[h!]
 \centering
   \includegraphics[width=0.9\columnwidth]{figures/exercise_translate}
-  \caption{One of the exercise types with which the user is presented asks the user to translate a word in a context that is retrieved from the user's past readings}{
+  \caption{Translate exercises ask the user to translate a word in a given context (retrieved from the user's past readings)}{
   \label{exercise_translate}
   }
 \end{figure}
 
-The system currently implements three other types of vocabulary practice exercises, which can be split into two categories: 
+The system currently implements three other types of vocabulary practice exercises\footnote{Detailed description of the exercise types are elsewhere\cite{Avagyan17a-blocks}}, which can be split into two categories: 
 \begin{description}
-	\item [Free text input] where the text must be typed in the learned language (similar to the figure above)
-	\item [Multiple choice] where the user is presented with a set of alternatives.
+	
+	\item [Free text input] where the text must be typed in the learned language (exercise type: Find)
+
+	\item [Multiple choice] where the user is presented with a set of alternatives (exercise types: Choose, and Match). 
+
 \end{description}
 
 \subsubsection{Selecting Words to Study}
