@@ -1,12 +1,22 @@
-“Wel goed voor leesvaardigheid. Best leuk als het in het Nederlands zou zijn”.
+NL - The answer in it's original language (Dutch).
+EN - Translated answer (English).
 
-“Veel geleerd, jammer dat het alleen frans-engels is, heel leuk om te doen”
+--
 
-“Je woordenschat gaat er wel echt op vooruit, Maar dan moet je het wel vaker doen dan een paar keer. Hele fijne website, makkelijk en leuke onderwerpen”
+NL: “Wel goed voor leesvaardigheid. Best leuk als het in het Nederlands zou zijn”.
+EN: "It's good for improving reading skills. It would be even better if this tool was available in Dutch."
 
-“Het moet nog wel verder ontwikkeld worden (de vertaling is alleen in het Engels), dan is het een goed systeem. Je kunt de teksten zelf kiezen en het maakt het ook persoonlijk”.
+NL: “Veel geleerd, jammer dat het alleen frans-engels is, heel leuk om te doen”
+EN: "I learned a lot, it is a shame that we could only translate from French to English, it's very fun to do"
 
-“Beter dan toetsen en leuk dat je zelf tekst kan kiezen”
+NL: “Je woordenschat gaat er wel echt op vooruit, Maar dan moet je het wel vaker doen dan een paar keer. Hele fijne website, makkelijk en leuke onderwerpen”
+EN: "My vocabulary truly is improving, but you do have to use it more than a few times. A very nice website, easy to use and with nice topics." 
 
-“Werkt goed maar als vertaling NL was geweest was het beter geweest. Goed dat je zelf kan kiezen wat je leest”
+NL: “Het moet nog wel verder ontwikkeld worden (de vertaling is alleen in het Engels), dan is het een goed systeem. Je kunt de teksten zelf kiezen en het maakt het ook persoonlijk”.
+EN: "It should be developed further (it only translates to English), then it would be a good system. You can choose the text yourself, this choice makes reading personalized.
 
+NL: “Beter dan toetsen en leuk dat je zelf tekst kan kiezen”
+EN: "Better than exams and nice that you can choose your own text."
+
+NL: “Werkt goed maar als vertaling NL was geweest was het beter geweest. Goed dat je zelf kan kiezen wat je leest”
+EN: "Works well, but if it were possible to translate to Dutch it would have been better. Good that you can choose what you read."
