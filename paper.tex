@@ -73,6 +73,26 @@
 % option again before submitting your final document.
 \usepackage{todonotes}
 
+\usepackage{mdframed}
+\newtheorem{mdtheorem2}{Theorem}
+\definecolor{addedcolor}{rgb}{0.4, 0.7, 0.4}
+\definecolor{addedcolorbg}{rgb}{0.95, 1.0, 0.95}
+
+\newenvironment{added}%
+  {\vspace{1ex} 
+    \begin{mdframed}[
+    backgroundcolor=addedcolorbg, 
+    linewidth=0pt,
+    topline=false,bottomline=false, rightline=true, leftline=false, 
+    leftmargin=0cm, innerleftmargin=0cm, 
+    rightmargin=0cm, innerrightmargin=0cm, 
+    % skipabove=1ex,innertopmargin=0cm,
+    % skipbelow=0cm, innerbottommargin=0cm,
+    font=\normalfont]}%
+  {\end{mdframed}
+  }
+
+
 % Paper metadata (use plain text, for PDF inclusion and later
 % re-using, if desired).  Use \emtpyauthor when submitting for review
 % so you remain anonymous.

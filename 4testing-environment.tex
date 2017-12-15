@@ -4,26 +4,57 @@
 \section{Testing With High School Students}
 \label{sec:demographics}
 
-We tested our system with \stcnt students from a public highschool in Groningen, The Netherlands. They represent three classes that have the same French teacher and are bilingual in Dutch and English. At the beginning of June 2017, we visited the school, and during one hour in each of the three classes we introduced the tools and their usage.
+We tested our system with \stcnt students from a public highschool in Netherlands, representing three classes that have the same French teacher and are bilingual in Dutch and English. 
 
-The system was used officially in class from the second week of June until the end of the month (coinciding with the end of the semester). With few exceptions the students created an account and started using the system the latest on June 9th. 
+At the beginning of June 2017, we introduced the system and its usage in each of the three classes. With few exceptions the students created an account and started using the system the latest on June 9th. The system was to be used until the end of the month, which coincided with the end of the study year. 
 
-The teacher asked the students to use the infrastructure as much as they liked and to write reports on their activity. For every half an hour of usage, the students had to write a brief report on how they spent their time and submit it to the teacher. The teacher could then decide to selectively test them on the basis of their reports.
+\subsection{Usage Scenario}
 
-We deployed the system with the translations from French to English instead of Dutch since, based on our experience translation APIs are of higher quality when one of the languages is English and because the students and their teacher were comfortable with the idea.\footnote{We made it clear to the students that they can ask us, and we will modify their personal account in such a way as to receive translations in Dutch. None of the students requested this.}
+\begin{added}
 
-We also invited the students to send us feedback at any time if they encounter problems or if they have ideas for improvement. Several of them did email. Towards the end of the month, we also deployed several in-app focused pop-up questions using a customer opinion elicitation service called HotJar. After the month was over we sent out a follow-up questionnaire.
+	The teacher invited the students to use the system in order to perform {\bf supplementary reading}, aside from the other activities that were done in the class. He encouraged them to read texts they found interesting and to build up their own {\em personalized portfolio of words} which would be complementary to the list of common mandatory words that each class had to study.
+	
+	For every half an hour of usage, the students had to write a brief report on how they spent their time and submit it to the teacher. The teacher could then decide to selectively test them on the basis of their reports. This was a requirement from the teacher and based on a strategy he used in the past with other software. This might have affected negatively the willingness of the students to spend time on the platform.
+\end{added}
 
-\subsection{Demographics}
 
-Before creating accounts on our platform, the participants were directed to a survey form which asked them to provide personal information about their current level of knowledge, learning strategies, and interests. A handful of the participants did not fill the survey before using the system.
+\subsection{Deployment}
 
-The participants that filled our survey were 54 female and 15 male with ages below 18 representing three different classes. Based on their own self characterization, 53 students are level B1 (i.e. can understand the main points of clear standard speech, can narrate an event, an experience or a dream) and 16 are level A2 (i.e. using simple words, can describe their surroundings and communicate immediate needs). 
-
+Before creating accounts on our platform, the participants were directed to a survey form which asked them to provide information about their current level of knowledge, learning strategies, and interests. A handful of the participants did not fill the survey before using the system.
 
 When asked whether they have favorite topics they would like to read about, half of the students mentioned various topics while the other half did not answer the question. From the topics that they mentioned as possible interests some of the more popular were: sports, music, travel, lifestyle, fashion, movies, and somebody mentioned as interest {\em ``no politics''}.
 
-We seeded the system with a variety of French news and blogs that cover these aspects: 1Jour1Actu, L'Equipe, La Blogoteque, Le Figaro, Le Monde. 
+
+We seeded the system with a variety of French news and blogs that cover the aforementioned aspects: 1Jour1Actu, L'Equipe, La Blogoteque, Le Figaro, Le Monde. 
+
+\begin{added}
+	
+	The choice of sources was done in collaboration with the teacher. Even if the source of readings was not actually the entire web, practically, having many dozens of news articles daily (only Le Figaro has usually more than forty in a day) offers sufficient opportunity for the free choice of individually interesting articles. 
+	% {\em reading personalization} 
+	% We could have added even 
+	
+\end{added}
+
+
+
+\begin{added}
+Students used personal computers and Android/iOS phones.
+\end{added}
+
+	We deployed the system with the translations from French to English instead of Dutch since, based on our experience translation APIs are of higher quality when one of the languages is English and because the students and their teacher were comfortable with the idea.\footnote{We made it clear to the students that they can ask us, and we will modify their personal account in such a way as to receive translations in Dutch. None of the students requested this.}
+
+We also invited the students to send us feedback at any time if they encounter problems or if they have ideas for improvement. Several of them did email. Towards the end of the month, we also deployed several in-app focused pop-up questions using a customer opinion elicitation service called HotJar. After the month was over we sent out a follow-up questionnaire.
+
+
+
+
+\subsection{Demographics}
+
+
+The participants that filled our initial survey were 54 female and 15 male with ages below 18 representing three different classes. Based on their own self characterization, 53 students are level B1 (i.e. can understand the main points of clear standard speech, can narrate an event, an experience or a dream) and 16 are level A2 (i.e. using simple words, can describe their surroundings and communicate immediate needs). 
+
+
+
 
 
 

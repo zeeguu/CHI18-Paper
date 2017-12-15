@@ -4,35 +4,40 @@
 \section{How Do Students Use the Possibility of Reading Personally Interesting Articles?}
 \label{sec:results}
 
-\subsection {Feed Subscriptions}
-Figure \ref{fig:registrations} represents an incidence matrix collected at the end of the study interval: the columns represent students, and the rows represent article sources; if a student is registered to a given source, at the intersection of the corresponding row and column we place a $\Diamond$. 
 
-We would expect to see fully continuous horizontal rows of data-points if every user subscribed to the same feed, and fully continuous vertical rows if every user subscribed to all of the feeds available. The fact that these patterns are largely absent in Figure 4 supports our assumption that different individuals prefer to subscribe to different reading sources.
+\subsection {Feed Subscriptions}
+Figure \ref{fig:subscriptions} represents an incidence matrix collected at the end of the study interval: the columns represent students, and the rows represent article sources; if a student is registered to a given source, at the intersection of the corresponding row and column we place a $\Diamond$. 
+
+We would expect to see fully continuous horizontal rows of data-points if every user subscribed to the same feed, and fully continuous vertical rows if every user subscribed to all of the feeds available. The fact that these patterns are largely absent in Figure \ref{fig:subscriptions} supports our assumption that different individuals prefer to subscribe to different reading sources.
 
 % The figure illustrates that giving the students the freedom to choose the sources they wanted, allowed each one of them to express their interest. 
 
 \begin{figure}[h!]
+
 \centering
   \includegraphics[width=\columnwidth]{figures/users_feeds}
-  \caption{Different users subscribe to different sources}~\label{fig:registrations}
+  \caption{Different users subscribe to different sources}
+  \label{fig:subscriptions}  
 \end{figure}
 
-Of course some feeds are more popular than others. Projecting the data- points onto the horizontal axis and sorting the results leaves us with a histogram as can be seen in Figure 5.
+Of course some feeds are more popular than others. Projecting the data- points onto the horizontal axis and sorting the results leaves us with a histogram as can be seen in Figure \ref{fig:feedpopularity}.
 
 \begin{figure}[h!]
 \centering
   \includegraphics[width=\columnwidth]{figures/feed_popularity}
-  \caption{Some feeds are more popular than others}~\label{fig:registrations}
+  \caption{Some feeds are more popular than others}
+  \label{fig:feedpopularity}
 \end{figure}
 
 
-{\em 1Jour1Actu} is the most popular article source and Le Figaro - Sant\'e is the least. In order to see whether or not this might be related to how they are presented in the dialog window of our system (see Figure \ref{fig:system_subscriptions}), we can compare the order of popularity with the order in which they are displayed. One can see how the second-to-last presented feed, Le Monde, is the second most popular feed by measure of subscriptions. Conversely, the feed listed above Le Monde is actually the least subscribed-to feed in our listing.
+{\em 1Jour1Actu} is the most popular article source and Le Figaro - Sant\'e is the least. In order to see whether or not this might be related to how they are presented in the dialog window of our system (see Figure \ref{fig:system_subscriptions}), in Figure \ref{fig:popularityvsranking} can compare the order of popularity with the order in which they are displayed. One can see how the second-to-last presented feed, Le Monde, is the second most popular feed by measure of subscriptions. Conversely, the feed listed above Le Monde is actually the least subscribed-to feed in our listing.
 
 
 \begin{figure}[h!]
 \centering
   \input{popularity_vs_ranking}
-  \caption{The popularity of the feeds vs. their ranking in the UI}~\label{fig:registrations}
+  \caption{The popularity of the feeds vs. their ranking in the UI}
+  \label{fig:popularityvsranking}
 \end{figure}
 
 
@@ -127,6 +132,33 @@ Figure \ref{fig:activity_per_day} shows the days when learners practice exercise
     \caption{The students are doing exercises at their own pace throughout the one month interval }
     \label{fig:activity_per_day}
   \end{figure}
+
+
+\begin{added}
+
+  The value of extensive reading can be found, besides the new words that are learned, also in the strengthening of the knowledge of the existing words. This is hard to quantify, but by analyzing the learner interaction with the exercises we can provide a glimpse into it. Looking at the outcomes of all the exercises done by the students we observe that:
+
+  \begin{itemize}
+    \item In total 5149 words were used in the exercises platform during the learning period. They are words for which the learners requested a translation before. Therefore the learners either did not know them or at least were unsure about them.
+
+    \item For 80\% (4110) of the words the learners were able to correctly identify the meaning in the last associated exercise. Out of these: 
+
+    \begin{itemize}
+      \item 14\% were wrong during their first interaction in exercises but were correct in the final iteration of the exercises. These are {\bf likely to be learned via the exercises}.
+
+      \item 66\% were recognized already for the first time in the exercises. These are {\bf likely to be words for which the knowledge was strengthened}: the students were unsure when encountering them initially but became certain by seeing their definition once. 
+    \end{itemize}
+
+    \item For 20\% (1037) of the words the final outcomes showed incorrect answers, thus we can assume that they remained {\bf unlearned at the end of the experimental period}.
+
+  \end{itemize}
+
+\end{added}
+
+
+
+
+
 
 
 
