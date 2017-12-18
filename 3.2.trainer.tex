@@ -3,7 +3,8 @@
 \newpage
 \subsection{Web Vocabulary Trainer}
 
-Given the list of words that a user looked up -- and are thus likely to be unknown -- we can generate exercises for them. Given that our translation API captures the entire sentence together with the translation, exercises can use the original context in which the words have been encountered.
+% Given the list of words that a user looked up -- and are thus likely to be unknown -- we can generate exercises for them. 
+Given that the translation API captures the context together with every translation, exercises can be personalized for every user based on their past reading by using the original context in which the words have been encountered.
 
 Figure \ref{fig:exercise_translate} shows such a generated exercise which asks the reader to translate a given word in the context in which it was encountered in a past reading. The main interactive elements (IEs) that are specific to this exercise are an input box that allows the user to enter a solution (IE5); a button for checking the correctness of the input answer (IE2); a hint button which presents the correct answer (IE1). Two types of control that span exercise types are: a word pronunciation option (IE3) and a feedback option (IE4) which allows the user to provide feebdack about the exercise.
 
@@ -15,13 +16,13 @@ Figure \ref{fig:exercise_translate} shows such a generated exercise which asks t
 \end{figure}
 
 The system currently implements three other types of vocabulary practice exercises\footnote{Detailed description of the exercise types are elsewhere\cite{Avagyan17a-blocks}}, which can be split into two categories: 
-\begin{description}
+\begin{enumerate}
 	
-	\item [Free text input] where the text must be typed in the learned language (exercise type: Find)
+	\item Free text input -- where the text must be typed in the learned language (exercise type: Find)
 
-	\item [Multiple choice] where the user is presented with a set of alternatives (exercise types: Choose, and Match). 
+	\item Multiple choice -- where the user is presented with a set of alternatives (exercise types: Choose, and Match). 
 
-\end{description}
+\end{enumerate}
 
 \subsubsection{Selecting Words to Study}
 
@@ -29,14 +30,11 @@ Since a learner might encounter many words that are not understood, we need to p
 
 % The words good for study are the ones that are either starred by the user, or are important and of quality based on a set of heuristics. 
 
-\begin{description}
+\begin{enumerate}
 
-  \item [Important Words] are the ones which appear frequently in the language. For word frequencies we use frequencies computed based on movie subtitles which have been shown to be highly representative to frequencies in human interacitons \cite{New07-subtitles}. 
+  \item Word Importance. The system prioritizes words based on the frequency with which they appear in the language. For word frequencies we use frequencies computed based on movie subtitles which have been shown to be highly representative to frequencies in human interacitons \cite{New07-subtitles}. 
   
-  \item [Quality Context] we favor words that come with a context which is not too short but not too long. 
+  \item Context Quality. The system favors words that come with a context which is not too short but not too long. 
 
-\end{description}
+\end{enumerate}
 
-\subsection{Study Recommender}
-
-The scheduling algorithm is based on an adaptive, response-time-based scheduling algorithm [was developed] to increase the efficiency of perceptual learning by Mettler et al. \cite{Mettler14-ARTS}. After evaluating several alternative scheduling strategies we settled on the Mettler one since it has been proven to have gains with both familiar, seen items as well as with new, unseen instances and the benefits of adaptive scheduling were present at an immediate test as well as at a delay \cite{Mettler14-ARTS}.
