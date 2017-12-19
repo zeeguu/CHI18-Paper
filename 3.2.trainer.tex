@@ -1,7 +1,7 @@
 %!TEX root=paper.tex
 
 \newpage
-\subsection{Web Vocabulary Trainer}
+\subsection{Practicing Personalized Vocabulary in Context}
 
 % Given the list of words that a user looked up -- and are thus likely to be unknown -- we can generate exercises for them. 
 Given that the translation API captures the context together with every translation, exercises can be personalized for every user based on their past reading by using the original context in which the words have been encountered.
@@ -15,7 +15,7 @@ Figure \ref{fig:exercise_translate} shows such a generated exercise which asks t
   \label{fig:exercise_translate}
 \end{figure}
 
-The system currently implements three other types of vocabulary practice exercises\footnote{Detailed description of the exercise types are elsewhere\cite{Avagyan17a-blocks}}, which can be split into two categories: 
+	The system currently implements three other types of vocabulary practice exercises\footnote{Detailed description of the exercise types are elsewhere\cite{Avagyan17a-blocks}}, which can be split into two categories: 
 \begin{enumerate}
 	
 	\item Free text input -- where the text must be typed in the learned language (exercise type: Find)
@@ -32,7 +32,7 @@ Since a learner might encounter many words that are not understood, we need to p
 
 \begin{enumerate}
 
-  \item Word Importance. The system prioritizes words based on the frequency with which they appear in the language. For word frequencies we use frequencies computed based on movie subtitles which have been shown to be highly representative to frequencies in human interacitons \cite{New07-subtitles}. 
+  \item Word Importance. The system prioritizes words based on the frequency with which they appear in the language.\footnote{For word frequencies we use frequencies computed based on movie subtitles which have been shown to be highly representative to frequencies in human interacitons \cite{New07-subtitles}}. 
   
   \item Context Quality. The system favors words that come with a context which is not too short but not too long. 
 

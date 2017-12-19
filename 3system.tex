@@ -6,19 +6,13 @@
 
 Our long term vision, of an ecosystem where various educational applications, created by different authors, interacting and sharing information in order to maximize the efficiency and enjoyment of the vocabulary learning process is described in more detail elsewhere \cite{Lungu16}. 
 
-Figure \ref{fig:architecture} highlights two types of applications that are relevant for implementing a language textbook: {\bf reader applications} allow the learners to interact with texts in their preferred context (e.g. eBooks, News, Blogs) and {\bf vocabulary trainers} allow the readers to practice vocabulary exercises. 
+Figure \ref{fig:architecture} highlights two types of applications that are relevant for implementing a language textbook: {\bf reader applications} allow the learners to interact with texts in their preferred context (e.g. eBooks, News, Blogs) and {\bf vocabulary trainers} allow the readers to practice vocabulary exercises. It also presents three critical components of the ecosystem with which the applications interact: the learner model, translation service, and the study recommender. Before we convince other system creators to join such an ecosystem, we have decided to build a {\em minimum viable ecosystem} which includes basic implementations of the core components. 
 
 \begin{figure}[h!]
 \centering
   \includegraphics[width=\columnwidth]{figures/zeeguu-architecture.pdf}
   \caption{The architecture of the envisioned software ecosystem}~\label{fig:architecture}
 \end{figure}
-
-\begin{added}
-
-	Besides the applicatins, Figure \ref{fig:architecture} presents three critical components of the ecosystem, which are at the core of the system which can interact with various applications: the learner model, translation service, and the study recommender. We briefly describe each in turn. 
-	
-\end{added}
 
 \subsection{Learner Model}
 
@@ -37,26 +31,31 @@ The dependency of the translation service on multiple third party APIs allows fo
 
 \subsection{Study Recommender}
 
-The scheduling algorithm is based on an adaptive, response-time-based scheduling algorithm [was developed] to increase the efficiency of perceptual learning by Mettler et al. \cite{Mettler14-ARTS}. After evaluating several alternative scheduling strategies we settled on the Mettler one since it has been proven to have gains with both familiar, seen items as well as with new, unseen instances and the benefits of adaptive scheduling were present at an immediate test as well as at a delay \cite{Mettler14-ARTS}.
+There are two types of recommendations that an intelligent language textbook should make: 
+\begin{itemize}
+	\item Interesting and accessible texts to read. The texts should be both interesting and of an appropriate difficulty level to maintain the motivation. The current implementation of the text recommender allows the reader to select given online sources (e.g. news, blogs) which are interesting for them. The difficulty estimation of everytext is done by taking into account the frequency in the target language of all the words in the text. 
+	\item Optimally-timed words to practice. To schedule the words to practice the system uses an adaptive, response-time-based scheduling algorithm [was developed] to increase the efficiency of perceptual learning by Mettler et al. \cite{Mettler14-ARTS}. After evaluating several alternative scheduling strategies we settled on the Mettler one since it has been proven to have gains with both familiar, seen items as well as with new, unseen instances and the benefits of adaptive scheduling were present at an immediate test as well as at a delay \cite{Mettler14-ARTS}.
+\end{itemize}
+
+% The scheduling algorithm is based on 
 
 
-\subsection{Web-Based Reader and Trainer Applications}
+\subsection{A Web-Based Reader and Trainer Platform}
 
 
-Before we convince other application creators to join such an ecosystem, we have decided to build a {\em minimum viable ecosystem} which includes the basic implementations of the core components. 
 
 The system that we present in this paper as a {\em personalized language textbook} is composed of instantiations of the components. We present them in turn in this section, focusing the discussion on three key activities that a user of such an interactive textbook is interested in: 
 
 \begin{enumerate}
 	\item finding texts to read
 	\item reading the found texts
-	\item doing vocabulary exercises
+	\item practicing vocabulary in context
 \end{enumerate}
 
  % interacts with: the reader and the trainer applications. 
 \begin{added}
 	
-	The system presented is implemented as a responsive web application, and thus can be used from a variety of devices. In our experiments it was used from Windows, Android, and iOS devices.
+	The system presented is implemented as a responsive web application, and thus can be used from a variety of devices. We also have implemented a trainer for smartwatch devices. However, in the experiments reported in this paper, it was used from Windows, Android, and iOS devices. 
 
 \end{added}
 
