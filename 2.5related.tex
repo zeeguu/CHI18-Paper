@@ -2,24 +2,81 @@
 \newpage
 \section{Related Work}
 
-Research in Computer Assisted Language Learning (CALL) investigates how to improve the effectiveness and efficiency of language learning while also making it easier and more convenient for both teachers and students to access and use language learning materials\cite{levy2013call}. Recent efforts in CALL have focused on language learning on different platforms, including specifically through the Web
+The domain of computer assisted language learning has a rich history of applied research that aims to improve the effectiveness and efficiency of language learning through helping both teachers and students \cite{levy2013call}. In this discussion we focus on several aspects that we combine in this work, which we argue, have not been combined together before.
 
 
-\subsection{Augmenting Foreign Texts}
-The idea of augmenting texts with translations has been proposed before in various forms. One of the first occasions was in the work of Nerbonne \cite{Nerb99-Assistant} who proposed Glosser -- system, which would provide dictionary information about a given word, including translation, part of speech, declinations, etc. In a follow up study with 22 people they observed users using the system for twenty minutes \cite{Dokter98-UserStudy}. In their work, they focus on individual words. In our work we observed a larger number of learners for a longer period of time, and our tools allow them to translate sequences of words and not only individual words. 
+\subsection{Using the Web as A Source of Language Materials}
+% Web Mining
+
+Multiple authors have observed before that the World Wide Web represents an enormous language database at students fngertips \cite{Fried08-Learner,Hira07-WebCorpora}.
+
+The idea of augmenting texts with translations has been proposed before in various forms. 
+\begin{itemize}
+	\item One of the first occasions was in the work of Nerbonne \cite{Nerb99-Assistant} who proposed Glosser -- system, which would provide dictionary information about a given word, including translation, part of speech, declinations, etc. 
+	In a follow up study with 22 people they observed users using the system for twenty minutes \cite{Dokter98-UserStudy}. In their work, they focus on individual words. In our work we observed a larger number of learners for a longer period of time, and our tools allow them to translate sequences of words and not only individual words. 
+	\item Azab et al. \cite{Azab13-nlp} proposed a system entitled SmartReader which provides interactive annotations of English words for the advanced foreign students who learn English. Pop-ups are displayed above the selected word with information about it. The study introduces and describes the system, however it does not report anything about the way the system is used.
+
+\end{itemize}
 %maybe some conclusion here
 
-Azab et al. \cite{Azab13-nlp} proposed a system entitled SmartReader which provides interactive annotations of English words for the advanced foreign students who learn English. Pop-ups are displayed above the selected word with information about it. The study introduces and describes the system, however it does not report anything about the way the system is used.
+
 
 \subsection{Interactive Texts}
+
+\begin{itemize}
+	\item \cite{DeRidder02-Links} studied the behavior of students reading with hyperlinks -- The results indicate that when reading a text with highlighted hyperlinks, readers are significantly more willing to consult the gloss 
+
+	\item \cite{Yang09-Glosses} multimedia gloss groups noticed and recognized significantly more of the target words than the control group
+
+	\item \cite{Sanko06-Effects} hypertextual input enhancement favourably affects vocabulary learning
+
+	\item \cite{Wible01-Exposure} 
+		- SRP is a stand-alone tool that provides teachers and student search capabilities for supplementary readings online
+		- exploits text retrieval techniques based upon the hypothesis that there is a parallel between text similarity measurement on the one hand and the pedagogical task of providing supplementary readings which offer repeated exposure to new vocabulary
+		- aim is for the SRP to take a target vocabulary item as input and provide as output a set of texts from the corpus that contain tokens of the target vocabulary which resemble the original semantically and of course match it in part of speech.
+
+	\item \cite{Diaz15-Augmented} study of how the users augment the web -- end-users can find in WA the conduit toward “personalization on demand,” making the daily work experience of millions of web users more rewarding. -- one of the use-cases is Google Translate -- 16th most used browser extension... one limitation... not keeping track 
+
+	\item Gymnozilla \cite{Streit05-Browsers} 
+		- Gymn@zilla supports browsing the Internet and a local document repository by dynamically annotating HTML and PDF documents with open dictionaries resources.
+		- Such an approach makes use of Natural Language Processing (NLP) to elaborate authentic documents2
+		- FROM TRUSTY: Similarly, the Gymn@zilla project overlays the L2 Web with text and picture annotations and supports the creation of personal word lists and closure exercises [31] but 
+		-- no user study of the prototype was conducted.
+
+	\item \cite{Horva13-Enriching} 
+	- have already conducted small supervised experiment to evaluate effect of text
+	augmentation of reading speed. The results show that augmented webpage slows
+	reading speed down on average by approximately 7%
+
+
+\end{itemize}
+
+
+FROM Trusty: Their augmentation techniques most often use affordances of the Web such as hyperlinks, pop ups and frames to overlay translations, dictionary definitions, grammatical explanations and cultural information. These annotations have been found to be beneficial to several aspects of language learning \cite{DeRidder02-Links} and improvements in reading comprehension \cite{Sanko06-Effects}.
+
+
+
 In a different direction than the previous work, Trusty and Truong augmented the web in a learners native language with translations of a fixed set of words in the language that they are learning\cite{Trus11web}. They show that in a two month deployment, 18 participants, learned in average 50 new words.
 
 Dasgupta argues that in the context of interactive books, self-contained exercises to be included. \cite{Dasgupta10-Play}
 
 \subsection{Vocabulary Practice Exercises}
+
 The number of systems that can provide vocabulary exercises to the learners is very large with several very popular commercial systems such as Babbel, DuoLingo, RosettaStone, Memrise, etc. Babbel offers 2000 to 3000 words per language, wich is comparable to most Duolingo courses. Rosetta Stone claims that you can reach up to C1 with its advanced course while the system we present here can be used by any learner, no matter how advanced. The main limitation of all these afore-mentioned systems is that the example sentences that one practices with are pre-defined. We aim for personalization. One of the advantages on the other hand, is that predefined example systems is that they can also teach grammar, which is something we do not investigate at the moment.
 
-Spaced repetition systems like Anki are good at drilling vocabulary but they do not take the context of a word into account; even though learning a word in context is more effective \cite{nagy95-context}.
+
+\begin{itemize}
+	\item Spaced repetition systems like Anki are good at drilling vocabulary but they do not take the context of a word into account; even though learning a word in context is more effective \cite{nagy95-context}.
+
+	\item \cite{Dear12-ImplicitAcquisition} Dearman and Truong propose a 'live wallpaper' interface that is always visible to the user when he is using his phone. They also present words in context. 
+
+	\item \cite{Cai15-wait} WaitChatter presents vocabulary exercises while the user awaits IM responses
+
+
+\end{itemize}
+
+
+
 
 \subsection{Personalization}
 
