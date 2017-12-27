@@ -12,9 +12,8 @@ In the text, by Zeeguu we refer to the system described in the
 aforementioned paper.
 
 Legend: 
-Q[n]: Question number n asked by the researcher. 
-Secondary and clarification questions do not get
-a different n subscript
+Q[n]: Main question number n asked by the researcher. Follow up, 
+and clarification questions do not get a different n subscript.
 
 A: The answer provided by the teacher
 
