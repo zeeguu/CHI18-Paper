@@ -1,4 +1,5 @@
 ########################################################################
+
 Transcript of the interview with the teacher of the three classes 
 which used the zeeguu system for one month in June 2017. 
 The details about the experiment that present the context of this 
@@ -9,6 +10,7 @@ is available at: https://github.com/zeeguu-ecosystem/CHI18-Paper/
 Legend: 
 Q: Question asked by the researcher
 A: The answer provided by the teacher
+
 ########################################################################
 
 Q: How was Zeeguu integrated in the classes that you taught?
