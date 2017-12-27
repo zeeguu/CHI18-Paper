@@ -11,7 +11,6 @@ is available at: https://github.com/zeeguu-ecosystem/CHI18-Paper/
 Legend: 
 Q[n]: Main question number n asked by the researcher. Follow up, 
 and clarification questions do not get a different n subscript.
-
 A: The answer provided by the teacher
 
 ########################################################################
