@@ -1,15 +1,12 @@
 ########################################################################
 
 Transcript of the interview with the teacher of the three classes 
-which used the zeeguu system for one month in June 2017.
+which used the Zeeguu system for one month in June 2017.
 
 The details about the experiment that present the context of this 
 interview are present in the paper: As We May Study: Towards the Web 
 as a Personalized Language Textbook. A preprint of the paper
 is available at: https://github.com/zeeguu-ecosystem/CHI18-Paper/
-
-In the text, by Zeeguu we refer to the system described in the 
-aforementioned paper.
 
 Legend: 
 Q[n]: Main question number n asked by the researcher. Follow up, 
