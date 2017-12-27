@@ -8,13 +8,19 @@ interview are present in the paper: As We May Study: Towards the Web
 as a Personalized Language Textbook. A preprint of the paper
 is available at: https://github.com/zeeguu-ecosystem/CHI18-Paper/
 
+In the text, by Zeeguu we refer to the system described in the 
+aforementioned paper.
+
 Legend: 
-Q: Question asked by the researcher
+Q[n]: Question number n asked by the researcher. 
+Secondary and clarification questions do not get
+a different n subscript
+
 A: The answer provided by the teacher
 
 ########################################################################
 
-Q: How was Zeeguu integrated in the classes that you taught?
+Q[1]: How was Zeeguu integrated in the classes that you taught?
 A: I want my students to read the language and furthermore I want them to do
 homework which is personalized so I don't give any assignments. Instead, I give
 out a list of possible activities and they are awarded points for every half
@@ -38,7 +44,7 @@ Q: So this is good also for the long-term not only for the short term
 A: Right. 
 
 
-Q: The way you described it sounds to me like it fits quite well your vision.
+Q[2]: The way you described it sounds to me like it fits quite well your vision.
 Is there something that you would say is still needed?
 A: Yes there is one point. I use the system with 16 year old student 17 year
 olds and 18 year olds students that have chosen French to pass their exams so
@@ -64,7 +70,7 @@ A: Indeed. The exercises they have done and their scores is a kind of
 information that would be very useful for me. 
 
 
-Q: How does Zeeguu fit in the bigger vision that you have for teaching? Is it a
+Q[3]: How does Zeeguu fit in the bigger vision that you have for teaching? Is it a
 useful thing, is it an important one, is it critical?
 A: I think you might call it critical; in my vision a language should be
 learned by students not by studying the language but by using the language.
@@ -74,7 +80,7 @@ choose their work, that they can read what they want, that they can choose the
 topics, makes your system a very important tool in my methodology. 
 
 
-Q: Based on your observations, do you think that it helped that students could
+Q[4]: Based on your observations, do you think that it helped that students could
 choose their topics of reading?
 A: Yes. The number of students uses it a lot some students use it for on time
 to time and some students don't use it. Most of them really love that they can
@@ -82,7 +88,7 @@ choose the subject that they are going to read and it is easy to do you just
 click on the world and you don't need anything else.
 
 
-Q: Given that every one of the students is reading a different text, is there a
+Q[5]: Given that every one of the students is reading a different text, is there a
 danger that every student will develop his little individual vocabulary bubble?
 A: Very good question! In my view this not a problem at all. In magazines, on
 the internet, there are few words that are special in each one of them. The
@@ -106,7 +112,7 @@ first 2 or 3 years you have to have a selection of words that you use with
 them. I would just advise Zeeguu to be used only after two or three years. 
 
 
-Q: Last year you had three classes and two levels that use the system; could
+Q[6]: Last year you had three classes and two levels that use the system; could
 you see any difference? 
 A: There were two levels class 4 and Class 5 but I do not think that when I
 compare those classes it's very easy to see a big difference. 
@@ -116,7 +122,7 @@ A: Yes. I noticed that class 4 did mostly answer anak2 for most of the times
 because it is easier
 
 
-Q: We limited the students to a few sources that we thought were good. Should
+Q[7]: We limited the students to a few sources that we thought were good. Should
 we add more? Do you think that if they had even more choices they have a better
 chance to be motivated?
 A: I think so. I think it's important that we look for other sources that might
@@ -132,7 +138,7 @@ can use that as an input when we are looking for more sources. I will share
 that with you. 
 
 
-Q: Going back to something that you said everything earlier.  if the system
+Q[8]: Going back to something that you said everything earlier. If the system
 could be able to measure The students spend on the system,  would you still ask
 them for the reports of what they did or would the information we give you
 being off. 
@@ -160,7 +166,7 @@ often. They might think I need 3 more points for French let's pretend we have
 been using your system for 2 hours and I get to Points. 
 
 
-Q: One thing that we're trying to improve in Zeeguu is coming up with better
+Q[9]: One thing that we're trying to improve in Zeeguu is coming up with better
 translations. However, this is hard since translation algorithms are not
 perfect. By analyzing the student activity we can see that for one in every six
 translations, the readers click on a word to obtain alternative translations
@@ -183,7 +189,7 @@ Q: That is what we are offering you now...
 A: Yes definitely but it’s good.
 
 
-Q: What do you think about other teachers do you think that you're more open do
+Q[10]: What do you think about other teachers do you think that you're more open do
 using such software then the average teacher? Should we expect other teachers
 to adopt a system like this?
 A: I think I am a teacher who is a little bit ahead but I think there will be a
@@ -192,7 +198,7 @@ will know more next year, after I will present the way I work with the system
 at a teacher’s conference. 
 
 
-Q: If you had to summarize what worked, what didn't, and what should be
+Q[11]: If you had to summarize what worked, what didn't, and what should be
 improved?
 A: I think all worked well.  I would like to have more sources we already
 discussed that.  I think at this time  I would want to have more insight in
