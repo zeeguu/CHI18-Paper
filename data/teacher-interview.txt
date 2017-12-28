@@ -17,47 +17,47 @@ A: The answer provided by the teacher
 
 Q[1]: How was Zeeguu integrated in the classes that you taught?
 A: I want my students to read the language and furthermore I want them to do
-homework which is personalized so I don't give any assignments. Instead, I give
+homework which is personalized, so I don't give any assignments. Instead, I give
 out a list of possible activities and they are awarded points for every half
-hour of work in a certain skill so this is where Zeeguu comes in because Zeeguu
-fits my methodology because students can choose what they want to read and do
-the exercises.  it is fully integrated in the system of work they do at home
-which is called practical activities. we have activities for all the 4 skills
+hour of work in a certain skill. This is where Zeeguu comes into the picture 
+because Zeeguu fits my methodology: students can choose what they want to read and do
+the exercises.  It is fully integrated in the system of work they do at home
+which is called practical activities. We have activities for all the 4 skills
 but your system is used primarily for the reading skills and of course the
 development of their vocabulary
 
 Q: It is the development of vocabulary another skill? Or does it fall under the
 reading skill?
-A: It's not a skill it's a building building block you need words you need
-grammar.  for all four skills you need vocabulary.  usually I made them learn
+A: It's not a skill it's a building building block; you need words, you need
+grammar.  For all the four skills you need vocabulary. Usually I made them learn
 vocabulary by heart for a test but this has proven to be rather useless because
-it only improves their short-term memory.  the good thing about your system is
-that they encounter a lot of words a lot of times and also you have spaced
-repetition and that is very good for learning vocabulary.
+it only improves their short-term memory.  The good thing about your system is
+that they encounter a lot of words a lot of times and the spaced repetition 
+exercises are also very good for learning vocabulary.
 
-Q: So this is good also for the long-term not only for the short term
+Q: So this is good also for the long-term not only for the short term.
 A: Right. 
 
 
 Q[2]: The way you described it sounds to me like it fits quite well your vision.
 Is there something that you would say is still needed?
-A: Yes there is one point. I use the system with 16 year old student 17 year
-olds and 18 year olds students that have chosen French to pass their exams so
-they are fairly motivated. Nevertheless, students at that age, young adults,
+A: Yes there is one point. I use the system with sixteen-, seventeen-, and 
+eighteen- year old students that have chosen French to pass their exams so
+they are fairly motivated. Nevertheless, at that age, young adults, still 
 choose things like watching a movie and listening to music rather than doing
 their homework. I need something that makes it possible for me to check whether
 they have really worked with your system or not. Because if I don't check the
 quality of their activity and the time that they spend, students tend to not
-work as much as they should. I need something to force them to work and when I
-tell them that I verify the time and the quality of their activity. That makes
+work as much as they should. I need something to force them to work. And when I
+tell them that I verify the time and the quality of their activity, that makes
 them work. At the moment I have insight into their activity by seeing the text
-that they red and the words that they searched and translated.  I need
-something more to be able to verify the quality of their work. 
+that they read and the words that they translated.  I need something more to be 
+able to verify the quality of their work. 
 
 Q: Maybe seeing the time that they spent?
 A: Time could be one thing. And a number of measures that can tell me something
 about the quality of their work. I don't have the illusion that I can control
-everything, but I can get a long way. 
+everything, but I think that with some more information I can get a long way. 
 
 Q: Another measure for the quantity of their work time could be the history of
 the exercises they did?
@@ -65,11 +65,11 @@ A: Indeed. The exercises they have done and their scores is a kind of
 information that would be very useful for me. 
 
 
-Q[3]: How does Zeeguu fit in the bigger vision that you have for teaching? Is it a
-useful thing, is it an important one, is it critical?
+Q[3]: How does Zeeguu fit in the bigger vision that you have for teaching? Is it 
+useful, is it important, is it critical?
 A: I think you might call it critical; in my vision a language should be
-learned by students not by studying the language but by using the language.
-Secondly, students should be highly motivated in order for the learning process
+learned by students not by studying the rules but by using the language.
+Students should be highly motivated in order for the learning process
 to function. Motivation is a very very important factor. The fact that they can
 choose their work, that they can read what they want, that they can choose the
 topics, makes your system a very important tool in my methodology. 
@@ -77,34 +77,33 @@ topics, makes your system a very important tool in my methodology.
 
 Q[4]: Based on your observations, do you think that it helped that students could
 choose their topics of reading?
-A: Yes. The number of students uses it a lot some students use it for on time
-to time and some students don't use it. Most of them really love that they can
-choose the subject that they are going to read and it is easy to do you just
-click on the world and you don't need anything else.
+A: Yes. A number of students used the system a lot, some students use it from time
+to time, and some students don't use it. However, most of them really love that they 
+can choose the subject that they are going to read and reading is easy: you just
+click on a word and you don't need anything else.
 
 
 Q[5]: Given that every one of the students is reading a different text, is there a
 danger that every student will develop his little individual vocabulary bubble?
 A: Very good question! In my view this not a problem at all. In magazines, on
 the internet, there are few words that are special in each one of them. The
-most frequent vocabulary they have. They will extend this basic vocabulary with
-their own text. My students have been studying French for 3 years the most
-frequent vocabulary they already have. I am an experienced teacher and language
-scientist as well; I know that when you have this base vocabulary and you go
-beyond it most of the world that just in the text are still the same, a small
-proportion of the words the people use. If you look at the French language,
-there are 25’000 words but when you're reading an article, you only encounter
-very few of those 25’000 words. When students read different texts, I think in
-the end 75% of the words that they will learn will be the same. 
+most frequent vocabulary they all share. My students have been studying French 
+for at least 3 years and the most frequent vocabulary they already have. 
+I am an experienced teacher and language scientist as well and I know that 
+when you have this base vocabulary and you go beyond it most of the words
+in the text are still the same -- a small proportion of the words in the language.
+If you look at the French language, there are 25’000 words but when you're reading 
+an article, you only encounter very few of those. When students read different 
+texts, I think in the end 75% of the words that they will learn will be the same. 
 
 Q: Indeed it is known that the distribution of words in written texts is very
-skewed and the rare words appear very rarely in any given text. 
+skewed and rare words appear seldom in any given text. 
 A: I would like to add that for students starting at zero I would not advise
 this system. When they start learning a language because, they don't know a lot
-of words and they have to communicate, my methodology from day one is it they
-have to speak French, and I only speak French with the most frequent words
-first 2 or 3 years you have to have a selection of words that you use with
-them. I would just advise Zeeguu to be used only after two or three years. 
+of words and they have to communicate. My methodology from day one is that they
+have to speak French and I only speak French using the most frequent words. For
+the first two or three years you have to have a selection of words that you use 
+with them. I would just advise Zeeguu to be used only after two or three years. 
 
 
 Q[6]: Last year you had three classes and two levels that use the system; could
@@ -122,43 +121,39 @@ we add more? Do you think that if they had even more choices they have a better
 chance to be motivated?
 A: I think so. I think it's important that we look for other sources that might
 motivate students because for example the sources we had were mostly very
-general. There was only one source with sports and the number of students
-mostly boys found this to be very interesting because they were very
-supportive.  maybe we need more sources for other specific subjects like
-sports. This is what I intend to do for the next months. 
+general. There was only one source with sports and a number of students,
+mostly boys, found this to be very interesting because they were very
+sportive themselves. Maybe we need more similar sources for specific subjects. 
+This is what I intend to do for the next months. 
 
 Q:  We asked the students before using the system to tell us what kind of
-topics they would want to read.  and there are some answers there.  so maybe we
+topics they would want to read. And there are some answers there. So maybe we
 can use that as an input when we are looking for more sources. I will share
 that with you. 
 
 
 Q[8]: Going back to something that you said everything earlier. If the system
-could be able to measure The students spend on the system,  would you still ask
+could be able to measure the time students spend on the system, would you still ask
 them for the reports of what they did or would the information we give you
-being off. 
+be sufficient?
 
 A: I imagine that measuring the time spent reading cannot be safely measured by
-a computer because if they have this file open and they go away for 1 hour and
-they come back and they say that they have been reading for all the time we can
-The time
+a computer... and I would not want that they have a file open and they go away 
+for 1 hour and they come back they can say that they have been reading for all 
+the time.
 
-Q: I agree with you.  we have a similar problem when we run group project with
-our students and we asked them to record the time they spend but also we're
-looking what they did in the time.  if they declare that they spent awake and
-they wrote 10 lines of program then we declare everything to be sufficient.
-Maybe if we combine the time declared with the activity that they did maybe
-that would be sufficient information.  also because this seems to be with the
-reports.
+Q: Maybe if we combine the time declared with the activity that they did
+that would be sufficient information. Also because this seems to be same with 
+the reports.
 
-A: Yes. For every half an hour.  so they have to report to me.  and they really
-have to show that they word for half an hour. And if that was 25 minutes or 35
-minutes I don't really care.  it's impossible to be that precise I just want to
-avoid and to make sure that they don't get away with not reading at all and
-have me think that they have been reading for half an hour.  because if I made
-it possible that they lie to me about the time that invite them to lie more
-often. They might think I need 3 more points for French let's pretend we have
-been using your system for 2 hours and I get to Points. 
+A: Yes. For every half an hour they have to report to me.  And they really
+have to show that they worked for half an hour. And if that was 25 minutes or 35
+minutes I don't really care.  It's impossible to be that precise. I just want to
+to make sure that they don't get away with not reading at all and pretending that
+they have been reading for half an hour. Because if I make it possible that they 
+lie to me about the time, I invite them to lie more often. They might think I 
+need three more points for French, so let me pretend I have been using the 
+system for two hours and I get to psoints. 
 
 
 Q[9]: One thing that we're trying to improve in Zeeguu is coming up with better
@@ -167,43 +162,43 @@ perfect. By analyzing the student activity we can see that for one in every six
 translations, the readers click on a word to obtain alternative translations
 because the original was not good enough. Thus one in six translations is not
 very precise. What do you think about the fact that the translations are still
-not perfect?  is it acceptable? 
+not perfect?  Is it acceptable? 
 A:  Yes. Definitely. In fact it is more than acceptable; in my view when you
 give students a correct translation they don't think about what they're doing
 there's no activity in their brains and they keep reading on. I want them to be
 very actively engaged with the texts that they are reading. If 98% of the
-translations are correct they only click on the world and they continue reading
+translations are correct they only click on the word and they continue reading
 but when they look at the word and have to think about whether is the right
-translation or not, they are more active. You know the result maybe that they
-don’t get the right translation But that is a risk I'm willing to take because
+translation or not, they are more active. You know, the result may be that they
+don’t get the right translation, but that is a risk I'm willing to take because
 I know that most of the time they end up with a translation and they have to be
-sure that it's the right translation so their focus must be higher.  So I would
+sure that it's the right translation so their focus must be higher. So I would
 prefer an imperfect translation machine.
 
 Q: That is what we are offering you now...
 A: Yes definitely but it’s good.
 
 
-Q[10]: What do you think about other teachers do you think that you're more open do
+Q[10]: What do you think about other teachers do you think that you're more open to
 using such software then the average teacher? Should we expect other teachers
 to adopt a system like this?
-A: I think I am a teacher who is a little bit ahead but I think there will be a
+A: I think I am a teacher who is a little bit ahead, but I think there will be a
 lot of followers.  I think this system might be a success for many teachers. I
 will know more next year, after I will present the way I work with the system
-at a teacher’s conference. 
+at a teacher's conference. 
 
 
 Q[11]: If you had to summarize what worked, what didn't, and what should be
 improved?
-A: I think all worked well.  I would like to have more sources we already
-discussed that.  I think at this time  I would want to have more insight in
-what my students do.  they can still make me believe that they were working a
-lot during an hour, when they only worked ten minutes. To believe them under
-blue eyes…  they are very nice students I think there are not a lot of them for
-abuse me  and lie to me but I do not want to create a possibility.  and I think
-that is a problem with other teachers because they will probably say to me okay
-that's a nice system,  but how do I make sure that students do the work that
-they are supposed to? 
+A: I think all worked well. I would like to have more sources; we already
+discussed that. I think at this time I would want to have more insight in
+what my students do. They can still make me believe that they were working a
+lot during an hour, when they only worked ten minutes. To believe them based
+on their blue eyes... they are very nice students and I think there are not a 
+lot of them who would try to lie to me but I do not want to create a possibility.  
+I think that this would be a problem with other teachers because they will probably 
+say, okay that's a nice system, but how do I make sure that students do the work 
+that they are supposed to? 
 
 
 
