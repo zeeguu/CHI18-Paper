@@ -21,7 +21,7 @@ by being designed for a average learner they are not exciting for any individual
 % The fact that textbooks do not work that well is illustrated also by the fact that some of the teachers of foreign languages whom we have spoken to, do not even use a textbook anymore, but instead find articles that they deem interesting online and share them with their students. Note that this could be a step in the right direction, since the teacher has a better understanding of the interests of the class. However, in the end, the student is still not reading what they are passionate about, but rather, what the teacher deems relevant. 
 
 Given the vast amounts of multi-language content available and added daily on the Internet (e.g. blogs, news articles, eBooks) it is likely that every student can find materials that are {\em personally interesting} for them in almost any language they are learning. 
-This would fit a general trend where old systems designed for the average user are being replaced with personalized attention across domains: in medicine\footnote{The nascent discipline of {\em personalized medicine} suggests that analysis of the genetic makeup of an individual may guide health care decisions far more precisely than big group studies do}, computer security,  web design \cite{Reinecke13-CulturalAdaptation}, mathematical education \cite{Polozov15-AdaptableMath}. 
+This would fit a general trend where old systems designed for the average user are being replaced with personalized attention across domains: in medicine\footnote{The nascent discipline of {\em personalized medicine} suggests that analysis of the genetic makeup of an individual may guide health care decisions far more precisely than big group studies do}, computer security,  web design \cite{Reinecke13-CulturalAdaptation}, or mathematical education \cite{Polozov15-AdaptableMath}. 
 % 
 % 
 % The texts that one can read are limited to generic topics, which must appeal to the entire audience. Unfortunately a text that is good enough for everybody is likely not exciting for anybody. This limits the amount of reading that learners will do, and thus, limits their learning.
@@ -33,7 +33,7 @@ This would fit a general trend where old systems designed for the average user a
 % 
 
 
-Although individual components have been proposed before (e.g. browser extensions that ease translating unknown words when used from the desktop computer, personalized exercises, etc.) in-the-wild studies of an integrated system have not been reported yet. In this paper we introduce and evaluate a system that combines multiple individual components into an integrated system that functions as a {\em personalized textbook}. Our main contribution in this paper is thus implementing and evaluating a system which combines two main components: 
+Although individual components have been proposed before (e.g. browser extensions that ease translating unknown words when used from the desktop computer, personalized exercises, etc.) in-the-wild studies of an integrated system have not been reported. In this paper we introduce and evaluate a system that combines multiple individual components into an integrated system that functions as a {\em personalized textbook}. Our main contribution is in building and evaluating a system which integrates multiple components: 
 
 \begin{enumerate}
 	
@@ -42,7 +42,7 @@ Although individual components have been proposed before (e.g. browser extension
   }.
   % Any interaction more complicated than this (e.g. opening an external dictionary) will interrupt the flow of the student.
 
-  \item {\bf Integration between vocabulary practice and reading platforms.} Instead of manually adding words to an external vocabulary practice system, the most relevant unknown words encountered in the readings are automatically scheduled for practice, possibly with the original context. 
+  \item {\bf Integration between vocabulary practice and reading history.} Instead of manually adding words to an external vocabulary practice system, the most relevant unknown words encountered in the readings are automatically scheduled for practice, when possible in the context of the original text, since learning a word in context is more effective \cite{nagy95-context}.
   % TODO: on both mobile and desktop platforms
 
 \end{enumerate}

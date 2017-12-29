@@ -13,7 +13,7 @@ Thus, the idea of augmenting texts with translations has been proposed before in
 
 \begin{itemize}
 
-	\item One of the first occasions was in the work of Nerbonne \cite{Nerb99-Assistant} who proposed Glosser -- system, which would provide dictionary information about a given word, including translation, part of speech, declinations, etc. 
+	\item One of the first occasions was in the work of Nerbonne \cite{Nerb99-Assistant} who proposed Glosser -- a system which would provide dictionary information about a given word including translation, part of speech, declinations, etc. 
 	In a follow up study with 22 people they observed users using the system for twenty minutes \cite{Dokter98-UserStudy}. 
 	In their work, they focus on individual words. 
 	In our work we observed a larger number of learners for a longer period of time.
@@ -24,11 +24,14 @@ Thus, the idea of augmenting texts with translations has been proposed before in
 	Pop-ups are displayed above the selected word with information about it. 
 	The study introduces and describes the system, however it does not report anything about the way the system is used.
 
-	\item \cite{Wible01-Exposure} introduce SRP -- a stand-alone tool that provides teachers and students with search capabilities for supplementary readings online.
+	\item Wible et al. \cite{Wible01-Exposure} introduce SRP -- a stand-alone tool that provides teachers and students with search capabilities for supplementary readings online.
 	The tool exploits text retrieval techniques and is based on the hypothesis that there is a parallel between text similarity measurement on the one hand and the pedagogical task of providing supplementary readings which offer repeated exposure to new vocabulary.
 	% The aim of SRP is to take a target vocabulary item as input and provide as output a set of texts from the corpus that contain tokens of the target vocabulary which resemble the original semantically and of course match it in part of speech.
+	However, the system is presented without any evaluation with users.
 
-	\item \cite{Streit05-Browsers} argued fora a system that would support browsing the Internet and a local document repository by dynamically annotating HTML and PDF documents with open dictionaries resources. A word is annotated with translations and pictures. It argues for the creation of personal word lists and exdrcises. But there is no study of the system being reported. 
+	\item Streiter et al. \cite{Streit05-Browsers} argued for a a system that would support browsing the Internet and a local document repository by dynamically annotating HTML and PDF documents with open dictionaries resources. A word is annotated with translations and pictures. It argues for the creation of personal word lists and exdrcises. But there is no report of the system being evaluated with users. 
+
+	\item Trusty and Truong augmented the web in a learners native language with translations of a fixed set of words in the language that they are learning\cite{Trus11web}. They show that in a two month deployment, 18 participants, learned in average 50 new words.
 
 \end{itemize}
 
@@ -39,39 +42,39 @@ Augmenting foreign texts with annotations in the form of pop-ups, and overlays, 
 
 
 \begin{itemize}
-	\item \cite{DeRidder02-Links} studied the behavior of students reading with hyperlinks.
-	The results indicate that when reading a text with highlighted hyperlinks, readers are significantly more willing to consult the gloss 
-
-	\item \cite{Yang09-Glosses} showed that multimedia gloss groups noticed and recognized significantly more of the target words than the control group
-
-	\item \cite{Sanko06-Effects} showed that hypertextual input enhancement favourably affects vocabulary learning
-
-	\item \cite{Diaz15-Augmented} did a study of how the users augment the web browsers with extensions in order to ``personalize on demant'' their browsing experience. Based on millions of web users they saw that Google Translate was the 16th most used browser extension. Limitations of Translate... 
+	\item DeRidder \cite{DeRidder02-Links} studied the behavior of students reading with hyperlinks. The results indicate that when reading a text with highlighted hyperlinks, readers are significantly more willing to consult the gloss. Sanko \cite{Sanko06-Effects} showed that hypertextual input enhancement favourably affects vocabulary learning.
 
 
-	\item \cite{Horva13-Enriching} 
-	- have already conducted small supervised experiment to evaluate effect of text
+	\item Yang showed that multimedia gloss groups are useful in retention: they noticed that users using multimedia glosses retained and recognized significantly more of the target words than the control group \cite{Yang09-Glosses}.
+
+
+	\item D\'iaz \cite{Diaz15-Augmented} did a study of how the users augment web browsers with extensions in order to ``personalize on demand'' their browsing experience. Based on millions of web users they saw that Google Translate was the 16th most used browser extension.
+
+
+	\item Horv\'ath conducted a small supervised experiment to evaluate effect of text
 	augmentation of reading speed. The results show that augmented webpage slows
-	reading speed down on average by approximately 7%
+	reading speed down on average by approximately 7\%. \cite{Horva13-Enriching} 
 
 
 \end{itemize}
 
-Trusty and Truong augmented the web in a learners native language with translations of a fixed set of words in the language that they are learning\cite{Trus11web}. They show that in a two month deployment, 18 participants, learned in average 50 new words.
 
 
-\subsection{Vocabulary Practice Exercises}
+\subsection{Vocabulary Practice}
+
+The number of systems that can provide vocabulary exercises to the learners is very large with several very popular commercial systems such as Babbel, DuoLingo, RosettaStone, Memrise, etc. being mainly focused on beginners and early intermediates. 
+
+Most of the systems personalize the exercises based on the learning progress of the users but not the content. Contentwise, these systems have predefined content, or no content at all (e.g. Anki, Memrise) and the user is supposed to manually punch in the content. 
 
 Dasgupta argues that in the context of interactive books, self-contained exercises to be included \cite{Dasgupta10-Play}. Also studies show that learning a word in context is more effective \cite{nagy95-context}.
 
 
-The number of systems that can provide vocabulary exercises to the learners is very large with several very popular commercial systems such as Babbel, DuoLingo, RosettaStone, Memrise, etc. 
-Babbel and DuoLingo offer 2000 to 3000 words per language. 
-Rosetta Stone claims that one can reach past B2 with their advanced course. 
-Almost all these previous systems are targeted at the beginners and intermediates.
-The system we present here can be used by any learner, no matter how advanced. 
 
-Most of the systems personalize the exercises based on the learning progress of the users but not the content. Contentwise, these systems have predefined content, or no content at all (e.g. Anki, Memrise) and the user is supposed to manually punch in the content. 
+% Babbel and DuoLingo offer 2000 to 3000 words per language. 
+% Rosetta Stone claims that one can reach past B2 with their advanced course. 
+% Almost all these previous systems are targeted at the beginners and intermediates.
+% The system we present here can be used by any learner, no matter how advanced. 
+
 
 % The main limitation of all these afore-mentioned systems is that the example sentences that one practices with are pre-defined. 
 % We aim for personalization.
@@ -82,9 +85,9 @@ Recently, creative applications of vocabulary exercises:
 
 \begin{itemize}
 
-	\item \cite{Dear12-ImplicitAcquisition} Dearman and Truong propose a 'live wallpaper' interface that is always visible to the user when he is using his phone. They also present words in context. 
+	\item Dearman and Truong propose a 'live wallpaper' interface that is always visible to the user when he is using his phone \cite{Dear12-ImplicitAcquisition}. They also present words in context. 
 
-	\item \cite{Cai15-wait} WaitChatter presents vocabulary exercises while the user awaits IM responses
+	\item WaitChatter takes advantage of micro-learning opportunities and presents vocabulary exercises while the user awaits IM responses \cite{Cai15-wait}.
 
 \end{itemize}
 
