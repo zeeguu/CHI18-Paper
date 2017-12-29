@@ -33,21 +33,24 @@ This would fit a general trend where old systems designed for the average user a
 % 
 
 
-Although individual components have been proposed before (e.g. browser extensions that ease translating unknown words when used from the desktop computer, personalized exercises, text difficulty estimators, etc.) in-the-wild studies of an integrated system have not been reported yet. In this paper we introduce and evaluate a system that combines multiple individual components into an integrated system that functions as a {\em personalized textbook}. The system we present combines: 
+Although individual components have been proposed before (e.g. browser extensions that ease translating unknown words when used from the desktop computer, personalized exercises, etc.) in-the-wild studies of an integrated system have not been reported yet. In this paper we introduce and evaluate a system that combines multiple individual components into an integrated system that functions as a {\em personalized textbook}. Our main contribution in this paper is thus implementing and evaluating a system which combines two main components: 
 
 \begin{enumerate}
 	
-  \item {\bf Reading comprehension support for texts that are interesting to the user on both desktop and mobile devices}. If ideal comprehension support should work {\em ``without requiring even a single click''} \cite{Proszeky02-Comprehension}, the next best thing is one-click (or one-touch) support. This is combined with a system for estimating text difficulty that allows the learner to choose articles that are within their capabilities\footnote{This to address the problem of a learner chosing an article randomly from a website and discovering that it is too difficult and giving up. E.g., the german articles in the  daily {\em Neue Z\"uricher Zeitung} have a very high degree of difficulty variability: some could be read by beginners while many would be too difficult for intermediates.}.
+  \item {\bf Reading comprehension support on both desktop and mobile devices for texts that are interesting to the user.} If ideal comprehension support should work {\em ``without requiring even a single click''} \cite{Proszeky02-Comprehension}, the next best thing is one-click (or one-touch) support. This is combined with a system for estimating text difficulty that allows the learner to choose articles that are within their capabilities\footnote{This to address the problem of a learner chosing an article randomly from a website and discovering that it is too difficult and giving up. 
+  % E.g. The articles in the {\em Neue Z\"uricher Zeitung} have a very high degree of difficulty variability: some can be read by beginners and some are be too difficult for intermediates.
+  }.
   % Any interaction more complicated than this (e.g. opening an external dictionary) will interrupt the flow of the student.
 
-  \item {\bf Integration between vocabulary practice and reading platforms.} Instead of manually adding words to an external vocabulary practice system, the most important unknown words encountered in the readings are automatically scheduled for practice, possibly with the original context.  
-  
-  % \item {\bf A system for estimating text difficulty such that a learner can choose articles matching his capability} not only their interests. 
-  
+  \item {\bf Integration between vocabulary practice and reading platforms.} Instead of manually adding words to an external vocabulary practice system, the most relevant unknown words encountered in the readings are automatically scheduled for practice, possibly with the original context. 
+  % TODO: on both mobile and desktop platforms
+
 \end{enumerate}
 
+To evaluate the usefulness and usability of such a system we deploy it with three classes of French learning students for one month. We analyze their usage of the system, their feedback, and the feedback of their teacher.
 
-In this paper we propose a system that illustrates how the goal of using the web as the source for a personalized language textbook can be achieved.
+% In the remainder of the paper we discuss the related work, present our system, present an exploratory analysis of the usage of the system in an in-the-wild sutdy with three higschool classes for one month. 
+ % paper we propose a system that illustrates how the goal of using the web as the source for a personalized language textbook can be achieved.
 
 % In this paper we are focusing our attention on a subset of education - 
 
