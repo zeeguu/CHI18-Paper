@@ -1,5 +1,5 @@
 %!TEX root=paper.tex
-\newpage
+% \newpage
 \section{Related Work}
 
 The domain of computer assisted language learning has a rich history of applied research that aims to improve the effectiveness and efficiency of language learning through helping both teachers and students \cite{levy2013call}. In this discussion we focus on several aspects that we combine in this work, which we argue, have not been combined together before.
@@ -64,7 +64,7 @@ Augmenting foreign texts with annotations in the form of pop-ups, and overlays, 
 
 The number of systems that can provide vocabulary exercises to the learners is very large with several very popular commercial systems such as Babbel, DuoLingo, RosettaStone, Memrise, etc. being mainly focused on beginners and early intermediates. 
 
-Most of the systems personalize the exercises based on the learning progress of the users but not the content. Contentwise, these systems have predefined content, or no content at all (e.g. Anki, Memrise) and the user is supposed to manually punch in the content. 
+Most of the systems personalize the exercises based on the learning progress of the users. However, contentwise, these systems have predefined material, or no content at all (e.g. Anki, Memrise) and the user is supposed to manually punch in the content. One particular limitation of some of the systems is that they only work on the desktop. 
 
 Dasgupta argues that in the context of interactive books, self-contained exercises to be included \cite{Dasgupta10-Play}. Also studies show that learning a word in context is more effective \cite{nagy95-context}.
 
@@ -80,16 +80,19 @@ Dasgupta argues that in the context of interactive books, self-contained exercis
 % We aim for personalization.
 % One of the advantages on the other hand, is that predefined example systems is that they can also teach grammar, which is something we do not investigate at the moment.
 
-Recently, creative applications of vocabulary exercises:
+Recently, creative applications of vocabulary exercises take advantage of micr-learning opportunities to support the vocabulary improvement of busy learners:
  % have been proposed in the context of micro-learning systems: 
 
 \begin{itemize}
 
-	\item Dearman and Truong propose a 'live wallpaper' interface that is always visible to the user when he is using his phone \cite{Dear12-ImplicitAcquisition}. They also present words in context. 
+	\item Dearman and Truong introduce a 'live wallpaper' interface always visible to the user when he is using his phone \cite{Dear12-ImplicitAcquisition}. 
+	% They also present words in context. 
 
-	\item WaitChatter takes advantage of micro-learning opportunities and presents vocabulary exercises while the user awaits IM responses \cite{Cai15-wait}.
+	\item Cai introduces WaitChatter providing vocabulary exercises while the user awaits instant messaging responses \cite{Cai15-wait}.
 
 \end{itemize}
+
+The relationship between these micro-learning systems and our work can be symbiotic since micro-learning opportunities can be generated based on past readings of the learner. In fact, we have implemented ourselves such a system in the context of a watchface \cite{Nien16-time}. which, is however, not discussed here.
 
 
 
