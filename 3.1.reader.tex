@@ -8,7 +8,7 @@
   
 % The Web Article Reader allows the learners to subscribe to various sources of articles (e.g. news, blogs) and provides a facile interaction for reading and translating unknown words. 
 % It consists of several components:
-\newpage
+
 \subsection{Finding Personally Interesting and Accessible Texts}
 % personally relevant vs. interesting... relevant can mean both interesting and not too difficult. 
 % \ml{make sure that we use source consistently in the text; not feed for example.}
@@ -55,7 +55,7 @@ To make reading as facile as possible, the reader is optimized for the most freq
 
 \begin{figure}[h!]
 \centering
-  \includegraphics[width=0.8\columnwidth]{figures/translated_word}
+  \includegraphics[width=0.7\columnwidth]{figures/translated_word}
   \caption{A translated word is inserted after the tapped word.}~\label{fig:translated_word}
 \end{figure}
 
@@ -70,14 +70,14 @@ Two other alternatives that we explored and eventually dropped (for each had dis
 \end{enumerate}
 
 
-\subsubsection{Multi-Word Expressions}
+\subsubsection{Translating Multi-Word Expressions}
 
 The user can chain a few consecutive words into a single translation by simply tapping adjacent words which are then automatically merged in a translation bubble (Figure \ref{fig:translation_extension}). This is useful for collocations and in cases where by expanding the translated set of words the precision of the translation increases. 
 
     \begin{figure}[h!]
     \centering
-      \includegraphics[width=0.8\columnwidth]{figures/translated_words1}
-      \includegraphics[width=0.8\columnwidth]{figures/translated_words2}
+      \includegraphics[width=0.7\columnwidth]{figures/translated_words1}
+      \includegraphics[width=0.7\columnwidth]{figures/translated_words2}
       \caption{When adjacent words are tapped the translation bubble is extended accordingly}~\label{fig:translation_extension}
     \end{figure}
 
@@ -86,13 +86,13 @@ This minimalistic interaction model serves a double purpose - it enables and eas
 One of the limitations of this interaction is that it is not clear (at least at the moment) how to expand it for the situations in which expressions are present that are composed of words which are not adjacent (e.g. particle verbs in German and Dutch).
 
 
-\subsubsection{Compensating for the Limits of Machine Translations}
+\subsubsection{Compensating for the Limits of Machine Translation}
 Due to the limitations of machine translation multiple translations might be possible in a given context. In such a case the system will insert the most likely alternative as described earlier right after the selected text, but it will allow the reader to discover alternatives. With a click on the translation, a drop-down menu appears in which alternatives are presented. Figure \ref{fig:registrations} shows that besides the predefined alternatives the learner can provide their own translation via an input box (the third line, ``took place'' is typed in by the learner in the figure). 
 
 
 \begin{figure}[h!]
 \centering
-  \includegraphics[width=\columnwidth]{figures/translation_alter_menu}
+  \includegraphics[width=0.7\columnwidth]{figures/translation_alter_menu}
   \caption{A translated word is inserted after the tapped word.}~\label{fig:registrations}
 \end{figure}
 

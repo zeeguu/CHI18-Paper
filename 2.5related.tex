@@ -5,27 +5,20 @@
 The domain of computer assisted language learning has a rich history of applied research that aims to improve the effectiveness and efficiency of language learning through helping both teachers and students \cite{levy2013call}. In this discussion we focus on several aspects that we combine in this work, which we argue, have not been combined together before.
 
 
-\subsection{Using the Web as A Source of Language Materials}
+\subsection{The Web as A Source of Content}
 % Web Mining
 
 Multiple authors have observed before that the World Wide Web represents an enormous language database at the fingertips of the students \cite{Fried08-Learner,Hira07-WebCorpora}. 
 Thus, the idea of augmenting texts with translations has been proposed before in various forms: 
 
 \begin{itemize}
+	\item D\'iaz \cite{Diaz15-Augmented} did a study of how the users augment web browsers with extensions in order to ``personalize on demand'' their browsing experience. Based on millions of web users they saw that Google Translate was the 16th most used browser extension.
 
-	\item One of the first occasions was in the work of Nerbonne \cite{Nerb99-Assistant} who proposed Glosser -- a system which would provide dictionary information about a given word including translation, part of speech, declinations, etc. 
-	In a follow up study with 22 people they observed users using the system for twenty minutes \cite{Dokter98-UserStudy}. 
-	In their work, they focus on individual words. 
-	In our work we observed a larger number of learners for a longer period of time.
-	% TODO: verify this!
-	In their study the words were previously annotated; our tools allow learners to translate sequences of words and not only individual words. 
-
-	\item Azab et al. \cite{Azab13-nlp} proposed a system entitled SmartReader which provides interactive annotations of English words for the advanced foreign students who learn English. 
-	Pop-ups are displayed above the selected word with information about it. 
-	The study introduces and describes the system, however it does not report anything about the way the system is used.
 
 	\item Wible et al. \cite{Wible01-Exposure} introduce SRP -- a stand-alone tool that provides teachers and students with search capabilities for supplementary readings online.
-	The tool exploits text retrieval techniques and is based on the hypothesis that there is a parallel between text similarity measurement on the one hand and the pedagogical task of providing supplementary readings which offer repeated exposure to new vocabulary.
+	The tool 
+	% exploits text retrieval techniques and 
+	is based on the hypothesis that there is a parallel between text similarity measurement on the one hand and the pedagogical task of providing supplementary readings which offer repeated exposure to new vocabulary.
 	% The aim of SRP is to take a target vocabulary item as input and provide as output a set of texts from the corpus that contain tokens of the target vocabulary which resemble the original semantically and of course match it in part of speech.
 	However, the system is presented without any evaluation with users.
 
@@ -36,19 +29,35 @@ Thus, the idea of augmenting texts with translations has been proposed before in
 \end{itemize}
 
 
-\subsection{Interactive Texts}
+\subsection{Interacting With Foreign Language Texts}
 
 Augmenting foreign texts with annotations in the form of pop-ups, and overlays, has been found to be beneficial to several aspects of language learning \cite{DeRidder02-Links} and improvements in reading comprehension \cite{Sanko06-Effects}.
 
 
 \begin{itemize}
+
+
+	\item  One of the first occasions was in the work of Nerbonne \cite{Nerb99-Assistant} who proposed Glosser -- a system which would provide dictionary information about a given word including translation, part of speech, declinations, etc. 
+	In a follow up study with 22 people they observed users using the system for twenty minutes \cite{Dokter98-UserStudy}. 
+	In their work, they focus on individual words. 
+	They also only had a limited number of texts that they pre-processed.
+	In our work we observed a larger number of learners for a longer period of time.
+	% TODO: verify this!
+	In their study the words were previously annotated; our tools allow learners to translate sequences of words and not only individual words. 
+
+	\item Azab et al. \cite{Azab13-nlp} proposed a system entitled SmartReader which provides interactive annotations of English words for the advanced foreign students who learn English. 
+	Pop-ups are displayed above the selected word with information about it. 
+	The study introduces and describes the system, however it does not report anything about the way the system is used.
+
+
 	\item DeRidder \cite{DeRidder02-Links} studied the behavior of students reading with hyperlinks. The results indicate that when reading a text with highlighted hyperlinks, readers are significantly more willing to consult the gloss. Sanko \cite{Sanko06-Effects} showed that hypertextual input enhancement favourably affects vocabulary learning.
+
+	In our case, the interactive reader component we developed, does not use hyperlinks because every word can be investigated, thus every word on a page is in a way a hyperlink. 
 
 
 	\item Yang showed that multimedia gloss groups are useful in retention: they noticed that users using multimedia glosses retained and recognized significantly more of the target words than the control group \cite{Yang09-Glosses}.
 
 
-	\item D\'iaz \cite{Diaz15-Augmented} did a study of how the users augment web browsers with extensions in order to ``personalize on demand'' their browsing experience. Based on millions of web users they saw that Google Translate was the 16th most used browser extension.
 
 
 	\item Horv\'ath conducted a small supervised experiment to evaluate effect of text
@@ -62,15 +71,18 @@ Augmenting foreign texts with annotations in the form of pop-ups, and overlays, 
 
 \subsection{Vocabulary Practice}
 
-The number of systems that can provide vocabulary exercises to the learners is very large with several very popular commercial systems such as Babbel, DuoLingo, RosettaStone, Memrise, etc. being mainly focused on beginners and early intermediates. 
+% Also studies show that learning a word in context is more effective \cite{nagy95-context}.
 
-Most of the systems personalize the exercises based on the learning progress of the users. However, contentwise, these systems have predefined material, or no content at all (e.g. Anki, Memrise) and the user is supposed to manually punch in the content. One particular limitation of some of the systems is that they only work on the desktop. 
+Dasgupta argues that in the context of interactive books, self-contained exercises to be included \cite{Dasgupta10-Play}. However, most of the vocabulary practice systems are disconnected from the readings of the learners. Most popular (usually commercial) systems such as Babbel, DuoLingo, RosettaStone, and Memrise are mainly focused on vocabulary drilling for beginners. 
 
-Dasgupta argues that in the context of interactive books, self-contained exercises to be included \cite{Dasgupta10-Play}. Also studies show that learning a word in context is more effective \cite{nagy95-context}.
+These systems employ various types of personalized scheduling for the vocabulary exercises but when it comes to the content, they either have predefined material or they require the learner to upload the vocabulary for study (e.g. Anki, Memrise).\footnote{The systems that have predefined content usually have a limited number of words: Babbel and DuoLingo offer 2000 to 3000 words per language} 
+The solution we propose adopts both personalized scheduling for the exercises and the automatic personalization of the content that is the result of retrieving the content from the readings of the learner.
 
 
 
-% Babbel and DuoLingo offer 2000 to 3000 words per language. 
+
+
+% . 
 % Rosetta Stone claims that one can reach past B2 with their advanced course. 
 % Almost all these previous systems are targeted at the beginners and intermediates.
 % The system we present here can be used by any learner, no matter how advanced. 
@@ -80,7 +92,8 @@ Dasgupta argues that in the context of interactive books, self-contained exercis
 % We aim for personalization.
 % One of the advantages on the other hand, is that predefined example systems is that they can also teach grammar, which is something we do not investigate at the moment.
 
-Recently, creative applications of vocabulary exercises take advantage of micr-learning opportunities to support the vocabulary improvement of busy learners:
+
+The research in vocabulary practice has recently focused on discoveirng innovative opportunities for study in order to support the busy learners. In particular, micro-learning has been used in very creative ways: 
  % have been proposed in the context of micro-learning systems: 
 
 \begin{itemize}
@@ -92,18 +105,18 @@ Recently, creative applications of vocabulary exercises take advantage of micr-l
 
 \end{itemize}
 
-The relationship between these micro-learning systems and our work can be symbiotic since micro-learning opportunities can be generated based on past readings of the learner. In fact, we have implemented ourselves such a system in the context of a watchface \cite{Nien16-time}. which, is however, not discussed here.
+The relationship between these micro-learning systems and our work is complementary: micro-learning exercises can be generated based on past readings of the learner as we have already shown with a smartwatch watchface \cite{Nien16-time}.
 
 
 
 
-\subsection{Personalization}
+% \subsection{Personalization}
 
-The idea of a Personal eLearning Environment has been proposed by Attwell in 2007 \cite{Atwell07-personal} who assumes that it will take place in different contexts and situations and will not be provided by a single learning provider.
+% The idea of a Personal eLearning Environment has been proposed by Attwell in 2007 \cite{Atwell07-personal} who assumes that it will take place in different contexts and situations and will not be provided by a single learning provider.
 
-In web design Reinecke et al. propose culturally adaptive interfaces which are able to adapt their look and feel to suit visual preferences of a given population \cite{Reinecke13-CulturalAdaptation}. 
+% In web design Reinecke et al. propose culturally adaptive interfaces which are able to adapt their look and feel to suit visual preferences of a given population \cite{Reinecke13-CulturalAdaptation}. 
 
-In mathematical education, Polozov et al. propose a technique for automatic generation of personalized word problems\cite{Polozov15-AdaptableMath}.
+% In mathematical education, Polozov et al. propose a technique for automatic generation of personalized word problems\cite{Polozov15-AdaptableMath}.
 
 
 
