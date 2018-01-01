@@ -6,7 +6,7 @@
 
 
 % \subsection {Feed Subscriptions}
-Figure \ref{fig:subscriptions} represents an incidence matrix collected at the end of the study interval: the columns represent students, and the rows represent article sources; if a student is registered to a given source, at the intersection of the corresponding row and column we place a $\Diamond$. 
+Figure \ref{fig:subscriptions} represents an incidence matrix in which the columns represent students and the rows represent article sources. If at the end of the study a student is registered to a given source, the intersection of the respective row and column has a $\Diamond$. 
 
 We would expect to see fully continuous horizontal rows of data-points if every user subscribed to the same feed, and fully continuous vertical rows if every user subscribed to all of the feeds available. The fact that these patterns are largely absent in Figure \ref{fig:subscriptions} supports our assumption that different individuals prefer to subscribe to different reading sources.
 
@@ -67,7 +67,7 @@ Figure \ref{fig:articles_read} shows that the articles that the users interact w
 % \end{added}
 
 \newpage
-\section{How Are The Reader Features Used?}
+% \section{How Are The Reader Features Used?}
 \section{What Is The Relative Importance of the Various Interaction Modes?}
 \newcommand{\feature}[1]{{\em #1}}
 Given that the reader interaction more innovative and more complex than the one to be found in exercises, we decide to use telemetry to investigate how are the learners using these features. Telemetry has been successfully used for understanding user behavior in games \cite{Gagne11-telemetry} but also more generic contexts, such as automatically detecting personas from large scale interaction data \cite{Zhang16-telemetry}. In our study, we used telemetry to track the usage of various relevant features in the personalized textbook in order to better understand the usage of our system.
@@ -76,7 +76,7 @@ Based on logging every interaction of every user, Figure \ref{fig:feature_usage}
 
   \begin{figure}[h!]
   \centering
-    \includegraphics[width=0.9\columnwidth]{figures/reader_feature_usage}
+    \includegraphics[width=0.6\columnwidth]{figures/reader_feature_usage}
     \caption{Popularity of features by their recorded usage-events}
     \label{fig:feature_usage}
   \end{figure}
@@ -100,7 +100,7 @@ The least used feature presented in the Figure \ref{fig:feature_usage}, {\em tra
 
   \begin{figure}[h!]
   \centering
-    \includegraphics[width=0.9\columnwidth]{figures/reader_feature_usage_per_user}
+    \includegraphics[width=0.6\columnwidth]{figures/reader_feature_usage_per_user}
     \caption{The usage of the various reader features by the various users }
     \label{fig:usage_per_user}
   \end{figure}

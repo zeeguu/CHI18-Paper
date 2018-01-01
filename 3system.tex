@@ -24,7 +24,6 @@ Based on the learner model, algorithms can make recommendations for the individu
 Currently, the model tracks the probabilities of a user knowing words based on interaction events in the apps: asking for a translation, repeatedly encountering a given word without asking for a translation, or answering an vocabulary exercise.
 
 
-
 \subsection{The Translation Service}
 
 The Translation Service is a subsystem implemented using Python which provides translations to all the applications in the ecosystem. Instead of implementing our own contextual translation engine, we rely on existing industrial grade translation APIs. To avoid depending on a single service and to also increase the likelihood that at least one of the alternative translations is the correct one, the translation service dispatches in parallel requests to at least three third party translation APIs: Google Translate, Microsoft Translate, and Glosbe. \cite{Jager17-mux} The first two provide contextual translations and multi-word translations, while the third is a simple dictionary. 
