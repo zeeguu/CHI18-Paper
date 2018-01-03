@@ -1,7 +1,8 @@
 %!TEX root=paper.tex
 
 % \newpage
-\section{Is Personalization Used By Learners?}
+\section{How Is Reader Personalization Being Used?}
+% \section{How Do Learners Use Reader Personalization?}
 % \section{How Do Students Use the Possibility of Reading Personally Interesting Articles?}
 \label{sec:results}
 
@@ -16,84 +17,84 @@ We would expect to see fully continuous horizontal rows of data-points if every 
 \begin{figure}[h!]
 
 \centering
-  \includegraphics[width=0.7\columnwidth]{figures/users_feeds}
+  \includegraphics[width=\columnwidth]{figures/users_feeds_histo}
   \caption{Different users subscribe to different sources}
   \label{fig:subscriptions}  
 \end{figure}
 
-Of course some feeds are more popular than others. Projecting the data- points onto the horizontal axis and sorting the results leaves us with a histogram as can be seen in Figure \ref{fig:feedpopularity}.
+Some feeds are more popular than others. Projecting the data- points onto the horizontal axis and sorting the results results in the histogram in Figure \ref{fig:feedpopularity}.
 
-\begin{figure}[h!]
-\centering
-  \includegraphics[width=0.7\columnwidth]{figures/feed_popularity}
-  \caption{Some feeds are more popular than others}
-  \label{fig:feedpopularity}
-\end{figure}
+% \begin{figure}[h!]
+% \centering
+%   \includegraphics[width=0.85\columnwidth]{figures/feed_popularity}
+%   \caption{Some feeds are more popular than others}
+%   \label{fig:feedpopularity}
+% \end{figure}
 
 
 {\em 1Jour1Actu} is the most popular article source and Le Figaro - Sant\'e is the least. In order to see whether or not this might be related to how they are presented in the dialog window of our system (see Figure \ref{fig:system_subscriptions}), in Figure \ref{fig:popularityvsranking} can compare the order of popularity with the order in which they are displayed. One can see how the second-to-last presented feed, Le Monde, is the second most popular feed by measure of subscriptions. Conversely, the feed listed above Le Monde is actually the least subscribed-to feed in our listing.
 
 
-\begin{figure}[h!]
-\centering
-  \input{popularity_vs_ranking}
-  \caption{The popularity of the feeds vs. their ranking in the UI}
-  \label{fig:popularityvsranking}
-\end{figure}
+% \begin{figure}[h!]
+% \centering
+%   \input{popularity_vs_ranking}
+%   \caption{The popularity of the feeds vs. their ranking in the UI}
+%   \label{fig:popularityvsranking}
+% \end{figure}
 
 
 
-
-\subsection{Article Interactions}
-Figure \ref{fig:articles_read} shows that the articles that the users interact with present a similar pattern: each user explores their own interest, and there is no one article that is interesting for all. The vertical ``line '' in the figure's left half represents an over-active reader.
-
+% \subsection{Article Interactions}
+Figure \ref{fig:articles_read} shows that the articles that the users interact with present a similar pattern: each user explores their own interest, and there is no one article that is interesting for all. 
+% The vertical ``line'' in the figure's left half represents an over-active reader.
 % \begin{added}
-
   % Interacting with means that the user translated at least one word in that article. to check with Dan that this is the definition! we currently do not have information about whether a user read the article to the end. 
-
 % \end{added}
-
-\begin{figure}[h!]
-\centering
-  \includegraphics[width=0.7\columnwidth]{figures/users_articles}
-  \caption{Every student has their own article reading preferences}~\label{fig:articles_read}
-\end{figure}
-
+% 
 % \begin{added}
-
-  After investigating some of the patterns of reading of students we observed that there are those who enjoy reading a variety of topics, but also those who like to read a single topic. 
-  From the latter category we mention: 
-
-  \begin{itemize}
-    \item one student who has read twelve articles exclusively on topics about sports in five different days
-    \item one student who has read six articles exclusively about health topics over two distinct days
-    \item TODO: Add discussion about some students who have a more omnivorous taste, and thus, also read much more.
-  \end{itemize} 
+% 
+  % After investigating the reading patterns of students we observed that there are those who enjoy reading a variety of topics, but also those who like to read a single topic. 
+  % From the latter category we mention: 
+On the other hand, we see a few students who read exclusively articles about sports (e.g. the rightmost column in the figure). The data shows a few other students who read a lot of sports articles, but also a student who reads articles exclusively about health topics. Finally, most of the students read various topics, which is beneficial from a learning point of view \cite{renadya07-power}.
+  % \begin{itemize}
+  %   \item one student who has read twelve articles exclusively on topics about sports in five different days
+  %   \item one student who has read six articles exclusively about health topics over two distinct days
+  %   \item TODO: Add discussion about some students who have a more omnivorous taste, and thus, also read much more.
+  % \end{itemize} 
 
 
     % The student \#657 in the published dataset has read 10 articles exclusively about sport in three different days between June 7 and July 4th. 
   
 % \end{added}
 
-\newpage
+\begin{figure}[h!]
+\centering
+  \includegraphics[width=\columnwidth]{figures/users_articles_color_png}
+  \caption{Each student (column) reads a different article mix}~\label{fig:articles_read}
+\end{figure}
+
+
+% \newpage
 % \section{How Are The Reader Features Used?}
 \section{How Do Learners Interact With the Reader?}
 % \section{What Is The Relative Importance of the Various Interaction Modes?}
 \newcommand{\feature}[1]{{\em #1}}
 The reader interaction is more innovative and complex than the exercises.
-We use telemetry to investigate how are the learners using the features of the reader. Telemetry has been successfully used for understanding user behavior in games \cite{Gagne11-telemetry} but also more generic contexts, such as automatically detecting personas from large scale interaction data \cite{Zhang16-telemetry}. In our study, we used telemetry to track the usage of various relevant features in the personalized textbook in order to better understand the usage of our system.
+We use telemetry to investigate how do learners use the features of the reader. 
+
+Telemetry has been successfully used for understanding user behavior in games \cite{Gagne11-telemetry} but also more generic contexts, such as automatically detecting personas from large scale interaction data \cite{Zhang16-telemetry}. In our study, we used telemetry to track the usage of various relevant features in the reader of the personalized textbook in order to better understand the usage of our system.
 
 Based on logging every interaction of every user, Figure \ref{fig:feature_usage} (left) shows the six most used features of the system.\footnote{An extended analysis that includes more features is elsewhere. \cite{Chirtoaca17-apollo}} Figure \ref{fig:feature_usage} (right) shows the number of distinct users for each category of events. A larger number of distinct users indicates a feature that is more important to the students. 
 
   \begin{figure}[h!]
   \centering
-    \includegraphics[width=1.05\columnwidth]{figures/feature-usage}
+    \includegraphics[width=1.0\columnwidth]{figures/feature-usage}
     \caption{Popularity of features by their recorded usage-events}
     \label{fig:feature_usage}
   \end{figure}
 
 % With 6.700 occurrences, 
-\feature{Requesting a translation} is the most used interactive feature of the system and \feature{showing translation alternatives} is the second most used one. The six-to-one ratio between the two features is an indicator of the limitations of the automatic translation. The fact that they are both achievable with one click or touch proves to have been a good decision. 
+\feature{Requesting a translation} is the most used feature of the system and \feature{showing translation alternatives} is the second most used one. The six-to-one ratio between the two features is an indicator of the limitations of the automatic translation. The fact that they are both achievable with one click or touch proves to have been a good decision. 
  % -- these are probably the situations when learners ask for 
 
 \feature{Pronuncing a word} is he third most used feature. On average, there are about 1.66 pronunciations for a given translation, suggesting that users are often asking for a second pronunciation after hearing it the first time. 
@@ -108,7 +109,7 @@ Based on logging every interaction of every user, Figure \ref{fig:feature_usage}
 \feature{Liking} an article that was just read by clicking the corresponding button at the bottom of an article happened 174 times. This information can be used in the future to improve article recommendations.
  % and maybe to add a social dimension to the system by providing information about how other people react to a given article.
 
-\feature{Translation suggestion} is the least used feature cf. Figure \ref{fig:feature_usage}. This feature, allows users to contribute their own translations when they are not satisfied with the one automatically provided by the system. This feature is not only used seldom, it is also used by very few users. It still is to be determined whether this is due to readers overwhelmingly being satisfied with the automatic translations and their alternatives, or due to a low involvement.
+\feature{Suggestion} is a feature that is used seldom and by only a minority of users. This feature, allows users to contribute their own translations when they are not satisfied with the one automatically provided by the system. This feature is not only used seldom, it is also used by very few users. It still is to be determined whether this is due to readers overwhelmingly being satisfied with the automatic translations and their alternatives, or due to a low involvement.
 % \ml{which brings me to: @Dan, what do you mean by alternatives here? :) Is it the number of times somebody selected an alternative, or the number of times they opened the menu. In any case, can we get the other number?}
 
   % \begin{figure}[h!]
@@ -127,14 +128,15 @@ Based on logging every interaction of every user, Figure \ref{fig:feature_usage}
 
 
 
+
 % \newpage
-\section{How Do Students Use the Personalized Vocabulary Exercises?}
+\section{How Do Students Interact With Exercises?}
 
 The system presented four types of vocabulary practice exercises to the students. In total, during the entire duration of the study we observed 18.082 exercises being presented to the students. Figure \ref{fig:ex_interactions} presents the number of exercises which had a ``correct'' outcome (red) vs. exercises which had a ``wrong'' outcome (blue). The figure shows one student who did 3.000 (!) exercises during one month, and about six eager students who did more than 700 exercises. 
 
   \begin{figure}[h!]
   \centering
-    \includegraphics[width=0.7\columnwidth]{figures/exercise_interactions_count.png}
+    \includegraphics[width=0.9\columnwidth]{figures/exercise_interactions_count.png}
     \caption{Correct (red) and wrong (blue) exercise outcomes per student}
     \label{fig:ex_interactions}
   \end{figure}
@@ -153,7 +155,7 @@ The figure does not include one other type of outcome, {\em requesting a hint}, 
   \label{tab:hints_per_ex_type}
 \end{tabular}
 
-Figure \ref{fig:activity_per_day} shows the days when learners practice exercises. It suggests constant activity over the entire period of the study with a more intensive period towards the end.
+Figure \ref{fig:activity_per_day} shows the days when learners practice exercises. The x-axis has the days of June and the y-axis has the different user ids. The figure suggests constant activity over the entire period of the study with a more intensive period towards the end.
 
   \begin{figure}[h!]
   \centering
@@ -166,28 +168,51 @@ Figure \ref{fig:activity_per_day} shows the days when learners practice exercise
 % \begin{added}
 
 
-% \section{Do Students Improve Their Vocabulary?}
-% \section{How Does The System Help Students Improve Their Vocabulary?}
-\section{What Is The Impact of the System on the Vocabulary?}
 
-  The value of extensive reading and vocabulary practice can be found, besides the new words that are learned, also in the strengthening of the knowledge of the existing words. This is hard to quantify, but by analyzing the learner interaction with the exercises we can provide a glimpse into it. Looking at the outcomes of all the exercises done by the students we observe that:
+
+\newpage
+% \section{How Do Students Improve Their Vocabulary?}
+% \section{How Does The System Help Students Improve Their Vocabulary?}
+\section{What Is The Impact of the System on the Learner Vocabulary?}
+
+  The value of extensive reading and vocabulary practice can be found, besides the new words that are learned, in the strengthening of the knowledge of the existing words, increased fluency, and increased grammar knowledge, but these benefits can only be clearly measured after a longer period of time\cite{renadya07-power}. 
+
+  However, by analyzing the learner interaction with the reader and the exercises we can provide a glimpse into two measures of progress that are visible after one month of usage: strengthening knowledge of existing words and learning new ones. 
+
+   \begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.8\columnwidth]{figures/word-learning-flow.pdf}
+    \caption{A large number of words have been studied and eventually learned by the students}
+    \label{fig:word_learning_flow}
+  \end{figure}
+
+   Looking at the outcomes of all the exercises done by the students we observe that:
 
   \begin{itemize}
-    \item In total 5149 words were used in the exercises platform during the learning period. They are words for which the learners requested a translation before. Therefore the learners either did not know them or at least were unsure about them.
+    \item From the 6,721 words that were looked up in the reader, 75\% (5,149) were used in the exercises platform during the learning period. Since the learners requested a translation for these words we can assume that they were not known to the readers or at least the readers were unsure about their meaning. 
 
-    \item For 80\% (4110) of the words the learners were able to correctly identify the meaning in the last associated exercise. Out of these: 
+    \item More than 1,500 words were never practiced in the exercises. Given that not all the words can be practiced, this is an argument for prioritizing the words that the students are presented with in the exercises.
+
+    \item For 20\% (1,038) of the words that were present in the exercises, the outcome of the final exercise that involved them showed an incorrect answer. Thus we can assume that they remained {\bf unlearned at the end of the experimental period}.
+
+
+    \item For 80\% of the words that were present in exercises (4,111) the learners were able to correctly identify the meaning in the last associated exercise. Out of these: 
 
     \begin{itemize}
-      \item 14\% were wrong during their first interaction in exercises but were correct in the final iteration of the exercises. These are {\bf likely to be learned via the exercises}.
+      \item 720 (14\%) of the words that were present in exercises were wrong during their first exercise interaction but were correct in the final one. These {\bf 720 words are likely to be learned via the exercises} by the sixty students in our study. They represent a bit more than 10\% of all the words that the students translated in the reader.
 
-      \item 66\% were recognized already for the first time in the exercises. These are {\bf likely to be words for which the knowledge was strengthened by using the system}: the students were unsure when encountering them initially in texts but eventually knew their meaning when encountering them later in the exercises. 
+      \item 66\% (3,398) were recognized already for the first time in the exercises. These are {\bf likely to be words for which the knowledge was strengthened by using the system}: the students were unsure when encountering them initially in the reader but eventually recognized their meaning when encountering them later in the exercises. 
     \end{itemize}
 
-    \item For 20\% (1037) of the words the final outcomes showed incorrect answers, thus we can assume that they remained {\bf unlearned at the end of the experimental period}.
 
   \end{itemize}
 
 % \end{added}
+
+
+
+
+
 
 
 
