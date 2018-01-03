@@ -1,7 +1,8 @@
 %!TEX root=paper.tex
 
 % \newpage
-\section{How Is Reader Personalization Being Used?}
+% \section{How Is Reader Personalization Being Used?}
+\section{How Is Reading Personalization Being Used?}
 % \section{How Do Learners Use Reader Personalization?}
 % \section{How Do Students Use the Possibility of Reading Personally Interesting Articles?}
 \label{sec:results}
@@ -9,7 +10,7 @@
 
 % \subsection {Feed Subscriptions}
 Figure \ref{fig:subscriptions} represents an incidence matrix in which the columns represent students and the rows represent article sources. If at the end of the study a student is registered to a given source, the intersection of the respective row and column has a $\Diamond$. 
-
+% 
 We would expect to see fully continuous horizontal rows of data-points if every user subscribed to the same feed, and fully continuous vertical rows if every user subscribed to all of the feeds available. The fact that these patterns are largely absent in Figure \ref{fig:subscriptions} supports our assumption that different individuals prefer to subscribe to different reading sources.
 
 % The figure illustrates that giving the students the freedom to choose the sources they wanted, allowed each one of them to express their interest. 
@@ -17,35 +18,37 @@ We would expect to see fully continuous horizontal rows of data-points if every 
 \begin{figure}[h!]
 
 \centering
-  \includegraphics[width=\columnwidth]{figures/users_feeds_histo}
-  \caption{Different users subscribe to different sources}
+  \includegraphics[width=0.9\columnwidth]{figures/subscription_plot}
+  \caption{Different students subscribe to different sources}
   \label{fig:subscriptions}  
 \end{figure}
 
-Some feeds are more popular than others. Projecting the data- points onto the horizontal axis and sorting the results results in the histogram in Figure \ref{fig:feedpopularity}.
-
+The histogram to the right of Figure \ref{fig:subscriptions} shows that some feeds are more popular than others. 
+% Projecting the data- points onto the horizontal axis and sorting the results results in the histogram in Figure \ref{fig:feedpopularity}.
+% 
 % \begin{figure}[h!]
 % \centering
 %   \includegraphics[width=0.85\columnwidth]{figures/feed_popularity}
 %   \caption{Some feeds are more popular than others}
 %   \label{fig:feedpopularity}
 % \end{figure}
+% {\em 1Jour1Actu} is the most popular article source and Le Figaro - Sant\'e is the least. 
+In order to see whether or not this might be related to how they are presented in the dialog window of our system (Figure \ref{fig:system_subscriptions}), Figure \ref{fig:popularityvsranking} compares the order of popularity with the order in which they are displayed. 
+% One can see how the second-to-last presented feed, Le Monde, is the second most popular feed by measure of subscriptions. Conversely, the feed listed above Le Monde is actually the least subscribed-to feed in our listing.
 
 
-{\em 1Jour1Actu} is the most popular article source and Le Figaro - Sant\'e is the least. In order to see whether or not this might be related to how they are presented in the dialog window of our system (see Figure \ref{fig:system_subscriptions}), in Figure \ref{fig:popularityvsranking} can compare the order of popularity with the order in which they are displayed. One can see how the second-to-last presented feed, Le Monde, is the second most popular feed by measure of subscriptions. Conversely, the feed listed above Le Monde is actually the least subscribed-to feed in our listing.
-
-
-% \begin{figure}[h!]
-% \centering
-%   \input{popularity_vs_ranking}
-%   \caption{The popularity of the feeds vs. their ranking in the UI}
-%   \label{fig:popularityvsranking}
-% \end{figure}
+\begin{figure}[h!]
+\centering
+  \input{popularity_vs_ranking}
+  \caption{The popularity of the feeds vs. their ranking in the UI}
+  \label{fig:popularityvsranking}
+\end{figure}
 
 
 
 % \subsection{Article Interactions}
-Figure \ref{fig:articles_read} shows that the articles that the users interact with present a similar pattern: each user explores their own interest, and there is no one article that is interesting for all. 
+Figure \ref{fig:articles_read} shows an incidence matrix of users (columns) and articles that they interact with (rows). It shows that each user explores their own interest.
+% , and there is no one article that is interesting for all. 
 % The vertical ``line'' in the figure's left half represents an over-active reader.
 % \begin{added}
   % Interacting with means that the user translated at least one word in that article. to check with Dan that this is the definition! we currently do not have information about whether a user read the article to the end. 
@@ -55,7 +58,7 @@ Figure \ref{fig:articles_read} shows that the articles that the users interact w
 % 
   % After investigating the reading patterns of students we observed that there are those who enjoy reading a variety of topics, but also those who like to read a single topic. 
   % From the latter category we mention: 
-On the other hand, we see a few students who read exclusively articles about sports (e.g. the rightmost column in the figure). The data shows a few other students who read a lot of sports articles, but also a student who reads articles exclusively about health topics. Finally, most of the students read various topics, which is beneficial from a learning point of view \cite{renadya07-power}.
+It also shows a few students who read exclusively articles about sports (e.g. the rightmost column), but also a student who reads articles exclusively about health topics. Finally, most of the students read a mix of topics, which is beneficial from a learning point of view \cite{renadya07-power}.
   % \begin{itemize}
   %   \item one student who has read twelve articles exclusively on topics about sports in five different days
   %   \item one student who has read six articles exclusively about health topics over two distinct days
@@ -175,35 +178,34 @@ Figure \ref{fig:activity_per_day} shows the days when learners practice exercise
 % \section{How Does The System Help Students Improve Their Vocabulary?}
 \section{What Is The Impact of the System on the Learner Vocabulary?}
 
-  The value of extensive reading and vocabulary practice can be found, besides the new words that are learned, in the strengthening of the knowledge of the existing words, increased fluency, and increased grammar knowledge, but these benefits can only be clearly measured after a longer period of time\cite{renadya07-power}. 
+  The value of extensive reading and vocabulary practice can be found, besides the new words that are learned, in the strengthening of the knowledge of the existing words, increased fluency, and increased grammar knowledge. Some of these benefits can only be clearly measured after a longer period of time\cite{renadya07-power}. 
 
-  However, by analyzing the learner interaction with the reader and the exercises we can provide a glimpse into two measures of progress that are visible after one month of usage: strengthening knowledge of existing words and learning new ones. 
+  However, since our system combines free reading with vocabulary exercises, by analyzing the learner interaction with the reader and the exercises we can provide a glimpse into two measures of progress that are visible after one month of usage: strengthening knowledge of existing words and learning new ones. 
 
    \begin{figure}[h!]
   \centering
-    \includegraphics[width=0.8\columnwidth]{figures/word-learning-flow.pdf}
-    \caption{A large number of words have been studied and eventually learned by the students}
+    \includegraphics[width=0.9\columnwidth]{figures/word-learning-flow.pdf}
+    \caption{An overview of the words encountered in the Reader and practiced in the Exercises}
     \label{fig:word_learning_flow}
   \end{figure}
 
    Looking at the outcomes of all the exercises done by the students we observe that:
 
   \begin{itemize}
-    \item From the 6,721 words that were looked up in the reader, 75\% (5,149) were used in the exercises platform during the learning period. Since the learners requested a translation for these words we can assume that they were not known to the readers or at least the readers were unsure about their meaning. 
+    \item From the 6,721 words that were looked up in the reader, 5,149 were used in the exercises platform during the learning period. Since the learners requested a translation for these words we can assume that they were not known to the readers or at least the readers were unsure about their meaning. 
 
-    \item More than 1,500 words were never practiced in the exercises. Given that not all the words can be practiced, this is an argument for prioritizing the words that the students are presented with in the exercises.
-
-    \item For 20\% (1,038) of the words that were present in the exercises, the outcome of the final exercise that involved them showed an incorrect answer. Thus we can assume that they remained {\bf unlearned at the end of the experimental period}.
-
+    \item More than 1,500 words were not practiced in the exercises. Some of these never got the chance to be scheduled by the algorithm and others were not presented to the students because the system decided they were not interesting enough. 
+    % Given that not all the words can be practiced, this is an argument for prioritizing the words that the students are presented with in the exercises.
 
     \item For 80\% of the words that were present in exercises (4,111) the learners were able to correctly identify the meaning in the last associated exercise. Out of these: 
 
     \begin{itemize}
-      \item 720 (14\%) of the words that were present in exercises were wrong during their first exercise interaction but were correct in the final one. These {\bf 720 words are likely to be learned via the exercises} by the sixty students in our study. They represent a bit more than 10\% of all the words that the students translated in the reader.
+      \item 720 (14\%) of the words that were present in exercises were wrong during their first exercise interaction but were correct in the final one. These {\bf 720 words are likely to be learned via the exercises} by the sixty students in our study. They represent 10.75\% of all the words that the students translated in the reader.
 
       \item 66\% (3,398) were recognized already for the first time in the exercises. These are {\bf likely to be words for which the knowledge was strengthened by using the system}: the students were unsure when encountering them initially in the reader but eventually recognized their meaning when encountering them later in the exercises. 
     \end{itemize}
 
+  \item For 20\% (1,038) of the words that were present in the exercises, the outcome of the final exercise that involved them showed an incorrect answer. Thus we can assume that they were {\bf not learned at the end of the experimental period}.
 
   \end{itemize}
 
