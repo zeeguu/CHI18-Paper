@@ -30,7 +30,7 @@ The Translation Service is a subsystem implemented using Python which provides t
 
 The dependency of the translation service on multiple third party APIs allows for a higher reliability and a chance to guarantee a low response time: when a service is down or too slow to respond, the results from it are ignored. We detail elsewhere the strategies we use to keep response times low\cite{Jager17-mux}.
 
-It is critical that the translation service be used by all the applications in the ecosystem since this allows the server to track the words and the context in which they are being looked up. This information is then used for estimating learner knowledge and for generating personalized recommendations. 
+It is critical that the translation service be used by all the applications in the ecosystem since this allows the server to track the words and the context in which they are being looked up. This information is then used for estimating learner knowledge, for generating personalized recommendations, but also for allowing a teacher to gain insight into student activity.
 
 
 % by interacting with a core API that provides the basic contextual translations, user knowledge estimation, and recommendations for words to be studied and texts to be read \cite{Lungu16}. 

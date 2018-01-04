@@ -1,20 +1,28 @@
 %!TEX root=paper.tex
 
+\input{7discussion}
+
 \section{Limitations of the Study}
 \label{sec:limitations}
 % We presented a system, and we showed that it has the potential to generate user involvement. However the study we performed is not sufficient to reach a strong conclusion about the impact of the system we present... 
 
-The feedback from the users was overall positive, with many of them showing appreciation for the personalization aspects of the system. However, further studies are needed since there are multiple reasons for which these results might not extend to the broader population. The students might have been influenced by our enthusiastic presentation of the system at the beginning of the testing month. Also, the number of students who answered our survey was limited: only \surveyrespondents students which represents less than 50\% of the participants who actually used the system.
+The feedback from the users was overall positive, with many of them showing appreciation for the personalization aspects of the system. 
+However, further studies are needed since there are multiple reasons for which these results might not extend to the broader population. 
+The students might have been influenced by our enthusiastic presentation of the system at the beginning of the testing month. 
+Also, the students we worked with are not necessarily representative for the Dutch highschool student population since they are bilingual. 
+% Even in this case, during the feedback multiple of them remarked that they would prefer to use the system in their native Dutch as opposed to English.
+Also, the number of students who answered our survey was limited: only \surveyrespondents students which represents less than 50\% of the participants who actually used the system.
 
-We showed that the users are using the system extensively. However, this might be because the students were encouraged to use the system as part of their assignment in the class. We showed that the majority of the students used the system constantly throughout the one month period. If they used it only for the final grade, we would have expected a more focused cramming at the end of the period (which we actually saw with few of the students...). 
+% We showed that the majority of the students used the system constantly throughout the one month period. 
+% However, this might be because the students were encouraged to use the system as part of their assignment in the class. 
+% If they used it only for the final grade, we would have expected a more focused cramming at the end of the period (which we actually saw with few of the students...). 
 
-The students we worked with are not necessarily representative for the Dutch highschool student population since they are bilingual. Even in this case, during the feedback multiple of them remarked that they would prefer to use the system in their native Dutch as opposed to English.
 
 % We observed that students prefer to interact with different texts...  
 
 The algorithms for scheduling vocabulary exercises are the state of the art in spaced repetition. However, we did not have a control group to see whether this approach works better than others. Moreover, note that other approaches for using spaced repetition already exist; what is unique in our approach is that the students learn based on personalized exercises generated based on the context of their past readings.
 
-
+We showed that the student interaction with the texts indicates that at the end of the month they have learned words that they did not know at the begining. However, it is not clear whether this knowledge will remain for the long term. 
 
 
 \section{Availability of System, Code and Data}
@@ -22,63 +30,26 @@ The algorithms for scheduling vocabulary exercises are the state of the art in s
 % \subsection{Software}
 The system described in this paper is deployed and available online. If the readers of this article want to test it they can use the {\em CHI2018} invite code while following the  ``Become a Betatester'' link at \url{https://zeeguu.unibe.ch/}.
 
-The source code is open under a MIT license and available online at \url{https://github.com/zeeguu-ecosystem}. The code is covered by tests and documentation. To replicate this paper with another population, one can deploy their own version.
+The source code is open under a MIT license and available online at \url{https://github.com/zeeguu-ecosystem}. The code is covered by tests and documentation. To replicate a study like the one presented in this paper with another population, a researcher can deploy their own version of the system. 
 
 % \subsection{Data}
-The anonymized telemetry data, representing the interactions of more than \students learners with the system for one month, is available as a MySQL database dump on GitHub at the following link: \url{https://github.com/zeeguu-ecosystem/CHI17-Paper}. The same link holds the full questionnaire data used in this paper. That data is also anonymized. 
-
-We hope that the availability of the system, code, and the open data that we publish here will make it easy for other researchers to investigate problems related to personalization in foreign language reading.
+The anonymized telemetry data, representing the interactions of more than \students learners with the system for one month, is available as a MySQL database dump on GitHub at the following link: \url{https://github.com/zeeguu-ecosystem/CHI17-Paper}. The same link holds the full anonymized questionnaire data. % used in this paper.
 
 
 
-% \newpage
-\section{Challenges}
-\label{sec:challenges}
-
-In this section we explore some of the challenges that we perceive need to be addressed by our system and similar ``personal textbook'' systems. We base our list of challenges on our observations and on the feedback that we received from our learners. The full list of recommendations from our users can be found in the GitHub repository online.
-
-\subsection{Registering for ``topics'' instead of ``sources''}
-Multiple learners asked for the possibility of registering to article topics rather than ``article sources''. A future system should consider this.
-
-\subsection{Ensuring the appropriateness of articles}
-The advantage of a textbook is the fact that the quality control of the texts in it is guaranteed by the editors. How are we going to ensure the quality of the texts that re to be found online? What we did was to limit the possible sources from where the students can read. Nevertheless, one of the students, wrote in the feedback form {\em ``I would like to avoid articles which have information about accidents with human casualties''}. One thing that we plan to investigate in the future is crowdsourcing and ``teachersourcing'' where learners and teachers (or more generally, trusted advanced learners) can provide feedback on existing materials. Crowdsourcing has been identified by Heffernan et al. as one of the driving technologies of the upcoming adaptive learning \cite{Heff16-crowdsourcing}. 
-
-% \subsection{The selection of vocabulary to study}
-
-% How do we automatically verify the ``learnability '' of an example in the context? It is a great responsibility automatically selecting a word to study. The situation where a user accepted a mistaken translation, and then the system ``teaches'' the learner that word would be disastruous. Currently we have a set of filters that try to avoid this, moreover, we also offer the learner the possibility of providing feedback in case he is not confident in a given translation. In the future, we consider using crowdsourcing to decrease even more the probability of wrong translations.
-% \ml{alternate perspecitve: Do the learners choose the right translation? }% 	\item provide shorter sentences
-
-
-\subsection{Scheduling vocabulary exercises}
-We have implemented the vocabulary practice scheduler in such a way that it tries to optimize the times when the words are being repeated based on the state of the art in spaced repetition. However, we received multiple requests from the users who are asking for the possibility of rehearsing the words in a given text, once they are finished with its study, more in the vein of traditional textbooks. It might be that in the future it would be useful to allow the learners to influence the scheduling algorithms. 
-
-% A few other types of improvement ideas that we have received from our beta-testers are: 
-% \begin{itemize}
-% 	\item be forgiving with misspellings, allow retry if the learner was close instead of considering it a mistake
-% 	\item better provide hints than simply showing the answer
-% \end{itemize}
-
-
-\subsection{Evaluating the quality of examples}
-
-It is indeed desirable to find good examples of practice exercises from past readings. Sometimes, the context in which the learner looks up a word is too long and sometimes it is too short. How to estimate the quality of an exercise? One measure that we are considering is: ensuring that all the words in the context are simpler than the tested word. 
-
-% For beginners, this is still not an option. So we can only do this for students who are already quite advanced. \todo{We should see whether there's a difference between the ones that were A2 vs. B1}
-
-\subsection{Estimating article difficulty in a personal way}
-The way we did difficulty ranking was sub-optimal. Most of the difficulties were very close to each other in value, between 1 and 4 and they were generic instead of being personalized. We think that as a result, the difficulty estimations that the system presented were too abstract for the readers. And as a result, one of the readers reported that he disliked about the Reader the fact that \squote{My level of the language is quite low for now, so I clicked to get a translation very often. Too often.} 
-
-A more advanced strategy is needed, one that is less abstract, and personalized for the individual learner. One approach would be to estimate the number of words that are likely to be unknown in an article for a particular learner. A complementary information about the article could be the number of words that we know are being learned at the moment which are to be found in that article. In this way, a learner can choose a text that also gives them the chance to re{\"e}ncounter words being learned. 
-
-\subsection{The teacher perspective}
-The system we presented here has a (limited) teacher dashboard for those users who have a teacher. The dashboard currently shows a chronological log of the words that the student has looked up in the context. However, the system could present more advanced analytics that could enhance the teacher's understanding of the class. This is something that is a clear opportunity when moving to a digital textbook. 
-
-\subsection{Investigating more possible classroom workflows}
-The system was initially designed for self study. However, when invited to test it in a formal classroom we were happy to oblige. We plan to work more with teachers to better understand how to combine the individuality of the system with the shared experience of the learners in a classroom. Indeed, new workflows and classroom activities must be discovered.
 
 
 \section{Conclusion and Future Work}
-We have presented here a system that we aimed to be a minimal viable product for a personalized language textbook. We report on using the system with high school students for about one month. We observe that overall the students make use of the personalization features, and when asked about it, they appreciated them. The teacher of the class also appreciated the system, and decided to introduce it in the new academic year with a larger group of students. 
+We have presented here a system that we aimed to be a minimal viable product for a personalized language textbook that uses the web as its content source. We report on using the system with high school students for about one month. We observe that overall the students make use of the personalization features, and that by using the system their vocabulary is improved with new words and strenghened knowledge of words the were not sure about. 
+
+When asked about it, the students appreciate the system, and in particular the possibility of reading personally interesting texts as well as the ease of interaction with the texts. They also want better ways to find even more personalized content. The teacher of the class thinks the such a system is critical for the modern language classroom, but wants more insight into student behavior.
+
+We plan to work more with teachers to better understand how to combine the individuality of the system with the shared experience of the learners in a classroom. Other classroom workflows than the one presented here could be possible. 
+% Indeed, new workflows and classroom activities must be discovered.
+
+% We hope that the availability of the system, code, and the open data that we published will make it easy for other researchers to investigate problems related to 
+% foreign language reading.
 
 
-
+\section{Acknowledgements}
+We thank the anonymous reviewers from the program committee of CHI'18 for valuable feedback on an earlier version of this paper. 
