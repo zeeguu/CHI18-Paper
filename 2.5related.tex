@@ -2,70 +2,73 @@
 % \newpage
 \section{Related Work}
 
-The domain of computer assisted language learning has a rich history of applied research that aims to improve the effectiveness and efficiency of language learning through helping both teachers and students \cite{levy2013call}. In this discussion we focus on several aspects that we combine in this work, which we argue, have not been combined together before.
+The domain of computer assisted language learning has a rich history of applied research that aims to improve the effectiveness and efficiency of language learning through helping both teachers and students \cite{levy2013call}. In this discussion we focus on the aspects that differentiate our work from prior art.
 
 
 \subsection{The Web as A Source of Content}
 % Web Mining
 
-Multiple authors have observed before that the World Wide Web represents an enormous language database at the fingertips of the students \cite{Fried08-Learner,Hira07-WebCorpora}. 
-Thus, the idea of augmenting texts with translations has been proposed before in various forms: 
+Multiple authors have observed before that the World Wide Web represents an enormous language database at the fingertips of the students \cite{Fried08-Learner,Hira07-WebCorpora,Streit05-Browsers,Wible01-Exposure,Trus11web}. 
+% Thus, the idea of augmenting texts with translations has been proposed before in various forms. 
 
-\begin{itemize}
-	\item D\'iaz \cite{Diaz15-Augmented} did a study of how the users augment web browsers with extensions in order to ``personalize on demand'' their browsing experience. Based on millions of web users they saw that Google Translate was the 16th most used browser extension.
+% \begin{itemize}
 
-
-	\item Wible et al. \cite{Wible01-Exposure} introduce SRP -- a stand-alone tool that provides teachers and students with search capabilities for supplementary readings online.
-	The tool 
-	% exploits text retrieval techniques and 
-	is based on the hypothesis that there is a parallel between text similarity measurement on the one hand and the pedagogical task of providing supplementary readings which offer repeated exposure to new vocabulary.
+	Wible et al. introduce SRP -- a tool that provides teachers and students with search capabilities for supplementary readings online \cite{Wible01-Exposure}.
+	The tool discovers similar texts to one given by the teacher to provide supplementary readings that offer repeated exposure to new vocabulary.
 	% The aim of SRP is to take a target vocabulary item as input and provide as output a set of texts from the corpus that contain tokens of the target vocabulary which resemble the original semantically and of course match it in part of speech.
-	However, the system is presented without any evaluation with users.
+	Unlike ours, the system is presented without any user evaluation.
 
-	\item Streiter et al. \cite{Streit05-Browsers} argued for a a system that would support browsing the Internet and a local document repository by dynamically annotating HTML and PDF documents with open dictionaries resources. A word is annotated with translations and pictures. It argues for the creation of personal word lists and exdrcises. But there is no report of the system being evaluated with users. 
+	
+	Streiter et al. \cite{Streit05-Browsers} argued for a a system that would support browsing the Internet and a local document repository by dynamically annotating HTML and PDF documents with open dictionaries resources. A word is annotated with translations and pictures. It argues for the creation of personal word lists and exercises. The idea is not evaluated with users. 
 
-	\item Trusty and Truong augmented the web in a learners native language with translations of a fixed set of words in the language that they are learning\cite{Trus11web}. They show that in a two month deployment, 18 participants, learned in average 50 new words.
+	
+	Trusty and Truong augmented the web in a learners native language with translations of a fixed set of words in the language that they are learning \cite{Trus11web}. They show that in a two month deployment, 18 participants, learned in average 50 new words.
 
-\end{itemize}
+% \end{itemize}
+
+Besides these research efforts, many users use browser extensions to help them understand foreign texts. D\'iaz \cite{Diaz15-Augmented} did a study of how the users augment web browsers with extensions in order to ``personalize on demand'' their browsing experience. Based on millions of web users they saw that Google Translate was the 16th most used browser extension. 
+% The difference between a browser extension and the system we propose is that the system we propose is open to other applications interacting with it, while most of the extensions are an end in themselves. 
+Translate allows exporting words and translations but unlike our system, does not provide an API that would allow other applications to build on top of a learner's history. Moreover, this learner history does not capture the context in which a word was translated, context which makes learning more effective \cite{nagy95-context}. 
+
+Kindle provides translations for individual words in a text. Just like Google Translate, these translations are not available to other applications (nor devices), and they can not be made available to the teacher of a class, or to researchers. 
 
 
 \subsection{Interacting With Foreign Language Texts}
 
-Augmenting foreign texts with annotations in the form of pop-ups, and overlays, has been found to be beneficial to several aspects of language learning \cite{DeRidder02-Links} and improvements in reading comprehension \cite{Sanko06-Effects}.
+Augmenting foreign texts with annotations in the form of pop-ups and overlays has been found to benefit several aspects of language learning \cite{DeRidder02-Links} and reading comprehension \cite{Sanko06-Effects}.
 
 
-\begin{itemize}
+% \begin{itemize}
 
-
-	\item  One of the first occasions was in the work of Nerbonne \cite{Nerb99-Assistant} who proposed Glosser -- a system which would provide dictionary information about a given word including translation, part of speech, declinations, etc. 
-	In a follow up study with 22 people they observed users using the system for twenty minutes \cite{Dokter98-UserStudy}. 
-	In their work, they focus on individual words. 
-	They also only had a limited number of texts that they pre-processed.
+	In one of the earliest such works, Nerbonne proposed Glosser -- a system which would provide dictionary information about a given word including translation, part of speech, declinations, etc. \cite{Nerb99-Assistant}.
+	In a study with 22 people they observed learners using the system for twenty minutes \cite{Dokter98-UserStudy}. 
+	In their work, they focus on individual words and a limited number of predefined and pre-processed texts. 
 	In our work we observed a larger number of learners for a longer period of time.
-	% TODO: verify this!
-	In their study the words were previously annotated; our tools allow learners to translate sequences of words and not only individual words. 
+	% In their study the words were previously annotated; our tools allow learners to translate sequences of words and not only individual words. 
 
-	\item Azab et al. \cite{Azab13-nlp} proposed a system entitled SmartReader which provides interactive annotations of English words for the advanced foreign students who learn English. 
+
+	Azab et al.proposed a system entitled SmartReader which provides interactive annotations of English words for the advanced foreign students who learn English  \cite{Azab13-nlp}.
 	Pop-ups are displayed above the selected word with information about it. 
 	The study introduces and describes the system, however it does not report anything about the way the system is used.
 
 
-	\item DeRidder \cite{DeRidder02-Links} studied the behavior of students reading with hyperlinks. The results indicate that when reading a text with highlighted hyperlinks, readers are significantly more willing to consult the gloss. Sanko \cite{Sanko06-Effects} showed that hypertextual input enhancement favourably affects vocabulary learning.
-
-	In our case, the interactive reader component we developed, does not use hyperlinks because every word can be investigated, thus every word on a page is in a way a hyperlink. 
-
-
-	\item Yang showed that multimedia gloss groups are useful in retention: they noticed that users using multimedia glosses retained and recognized significantly more of the target words than the control group \cite{Yang09-Glosses}.
+	DeRidder \cite{DeRidder02-Links} studied the behavior of students reading with hyperlinks. The results indicate that when reading a text with highlighted hyperlinks, readers are significantly more willing to consult the gloss. Sanko \cite{Sanko06-Effects} showed that hypertextual input enhancement favourably affects vocabulary learning.
+% 
+	In our case, the interactive reader component we developed, considers every word to be practically a hyperlink since every word in the text can be interacted with. 
+	% Our reliance on multiple third party contextual translators allows us to provide a quite 
 
 
+	Yanguas showed that multimedia gloss groups are useful in retention: they noticed that users using multimedia glosses retained and recognized significantly more of the target words than the control group \cite{Yang09-Glosses}. In our system, we do not show multimedia content, but we provide the learner with pronounciations in the cases they request them. Moreover, we present results from a one-month longitudinal study of a system, while Yanguas reported on an in-the-lab controlled experiment.
 
 
-	\item Horv\'ath conducted a small supervised experiment to evaluate effect of text
-	augmentation of reading speed. The results show that augmented webpage slows
-	reading speed down on average by approximately 7\%. \cite{Horva13-Enriching} 
+
+	% Horv\'ath conducted a small supervised experiment to evaluate effect of text
+	% augmentation of reading speed. The results show that augmented webpage slows
+	% reading speed down on average by approximately 7\%. \cite{Horva13-Enriching} 
 
 
-\end{itemize}
+
+% \end{itemize}
 
 
 
@@ -93,19 +96,13 @@ The solution we propose adopts both personalized scheduling for the exercises an
 % One of the advantages on the other hand, is that predefined example systems is that they can also teach grammar, which is something we do not investigate at the moment.
 
 
-The research in vocabulary practice has recently focused on discoveirng innovative opportunities for study in order to support the busy learners. In particular, micro-learning has been used in very creative ways: 
- % have been proposed in the context of micro-learning systems: 
-
-\begin{itemize}
-
-	\item Dearman and Truong introduce a 'live wallpaper' interface always visible to the user when he is using his phone \cite{Dear12-ImplicitAcquisition}. 
-	% They also present words in context. 
-
-	\item Cai introduces WaitChatter providing vocabulary exercises while the user awaits instant messaging responses \cite{Cai15-wait}.
-
-\end{itemize}
-
-The relationship between these micro-learning systems and our work is complementary: micro-learning exercises can be generated based on past readings of the learner as we have already shown with a smartwatch watchface \cite{Nien16-time}.
+One promissing vein of research in vocabulary practice has recently focused on discoveirng innovative opportunities for study in order to support the busy learners. In particular, micro-learning has been used in very creative ways:
+% 
+	Dearman and Truong introduce a 'live wallpaper' interface always visible when a user uses the phone \cite{Dear12-ImplicitAcquisition};
+% 
+	Cai introduces WaitChatter providing vocabulary exercises while the user awaits instant messaging responses \cite{Cai15-wait}.
+% 
+The relationship between these micro-learning systems and our work is complementary: micro-learning exercises can be generated based on past readings of the learner as we showed with a smartwatch \cite{Nien16-time}.
 
 
 
