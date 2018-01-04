@@ -12,7 +12,7 @@ The figure also presents several critical components of the ecosystem with which
 
 \begin{figure}[h!]
 \centering
-  \includegraphics[width=0.7\columnwidth]{figures/zeeguu-architecture.pdf}
+  \includegraphics[width=0.65\columnwidth]{figures/zeeguu-architecture.pdf}
   \caption{The architecture of the envisioned software ecosystem}~\label{fig:architecture}
 \end{figure}
 
@@ -26,7 +26,7 @@ Currently, the model tracks the probabilities of a user knowing words based on i
 
 \subsection{The Translation Service}
 
-The Translation Service is a subsystem implemented using Python which provides translations to all the applications in the ecosystem. Instead of implementing our own contextual translation engine, we rely on existing industrial grade translation APIs. To avoid depending on a single service and to also increase the likelihood that at least one of the alternative translations is the correct one, the translation service dispatches in parallel requests to at least three third party translation APIs: Google Translate, Microsoft Translate, and Glosbe. \cite{Jager17-mux} The first two provide contextual translations and multi-word translations, while the third is a simple dictionary. 
+The Translation Service is a subsystem implemented using Python which provides translations to all the applications in the ecosystem. Instead of implementing our own contextual translation engine, we rely on existing industrial grade translation APIs. To avoid depending on a single service and to also increase the likelihood that at least one of the alternative translations is the correct one, the translation service collects in parallel results from three third party translation APIs: Google Translate, Microsoft Translate, and Glosbe\footnote{Google and Microsoft provide context-aware translations and multi-word translations. Glosbe is a simple dictionary}. \cite{Jager17-mux} In the next section we explain how the best guess is inserted in the text while the alternatives are available for the readers to consult.
 
 The dependency of the translation service on multiple third party APIs allows for a higher reliability and a chance to guarantee a low response time: when a service is down or too slow to respond, the results from it are ignored. We detail elsewhere the strategies we use to keep response times low\cite{Jager17-mux}.
 
@@ -38,7 +38,7 @@ It is critical that the translation service be used by all the applications in t
 \subsection{Vocabulary Recommender}
 
 The goal of the vocabulary recommender is to program optimally-timed words to practice. 
-
+% 
 To schedule the words to practice the system uses an adaptive, response-time-based scheduling algorithm [was developed] to increase the efficiency of perceptual learning by Mettler et al. \cite{Mettler14-ARTS}. After evaluating several alternative scheduling strategies we settled on the Mettler one since it has been proven to have gains with both familiar, seen items as well as with new, unseen instances and the benefits of adaptive scheduling were present at an immediate test as well as at a delay \cite{Mettler14-ARTS}.
 
 
@@ -53,7 +53,7 @@ Currently, the difficulty of a text is computed by aggregating the individual di
 % taking into account the ranking of words in the target language based on frequency combined with the past history of a given user's activity: 
 
 \begin{itemize}
-	\item When the word is estimated to be known, its difficulty is considered to be zero. The word can be known either based on past readings (i.e. encountered multiple times, but never looked up) or based on past vocabulary exercises (i.e. correctly identified in the most recent exercises) 
+	\item When the word is estimated to be known, its difficulty is considered to be zero. A word can be estimated to be known either based on past readings (i.e. encountered multiple times, but never looked up) or based on past vocabulary exercises (i.e. correctly identified in the most recent exercises) 
 	\item When the word is in the top 50K most frequent words in the target language, it's difficulty is 	considered to increase with 0.1 for every 500 words; if the word is not in top 50K, its difficulty is ten.
 \end{itemize}
 
@@ -74,7 +74,7 @@ With these strategies for computing word difficulty, the text difficulty is comp
  % interacts with: the reader and the trainer applications. 
 % \begin{added}
 	
-	In this section we present the user interface of the prototype {\em personalized language textbook} that we have built. It combines in a single responsive web application a reader applications and a voabulary trainer with multiple exercise types, and thus, can be used from a variety of devices. In the experiments reported in this paper, it was used from Windows, Android, and iOS devices. Although not presented here, since it was not used in the experiments, a smartwatch application also exists as another vocabulary trainer.
+	In this section we present the user interface of the prototype {\em personalized language textbook} that we have built. It combines in a single responsive web application a reader applications and a voabulary trainer with multiple exercise types, and thus, can be used from a variety of devices. In the user evaluation reported in this paper, it was used from Windows, Android, and iOS devices. Although not presented here, since it was not used in the user evaluation, a smartwatch application also exists as another vocabulary trainer \cite{Nien16-time}.
 
 % \end{added}
 
