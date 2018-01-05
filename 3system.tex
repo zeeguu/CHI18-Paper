@@ -10,11 +10,11 @@ Figure \ref{fig:architecture} highlights two types of applications that are rele
 % 
 The figure also presents several critical components of the ecosystem with which the applications interact: the learner model, the translation service, the content recommender, and vocabulary recommender. Before we convince other system creators to join such an ecosystem, we have decided to build a {\em minimum viable ecosystem} which includes basic implementations of the core components. 
 
-In this section we briefly describe the various back-end components, and in the next we describe the user interface of a unified, web-based reader and trainer app. The back-end services are implemented using Python. The front-end uses Javascript and HTML5. The source code for both is available online as open-source. The details are at the end of this paper.
+In this section we briefly describe the various back-end components, and in the next we describe the user interface of a unified, web-based reader and trainer app. The back-end services are implemented using Python. The front-end uses Javascript and HTML5. The source code for both is available online as open-source (the repo url is at the end of this paper).
 
 \begin{figure}[h!]
 \centering
-  \includegraphics[width=0.65\columnwidth]{figures/zeeguu-architecture.pdf}
+  \includegraphics[width=0.60\columnwidth]{figures/zeeguu-architecture.pdf}
   \caption{The architecture of the envisioned software ecosystem}~\label{fig:architecture}
 \end{figure}
 
@@ -41,17 +41,22 @@ It is critical that the translation service be used by all the applications in t
 
 The goal of the vocabulary recommender is to program optimally-timed words to practice. 
 % 
-To schedule the words to practice the system uses an adaptive, response-time-based scheduling algorithm [was developed] to increase the efficiency of perceptual learning by Mettler et al. \cite{Mettler14-ARTS}. After evaluating several alternative scheduling strategies we settled on the Mettler one since it has been proven to have gains with both familiar, seen items as well as with new, unseen instances and the benefits of adaptive scheduling were present at an immediate test as well as at a delay \cite{Mettler14-ARTS}.
+To schedule the words to practice the system uses an adaptive, response-time-based scheduling algorithm aimed introduced by Mettler et al. \cite{Mettler14-ARTS}. 
+
+% After evaluating several alternative scheduling strategies we settled on the Mettler one since it has been proven to have gains with both familiar, seen items as well as with new, unseen instances and the benefits of adaptive scheduling were present at an immediate test as well as at a delay \cite{Mettler14-ARTS}. 
+
+The words scheduled for practice come from those that are translated by the readers. However, only a subset of words are actually scheduled for practice: those that are deemed {\em fit for study}. Not fit for study are words that can not be found in frequency lists of the language, expressions which are longer than three words, words whose translation is the same as the origin (e.g. digital(en) = digital(de)), and words whose context is too long. 
+% A user can force a word to be considered fit for study by {\em starring} it in the user interface.
 
 
 \subsection{Content Recommender}
 
 The content recommender aims to present the reader with texts that are both interesting and accessible at the same time.
 
-The current implementation of the text recommender allows the reader to select online sources (e.g. news, blogs) that are interesting for them. The sources are scanned for the latest articles and cached by using a custom-made library\footnote{The library called {\em watchmen} is open sourced at:\\ https://github.com/zeeguu-ecosystem/watchmen}. 
+The current implementation of the text recommender allows the reader to select online sources (e.g. news, blogs) that are interesting for them. The sources are constantly scanned for the latest articles and cached by using a custom-made library\footnote{Open sourced at: https://github.com/zeeguu-ecosystem/watchmen}. To add a new source, the teacher of the class (or the admin of the system) only has to add the url of the source.
 % The user interface for the article selection is presented in the next section. 
 
-Currently, the difficulty of a text is computed by aggregating the individual difficulty of the words it contains. The individual word difficulty, which can vary from 0 to 10, and is computed in the following way: 
+The difficulty of a text is computed by aggregating the individual difficulty of its words. Individual word difficulty can vary from 0 to 10 and is computed in the following way: 
 % taking into account the ranking of words in the target language based on frequency combined with the past history of a given user's activity: 
 
 \begin{itemize}
@@ -59,8 +64,7 @@ Currently, the difficulty of a text is computed by aggregating the individual di
 	\item When the word is in the top 50K most frequent words in the target language, it's difficulty is 	considered to increase with 0.1 for every 500 words; if the word is not in top 50K, its difficulty is ten.
 \end{itemize}
 
-With these strategies for computing word difficulty, the text difficulty is computed as the median of the words in the text. 
-% In the future we plan to investigate other measures.  
+With these strategies for computing word difficulty, the text difficulty is computed as the median of the words in the text. One limitation of this measure of difficulty is that it does not take into account the phrase length, as other measures do. \cite{Kincaid75-Readability}
 
 
 \newpage

@@ -1,0 +1,252 @@
+Dear Reviewer,
+
+Please find attached a new version of our paper, which represents a first step towards improving it in accordance with the feedback that we received from the reviewers. 
+
+The main changes are: 
+
+   1. The introduction now is compressed to a single page to address the observation of one of the reviewers of it being too long, and to make space for more related work and two new sections
+
+   2. The related work is now expanded and does a better job at comparing the prior work with ours
+
+   3. The third section of the paper is slightly extended to present in slightly more detail the high-level architecture of the system and provide extra information requested by several of the reviewers
+
+   4. The writing of several of the evaluation sections is tightened up such that two new sections could be added to the paper; Figure 10 is improved, and with it the accompanying discussion.
+
+   5. A new section on the impact of the system on the vocabulary of the students is added on page #7
+
+   6. A new section presenting the summary of an semi-structured interview with the teacher of the students who used the system is added on page #9
+
+   7. The section on the "Perception of the learners" is cleaned up and better structured
+
+   8. The section which was entitled "Challenges" has been refactored and better structured into "Lessons Learned"
+
+
+We appreciate your time, and look forward to your feedback on how can the paper be further improved. 
+
+Please find at the end of this message, a detailed summary of the changes that were made in response to the reviewer comments.
+
+Best regards,
+The Authors. 
+
+
+---- 
+
+Metareview: 
+==========
+
+>> the authors need to carefully address the comments of the reviewers in their rewrite of the paper 
+
+   We addressed as many comments as we could. 
+
+
+>> particularly add in the extra data analyses as mentioned in their rebuttal
+
+   We added the extra analyses mentioned in our rebuttal. A new section entitled "What Is The Impact Of The System On The Learner Vocabulary?" is now to be found on page 8. 
+
+
+>> look into how they can rewrite the discussion section as suggested by several of the reviewers.
+
+   We rewrote the discussion section. We renamed it to Lessons Learned, and tried to target it towards future researchers interested in building similar systems and addressing some of the limitations of our system.
+
+
+Reviewer 1:
+==========
+
+>> the authors limit the articles in the system to a predefined set of sources. This mismatches with the story of the intro in this paper and, as reported, also the expectations of the participants. However, I see arguments for restricting the content when the system is used in high schools. I even wondered how an equal language level could be achieved in one grade. I missed a discussion about this in the paper.
+
+   On page #6 (paragraph “In collaboration with the teacher…”) we now explain that even if the choice is limited, the choice is abundant, with multiple dozens of new articles daily.
+
+   Nevertheless, the limitation of this system is correctly pointed out by the reviewer. It is in fact discussed in the Lessons Learned  discussion feedback of the students, as well as in the feedback of the teacher.
+
+
+>> The authors explain the functionality of the presented system clearly.
+However, I miss information about usage scenarios. I wondered if the
+system is designed for additional reading as homework. If so, on what
+kind of devices do the students read? Figure 1 indicates that multiple
+devices are supported, however, it is not explained in the paper.
+Furthermore, I wondered how the system is integrated into school lessons.
+
+   On page #5 (the last paragraph on the page, entitled Usage Scenario) we detail the context in which the system is being used. Two paragraphs later, we explain the devices that the students used: desktop systems, and mobile devices using Android and iOS. 
+
+   On page #4, at the end of the first paragraph, we also explain why a smartwatch is represented in Figure 1: we have implemented a trainer, even if we don’t talk about it for the remainder of the paper. 
+
+   
+>> There are many apps and browser plug-ins for translating words and vocabulary training. I would recommend underlining the novelty of the system based on related work. 
+
+   We extended the related work, and compared it with our system. There is a special paragraph which compares browser extensions that support translations. 
+
+
+>> Additionally, I wondered, how the authors guarantee a certain quality of the translations provided by third-party APIs, without having the context of the text. 
+
+   On page #3 we added a footnote to clarify that Google and Microsoft provide context-aware translations. We further added another explanatory sentence about how "the best guess is inserted in the text while the alternatives are available for the readers to consult"
+
+   
+>> From my perspective, that is one advantage of high school textbook, that professionals checked the translations concerning the context.
+   
+   On page #9, the newly added section ("The Perception of the Teacher") that describes the interview with the teacher of the class  reports that the teacher finds the lack of perfection in translations acceptable, even desirable. However, he also observes that the system is to be used by learners who are already intermediate. In our rewritten introduction, we also make it more clear that the system is designed for intermediates.
+
+
+>> The authors report on an in the wild study of the system with 60 students
+and one teacher over a time span of approximately four weeks. I
+appreciate the large wild study, in general. However, I wondered about
+the reported measurements. From my perspective, most interesting would be
+to see the effect on student’s vocabulary. 
+
+   On page #8, we added a new section discussing the impact of the system on the vocabulary of the learners. We thank the reviewer for this request, as we believe this discussion strenghtens the paper. 
+
+
+>> Furthermore, the time  students spent with the system could provide insights how successful the system is. These values should be compared to students using traditional textbooks at the high school. In contrast, I do not see a contribution in the comparison of selected content sources. 
+
+   We have removed the discussion about the comparison between the various content sources. The corresponding section shrank to a single column from being almost two, and focuses now strictly on the personalization of reading content based on our telemetry data. 
+
+   Unfortunately, we can not compare with traditional textbooks. 
+
+
+>> Detailed qualitative results about how the system is integrated into the lessons from a teacher’s perspective would be helpful.
+
+   On pages #5 and #6 we have added more details about the way the teacher envisions using the system. 
+
+   We have also added an entire section that discusses the perception of the teacher on page #9. 
+
+   We thank the reviewer for this suggestion; we believe that addressing it had considerably improved the paper. 
+
+
+>> I would recommend, to underline the main contribution of this submission in
+relation to the presented system and previous work.
+
+   We have extended the Related Work section, and we tried to better highlight the difference between our work and the prior. 
+
+
+>> Minor issues: 
+>> Paragraph three in the introduction requires a reference for the
+statement about the US Air Force.
+
+   The reference was from "The End of the Average" by Todd Rose. Unfortunately, in the desire to compress the introduction which was deemed too long, we had to completely drop that paragraph. 
+
+>> Some references on Figures seems to be wrong in the paper. On page 6,
+“Figure 8 shows such a generated exercise…”-> Figure 7 shows an
+exercise and not Figure 8. On page 8 refers the text to Figure 5, but I
+assume it should be Figure 10.
+
+Fixed. 
+
+
+>> There are some typos, in particular in the reference list. Please check
+it again.
+
+Fixed. 
+
+
+Reviewer 2:
+==========
+
+
+>> Moreover, the three problems addressed are not very novel, neither have they been neglected by existing solutions:
+1. Language learning websites, such as http://www.veintemundos.com/, have
+a whole list of different topics sorted by difficulty, from which
+learners can self-select.
+2. Amazon’s Kindle has the translate-on-tab function included by
+default.
+3. Texts on learning websites, such as http://www.veintemundos.com/ do
+indeed come with exercises
+
+    In the related work we discuss now the differences between our system and the afore-mentioned solutions. 
+
+
+>> The related work is very sparse and should be extended to
+comprehensively cover the efforts of the research community to tackle
+topics, such as foreign language learning, interactive texts, and
+personalization.
+
+   We have extended considerably the related work section.
+
+
+>> It is unclear to me how the text difficulty of an article is
+determined? “Difficulty estimation takes into account the frequency of
+the vocabulary items in the text.” Which vocabulary items are meant
+here? An objective way to determine text difficulty would be to use
+metrics, such as the Flesch–Kincaid readability test.
+
+   Page #3, Content Recommender, elaborates on the algorithm we use to compute the difficulty of a text. We also mention that one limitation is that we do not take into account phrase length, as Flesch-Kincaid do. 
+
+
+>>> Reportedly, study participants had to write a report for every 30
+minutes spent on the platform. Why was this necessary (instead of
+automatic logging) and in what way might this have discouraged
+participants from using the platform?
+
+   On page #6 we report that this was a request from the teacher
+   that we could not control: 
+   "The teacher could then decide to selectively test them on the basis of their reports. The teacher had used this strategy in the past with other software that he used in class."
+
+
+>> Please provide more information on platform usage, especially average
+number of logins per student, average number of articles read,
+translations made, etc. 
+
+   TODO: still to add
+
+
+>> A more in-depth evaluation with teachers (in the form of
+semi-structured interviews) and presentation of insights.
+
+   On page #9 we have added an entire new section which presents the results of a semi-structured interview with the teacher of the class. 
+
+
+>> the introduction is quite lengthy
+
+   We have compressed the introduction to fit into a single page. 
+
+
+>> artifacts in references
+   
+   We are not sure what does the reviewer refer to
+
+
+>> the translator service triggers translation requests to three online translation services. How are conflicts resolved?
+
+   On page #3, in the Translation Service section, we added an extra phrase which explains how the information from the three sources is merged.
+
+
+>> what was the age range (mean age, SD) of participants?
+
+   In the "Demographics" paragraph, on page #7, we added a note that the participants are all below 18. Unfortunately, when we asked their age, we only had a single category for age, and that was: “below 18”. 
+
+
+>> in a future version of the system, who seeds the article database? How can this be made scalable?
+
+    On page #3 we added a clarification for this: "To add a new source, the teacher of the class only has to provide the url of a new source."
+
+
+
+>> Figure 16 depicts rather sparse than constant usage.
+
+   We changed the text to: “The figure suggests that the students are doing exercises at their own pace over the observed period. The activity is rather sparse, with a more intensive period towards the end.”
+
+
+>> how diverse were the articles for each channel? Is this not a rather
+coarse personalization, since one news outlet can cover various topics?
+
+   Indeed, the discussion on page #8 shows that the reviewer’s intuition is correct, and several of the learners reported that they think a more fine-grained grouping of articles would have benefited them. 
+
+
+>> provide information on the technologies used to build the apparatus,
+i.e., learning platform
+
+   On page #3 we added a brief paragraph that describes the technologies used for the learning platform:
+   "The back-end services are implemented using Python. The front-end uses Javascript and HTML5. The source code for both is available online as open-source (the repo url is at the end of this paper)."
+
+
+>> if students self-select their text channels, how do the authors imaging
+special vocabulary to be learned? How would a vocabulary filter bubble be
+avoided?
+
+   Very good question. 
+   This is now discussed in the new section on page #9 "The Perception of the Teacher"
+
+
+>> I would like to thank the authors for their rebuttal and clarifications
+on their contribution and measurements. It is still unclear to me, however, how exercises adapt to the user and context. 
+
+   We consider that the exercises adapt to the user because they are different to every user, being generated based on past readings. Moreover, the scheduling algorithm (described on page #3 in "Vocabulary Recommender") takes as input the past interaction times of the user with the words. 
+

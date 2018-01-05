@@ -1,0 +1,88 @@
+%!TEX root=paper.tex
+
+\section{Lessons Learned}
+
+% \subsection{Reading Personalization Works And Learners Want More}
+\subsection{Learners Appreciate Personalization But More Is Needed}
+Based on telemetry, we confirmed that the opportunity of reading personalized materials is used by the students. Also in their feedback, students appreciate highly the personalization of reading content. The teacher thinks that student motivation is increased due to the possibility of reading texts they like. 
+% 
+However, one of the recurring themes of the student feedback is the need for a better way to find personally interesting articles. One possibility is suggested by the learners: the possibility of browsing articles by topics rather than sources. Another is a recommender system that takes as input the learner feedback on existing articles (e.g. the use of the Like button).
+% An even more advanced system could try to automatically recommend texts based on the past reading history of the learner the way music and book recommender systems work. 
+
+% The way we did difficulty ranking was sub-optimal. Most of the difficulties were very close to each other in value, between 1 and 4 and they were generic instead of being personalized. We think that as a result, the difficulty estimations that the system presented were too abstract for the readers. And as a result, 
+
+
+% This situation could happen either because our current difficulty computation is not good enough, or because the way it is presented in the user interface is not clear enough for the readers.
+
+% One of the limitations of our difficulty computer, but also of other traditional readability metrics \cite{Kincaid75-Readability} is that they 
+
+% A more advanced strategy is needed, one that is less abstract, and personalized for the individual learner. One approach would be to estimate the number of words that are likely to be unknown in an article for a particular learner. A complementary information about the article could be the number of words that we know are being learned at the moment which are to be found in that article. In this way, a learner can choose a text that also gives them the chance to re{\"e}ncounter words being learned. 
+
+
+% \subsection{Personal Study Preferences}
+The vocabulary practice scheduler tries to optimize the times when the words are being repeated based on the state of the art in spaced repetition. However, we received multiple requests from learners who want to practice the words in a given text, once they are finished reading it, in the vein of traditional textbooks. The ideal system would allow the learners to personalize the vocabulary scheduling algorithms. 
+
+
+\subsection{Improving Text Accesibility Reporting}
+One of the learners reported: \squote{My level of the language is quite low for now, so I clicked to get a translation very often. Too often.}. Since the feedback was anonymous, it is not clear whether this situation came about due to the limitations of the difficulty computation, the limitations of the user interface, or because the student was simply not as advanced as their colleagues. In any case, a more personal approach to difficulty computation and reporting seems to be needed in order to steer students away from articles which are too difficult for them. 
+
+
+\subsection{Ensuring the Quality of Content}
+The advantage of a textbook is that the quality control of the texts in it is guaranteed by the editors. However, a personalized textbook like the one we present has no editors. The solution we found in our work was to limit the possible sources of articles together with the teacher. Even so, one of the students, wrote in their feedback: {\em ``I would like to avoid articles which have information about accidents with human casualties''}. Ideally, in the future, this kind of personal preferences can be specified by the readers.
+
+One thing that future personalized textbooks might investigate is crowdsourcing and ``teachersourcing'' where learners and teachers (or more generally, trusted advanced learners) can provide feedback on existing materials. Crowdsourcing has been identified by Heffernan et al. as one of the driving technologies of the upcoming adaptive learning \cite{Heff16-crowdsourcing}. 
+
+Another situation where the quality of non-human-selected material matters is the automatic extraction of the context to be used in exercises. 
+Although it is practical to reuse the original context of a word in exercises, sometimes the context in which the learner looks up a word is too long, sometimes too short, sometimes too difficult, and sometimes too easy. Estimating the quality of the automatically extracted context of an exercise is a challenge for future systems.
+ % must address.
+ % One measure that we are considering is: ensuring that all the words in the context are simpler than the tested word. 
+
+
+
+\subsection{An Activity Dashboard Is Important For The Teacher}
+One of the advantages of our (eco)system architecture in comparison to other alternatives for online reading (e.g. browser extensions for translations) is that it allows the teacher to gain insight into the reading activity of students. The deployed system has a teacher dashboard showing a chronological list of the words that a student looked up in context. In the interview with the teacher, they observed that the biggest missing aspect of the system is a more complete insight into student activity. 
+
+% Such a system should present more advanced analytics that could enhance the teacher's understanding of the class. This is something that is a clear opportunity when moving to a digital textbook. 
+
+
+
+
+
+% % \newpage
+% \section{Challenges}
+% \label{sec:challenges}
+
+% In this section we explore some of the challenges that we perceive need to be addressed by our system and similar ``personal textbook'' systems. We base our list of challenges on our observations and on the feedback that we received from our learners. The full list of recommendations from our users can be found in the GitHub repository online.
+
+% \subsection{Registering for ``topics'' instead of ``sources''}
+% Multiple learners asked for the possibility of registering to article topics rather than ``article sources''. A future system should consider this.
+
+
+% \subsection{The selection of vocabulary to study}
+
+% How do we automatically verify the ``learnability '' of an example in the context? It is a great responsibility automatically selecting a word to study. The situation where a user accepted a mistaken translation, and then the system ``teaches'' the learner that word would be disastruous. Currently we have a set of filters that try to avoid this, moreover, we also offer the learner the possibility of providing feedback in case he is not confident in a given translation. In the future, we consider using crowdsourcing to decrease even more the probability of wrong translations.
+% \ml{alternate perspecitve: Do the learners choose the right translation? }% 	\item provide shorter sentences
+
+
+
+% A few other types of improvement ideas that we have received from our beta-testers are: 
+% \begin{itemize}
+% 	\item be forgiving with misspellings, allow retry if the learner was close instead of considering it a mistake
+% 	\item better provide hints than simply showing the answer
+% \end{itemize}
+
+
+% \subsection{Evaluating the quality of examples}
+
+% It is indeed desirable to find good examples of practice exercises from past readings. Sometimes, the context in which the learner looks up a word is too long and sometimes it is too short. How to estimate the quality of an exercise? One measure that we are considering is: ensuring that all the words in the context are simpler than the tested word. 
+
+% For beginners, this is still not an option. So we can only do this for students who are already quite advanced. \todo{We should see whether there's a difference between the ones that were A2 vs. B1}
+
+% \subsection{Estimating article difficulty in a personal way}
+% The way we did difficulty ranking was sub-optimal. Most of the difficulties were very close to each other in value, between 1 and 4 and they were generic instead of being personalized. We think that as a result, the difficulty estimations that the system presented were too abstract for the readers. And as a result, one of the readers reported that he disliked about the Reader the fact that \squote{My level of the language is quite low for now, so I clicked to get a translation very often. Too often.} 
+
+% A more advanced strategy is needed, one that is less abstract, and personalized for the individual learner. One approach would be to estimate the number of words that are likely to be unknown in an article for a particular learner. A complementary information about the article could be the number of words that we know are being learned at the moment which are to be found in that article. In this way, a learner can choose a text that also gives them the chance to re{\"e}ncounter words being learned. 
+
+
+% \subsection{Investigating more possible classroom workflows}
+% The system was initially designed for self study. However, when invited to test it in a formal classroom we were happy to oblige.
