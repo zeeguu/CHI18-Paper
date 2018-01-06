@@ -6,8 +6,8 @@
 \label{sec:limitations}
 % We presented a system, and we showed that it has the potential to generate user involvement. However the study we performed is not sufficient to reach a strong conclusion about the impact of the system we present... 
 
-The feedback from the users was overall positive, with many of them showing appreciation for the personalization aspects of the system. 
-However, further studies are needed since there are multiple reasons for which these results might not extend to the broader population. 
+% The feedback from the users was overall positive, with many of them showing appreciation for the personalization aspects of the system. 
+Although results are promising, further studies are needed since there are multiple reasons for which these results might not extend to the broader population. 
 The students might have been influenced by our enthusiastic presentation of the system at the beginning of the testing month. 
 Also, the students we worked with are not necessarily representative for the Dutch highschool student population since they are bilingual. 
 % Even in this case, during the feedback multiple of them remarked that they would prefer to use the system in their native Dutch as opposed to English.
@@ -20,9 +20,11 @@ Also, the number of students who answered our survey was limited: only \surveyre
 
 % We observed that students prefer to interact with different texts...  
 
-The algorithms for scheduling vocabulary exercises are the state of the art in spaced repetition. However, we did not have a control group to see whether this approach works better than others. Moreover, note that other approaches for using spaced repetition already exist; what is unique in our approach is that the students learn based on personalized exercises generated based on the context of their past readings.
+% The algorithms for scheduling vocabulary exercises are the state of the art in spaced repetition. However, we did not have a control group to see whether this approach works better than others. Moreover, note that other approaches for using spaced repetition already exist; what is unique in our approach is that the students learn based on personalized exercises generated based on the context of their past readings.
 
-We showed that the student interaction with the texts indicates that at the end of the month they have learned words that they did not know at the begining. However, it is not clear whether this knowledge will remain for the long term. 
+Student interaction with the texts indicates that at the end of the month they have learned words that they did not know at the begining. However, it is not clear whether this knowledge will remain for the long term. In the system, currently only once a student has correctly handled a word three times in a row in exercises, we consider it learned and remove it from the exercises. 
+
+We encountered an enthusiastic teacher who thinks that such a system is critical to his classroom. Although we think he is right, he might not be representative of the general teacher population so more studies with language teachers are needed.
 
 
 \section{Availability of The System, Code and Data}
@@ -47,12 +49,15 @@ We presented a system aimed to be a minimal viable product for a personalized la
 
 In their feedback, the students appreciate the possibility of reading personally relevant texts and the ease of interaction with the texts that is provided by the Reader component of our system. However, they also want better ways to find personally relevant content. The teacher of the three classes thinks that such a system is critical for the modern classroom, but wants more detailed data about student activity within the system.
 
-We plan to work more with teachers to better understand how to combine the individuality of the system with the shared experience of the learners in a classroom, since other classroom workflows than the one presented here could be possible. We also plan to improve the content recommender and the teacher dashboard. 
+As future work we think two directions are prioritaire. First, more work work with teachers is needed to better understand how to combine the individual focus of personalized textbook with the collective experience of the learners in a classroom.
+% , since other classroom workflows than the one presented here could be possible. 
+Second, a better content recommender and a better personalized difficulty estimator are needed in order to increase even more the motivation of young learners.
 % Indeed, new workflows and classroom activities must be discovered.
 
 % We hope that the availability of the system, code, and the open data that we published will make it easy for other researchers to investigate problems related to 
 % foreign language reading.
 
 
-\section{Acknowledgements}
-We are grateful to the anonymous reviewers of CHI'18 for very valuable feedback on an earlier version of this paper. 
+{\footnotesize
+	{\bf Acknowledgements.} We thank the anonymous reviewers for valuable feedback on an earlier version of this paper. 
+}
