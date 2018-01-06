@@ -5,15 +5,6 @@ you can run these queries yourself
 - with the outcome of every exercise
 - ordered by user in chronological order
 
-Preview of Result: 
-
-		593	2017-06-17 14:12:04	12430	2017-06-17	serre	Correct
-		593	2017-06-17 14:12:23	12431	2017-06-17	accusés	Wrong
-		593	2017-06-17 14:12:25	12432	2017-06-17	accusés	Wrong
-		593	2017-06-17 14:12:26	12433	2017-06-17	accusés	Correct
-		593	2017-06-17 14:12:52	12434	2017-06-17	hausse	Correct
-		593	2017-06-17 14:13:22	12435	2017-06-17	lutter	Correct		
-
 Query:
 
 		select b.user_id, e.time, e.id as exercise_id,  DATE(e.time), uw.word, eo.`outcome`
@@ -25,3 +16,11 @@ Query:
 		    eo.id = e.`outcome_id`
 		order by user_id, time
 
+Preview of Result: 
+
+		593	2017-06-17 14:12:04	12430	2017-06-17	serre	Correct
+		593	2017-06-17 14:12:23	12431	2017-06-17	accusés	Wrong
+		593	2017-06-17 14:12:25	12432	2017-06-17	accusés	Wrong
+		593	2017-06-17 14:12:26	12433	2017-06-17	accusés	Correct
+		593	2017-06-17 14:12:52	12434	2017-06-17	hausse	Correct
+		593	2017-06-17 14:13:22	12435	2017-06-17	lutter	Correct		
