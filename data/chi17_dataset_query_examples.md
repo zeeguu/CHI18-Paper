@@ -7,13 +7,18 @@ you can run these queries yourself
 
 Query:
 
-		select b.user_id, e.time, e.id as exercise_id,  DATE(e.time), uw.word, eo.`outcome`
-		from bookmark b, exercise e, bookmark_exercise_mapping bem, user_word as uw, exercise_outcome as eo
+		select b.user_id, e.time, e.id as exercise_id,  DATE(e.time), uw.word, eo.outcome
+		from 
+			bookmark b, 
+			exercise e, 
+			bookmark_exercise_mapping bem, 
+			user_word as uw, 
+			exercise_outcome as eo
 		where
-		    bem.`bookmark_id` = b.id and
-		    bem.`exercise_id`= e.id and
+		    bem.bookmark_id = b.id and
+		    bem.exercise_id= e.id and
 		    uw.id = b.origin_id and
-		    eo.id = e.`outcome_id`
+		    eo.id = e.outcome_id
 		order by user_id, time
 
 Preview of Result: 
@@ -48,8 +53,8 @@ Preview of Result:
 					text.id = text_id
 					and url.id = url_id
 					and domain_name.id = domain_name_id
-				group by url.`title`
-				order by bookmark.`time`) as q
+				group by url.title
+				order by bookmark.time) as q
 
 		group by q.user_id
 
