@@ -38,8 +38,12 @@ Preview of Result:
 		select q.user_id, count(title)
 		from 
 			(
-				select user_id, url.`title`, domain_name.`domain_name`, bookmark.`time`
-				from `bookmark`, text, url, domain_name
+				select user_id, url.title, domain_name.domain_name, bookmark.time
+				from 
+					bookmark, 
+					text, 
+					url, 
+					domain_name
 				where 
 					text.id = text_id
 					and url.id = url_id
@@ -62,12 +66,17 @@ Preview of Result:
 				(
 					-- days when doing exercises
 					select distinct user_id, DATE(e.time) as date
-							from bookmark b, exercise e, bookmark_exercise_mapping bem, user_word as uw, exercise_outcome as eo
+							from 
+								bookmark b, 
+								exercise e, 
+								bookmark_exercise_mapping bem, 
+								user_word as uw, 
+								exercise_outcome as eo
 							where
-							    bem.`bookmark_id` = b.id and
-							    bem.`exercise_id`= e.id and
+							    bem.bookmark_id = b.id and
+							    bem.exercise_id= e.id and
 							    uw.id = b.origin_id and
-							    eo.id = e.`outcome_id`
+							    eo.id = e.outcome_id
 
 					union
 
