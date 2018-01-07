@@ -25,7 +25,7 @@ Preview of Result:
 
 
 
-### The number of translation events for all the users
+### The number of translations all the users
 
 		select count(*)
 		from user_activity_data
@@ -52,7 +52,7 @@ Preview of Result:
 
 
 
-### The number of times each user used the system
+### The number of distinct days each user used the system
 
 
 		select a.user_id, a.login_days
