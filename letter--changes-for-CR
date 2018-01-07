@@ -4,13 +4,13 @@ Please find attached a new version of our paper, which represents a first step t
 
 The main changes are: 
 
-   1. The introduction now is compressed to a single page to address the observation of one of the reviewers of it being too long, and to make space for more related work and two new sections
+   1. The introduction now is compressed to a single page to address the observation of it being too long, and to make space for more related work and two new sections
 
    2. The related work is now expanded and does a better job at comparing the prior work with ours
 
    3. The third section of the paper is slightly extended to present in slightly more detail the high-level architecture of the system and provide extra information requested by several of the reviewers
 
-   4. The writing of several of the evaluation sections is tightened up such that two new sections could be added to the paper; Figure 10 is improved, and with it the accompanying discussion.
+   4. The writing of several of the evaluation sections is tightened up such that two new sections could be added to the paper; Figure 10 is enhanced, and with it the accompanying discussion.
 
    5. A new section on the impact of the system on the vocabulary of the students is added on page #7
 
@@ -20,10 +20,10 @@ The main changes are:
 
    8. The section which was entitled "Challenges" has been refactored and better structured into "Lessons Learned"
 
+At the end of this message, a detailed summary of the changes that were made in response to the reviewer comments is also present.
+
 
 We appreciate your time, and look forward to your feedback on how can the paper be further improved. 
-
-Please find at the end of this message, a detailed summary of the changes that were made in response to the reviewer comments.
 
 Best regards,
 The Authors. 
@@ -184,7 +184,8 @@ participants from using the platform?
 number of logins per student, average number of articles read,
 translations made, etc. 
 
-   TODO: still to add
+   On page #6, at the bottom of the first column, in the "Usage" paragraph, 
+   we added several of the informations that the reviewer requested.
 
 
 >> A more in-depth evaluation with teachers (in the form of
@@ -248,5 +249,5 @@ avoided?
 >> I would like to thank the authors for their rebuttal and clarifications
 on their contribution and measurements. It is still unclear to me, however, how exercises adapt to the user and context. 
 
-   We consider that the exercises adapt to the user because they are different to every user, being generated based on past readings. Moreover, the scheduling algorithm (described on page #3 in "Vocabulary Recommender") takes as input the past interaction times of the user with the words. 
+   We consider that the exercises adapt to the user because they are different to every user, being generated based on past readings. Moreover, the scheduling algorithm (described on page #3 in "Vocabulary Recommender") takes as input the past interactions of the user with the words. 
 
