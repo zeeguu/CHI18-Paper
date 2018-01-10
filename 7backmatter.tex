@@ -11,7 +11,7 @@ Although results are promising, further studies are needed since there are multi
 The students might have been influenced by our enthusiastic presentation of the system at the beginning of the testing month. 
 Also, the students we worked with are not necessarily representative for the Dutch highschool student population since they are bilingual. 
 % Even in this case, during the feedback multiple of them remarked that they would prefer to use the system in their native Dutch as opposed to English.
-Also, the number of students who answered our survey was limited: only \surveyrespondents students which represents less than 50\% of the participants who actually used the system.
+Also, the number of students who answered our survey was limited: only \surveyrespondents students which represents only about 30\% of the participants who actually used the system.
 
 % We showed that the majority of the students used the system constantly throughout the one month period. 
 % However, this might be because the students were encouraged to use the system as part of their assignment in the class. 
@@ -22,7 +22,7 @@ Also, the number of students who answered our survey was limited: only \surveyre
 
 % The algorithms for scheduling vocabulary exercises are the state of the art in spaced repetition. However, we did not have a control group to see whether this approach works better than others. Moreover, note that other approaches for using spaced repetition already exist; what is unique in our approach is that the students learn based on personalized exercises generated based on the context of their past readings.
 
-Student interaction with the texts indicates that at the end of the month they have learned words that they did not know at the begining. However, it is not clear whether this knowledge will remain for the long term. In the system, currently only once a student has correctly handled a word three times in a row in exercises, we consider it learned and remove it from the exercises. 
+Student interaction with texts and exercises indicates that at the end of the month they have learned words that they did not know at the begining and strengthened words they were not sure of. However, it is not clear whether this knowledge will remain for the long term. Currently only once a student has correctly handled a word three times in a row in exercises the system considers it learned and removes it from the exercises (even if it should probably be verified once more much later).
 
 We encountered an enthusiastic teacher who thinks that such a system is critical to his classroom. Although we think he is right, he might not be representative of the general teacher population so more studies with language teachers are needed.
 
@@ -36,22 +36,27 @@ The source code is open under a MIT license and available online at \url{https:/
 
 % \subsection{Data}
 The anonymized questionnaires, feedback, teacher interview, 
-together with the telemetry data in a MySQL database dump representing the interactions of more than \students learners with the system for one month, are available on GitHub at the address: \url{https://github.com/zeeguu-ecosystem/CHI18-Paper}. 
+together with the telemetry data in a MySQL database dump representing the interactions of more than \students learners with the system are available on GitHub at: \url{https://github.com/zeeguu-ecosystem/CHI18-Paper}. 
 % The same link holds the full anonymized questionnaire data. % used in this paper.
 
 
 
 
 
-\section{Conclusion and Future Work}
-We presented a system aimed to be a minimal viable product for a personalized language textbook that uses the web as its content source. We deployed the system with \studs high school students for one month. Based on telemetry we observe that the students take advantage use of the personalization features, and that by using the system their vocabulary improves. 
+\section{Conclusions and Future Work}
+We presented a system aimed to be a minimal viable product for a personalized language textbook that uses the web as its content source. We deployed the system with \studs high school students for one month. 
+Based on telemetry we see that students take advantage of the possibility of personalization by 
+  reading articles that are interesting and 
+  by practicing words in exercises generated from their past readings. 
+Based on their interactions we can see that their vocabulary is enriched with new words and the knowledge of other words is strengthened.
+% , and that by using the system their vocabulary improves. 
  % with new words and strenghened knowledge of words they were not confident about. 
 
 In their feedback, the students appreciate the possibility of reading personally relevant texts and the ease of interaction with the texts that is provided by the Reader component of our system. However, they also want better ways to find personally relevant content. The teacher of the three classes thinks that such a system is critical for the modern classroom, but wants more detailed data about student activity within the system.
 
-As future work we think two directions are prioritaire. First, more work work with teachers is needed to better understand how to combine the individual focus of personalized textbook with the collective experience of the learners in a classroom.
+As future work we see two salient directions. First, more work with teachers is needed to better understand how to combine the individual focus of personalized textbook with the collective experience of the learners in a classroom.
 % , since other classroom workflows than the one presented here could be possible. 
-Second, a better content recommender and a better personalized difficulty estimator are needed in order to increase even more the motivation of young learners.
+Second, improved content recommenders and difficulty estimators are needed in order to provide an even better personalization of content and thus increase learner interest and motivation.
 % Indeed, new workflows and classroom activities must be discovered.
 
 % We hope that the availability of the system, code, and the open data that we published will make it easy for other researchers to investigate problems related to 
@@ -59,5 +64,7 @@ Second, a better content recommender and a better personalized difficulty estima
 
 
 {\footnotesize
-	{\bf Acknowledgements.} We thank the anonymous reviewers for valuable feedback on an earlier version of this paper. 
+	{\bf Acknowledgements.} We thank the anonymous reviewers for very valuable feedback. We thank Sara Vanini and Mark Langheinrich for advice, and 
+	% , Marc Langheirich, Gabriela Marcu .
+	 Wim Gombert and Jeroen van Engen for collaboration.
 }

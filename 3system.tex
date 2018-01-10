@@ -14,14 +14,14 @@ In this section we briefly describe the various back-end components, and in the 
 
 \begin{figure}[h!]
 \centering
-  \includegraphics[width=0.60\columnwidth]{figures/zeeguu-architecture.pdf}
+  \includegraphics[width=0.75\columnwidth,trim={0 10 0 10},clip]{figures/zeeguu-architecture.pdf}
   \caption{The architecture of the envisioned software ecosystem}~\label{fig:architecture}
 \end{figure}
 
 \subsection{Learner Model}
 
-At the core of the ecosystem a ``learner model'' tracks the evolving knowledge of the learner. 
-Based on the learner model, algorithms can make recommendations for the individual applications regarding interesting content to read and appropriate vocabulary to study. The individual applications, in turn, report back to the learner model events from which the learner progress can be infered. 
+At the core of the ecosystem a {\em learner model} tracks the evolving knowledge. 
+Based on this model, algorithms can make recommendations for the individual applications regarding interesting content to read and appropriate vocabulary to study. The individual applications, in turn, report back to the learner model events from which the learner progress can be infered. 
 
 Currently, the model tracks the probabilities of a user knowing words based on interaction events in the apps: asking for a translation, repeatedly encountering a given word without asking for a translation, or answering an vocabulary exercise.
 
@@ -59,7 +59,7 @@ The difficulty of a text is computed by aggregating the individual difficulty of
 
 \begin{itemize}
 	\item When the word is estimated to be known, its difficulty is considered to be zero. A word can be estimated to be known either based on past readings (i.e. encountered multiple times, but never looked up) or based on past vocabulary exercises (i.e. correctly identified in the most recent exercises) 
-	\item When the word is in the top 50K most frequent words in the target language, it's difficulty is 	considered to increase with 0.1 for every 500 words; if the word is not in top 50K, its difficulty is ten.
+	\item When the word is in the top 50K most frequent words in the target language, its difficulty is considered to increase with 0.1 for every 500 words; if the word is not in top 50K, its difficulty is ten.
 \end{itemize}
 
 With these strategies for computing word difficulty, the text difficulty is computed as the median of the words in the text. One limitation of this measure of difficulty is that it does not take into account the phrase length, as other measures do. \cite{Kincaid75-Readability}
@@ -78,7 +78,7 @@ With these strategies for computing word difficulty, the text difficulty is comp
  % interacts with: the reader and the trainer applications. 
 % \begin{added}
 	
-	In this section we present the user interface of the prototype {\em personalized language textbook} that we have built. It combines in a single responsive web application a reader applications and a voabulary trainer with multiple exercise types, and thus, can be used from a variety of devices. In the user evaluation reported in this paper, it was used from Windows, Android, and iOS devices. Although not presented here, since it was not used in the user evaluation, a smartwatch application also exists as another vocabulary trainer \cite{Nien16-time}.
+	In this section we present the user interface of the prototype {\em personalized language textbook} that we have built. It combines in a single responsive web application a reader applications and a vocabulary trainer with multiple exercise types, and thus, can be used from a variety of devices. In the user evaluation reported in this paper, it was used from Windows, Android, and iOS devices. Although not presented here, since it was not used in the user evaluation, a smartwatch application also exists as another vocabulary trainer \cite{Nien16-time}.
 
 % \end{added}
 

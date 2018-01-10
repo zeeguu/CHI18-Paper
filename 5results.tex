@@ -25,7 +25,7 @@ Based on logging every interaction of every user, Figure \ref{fig:feature_usage}
   \end{figure}
 
 % With 6.700 occurrences, 
-\feature{Requesting a translation} is the most used interaction of the system and \feature{showing translation alternatives} is the second most used one. The six-to-one ratio between the two features is an indicator of the limitations of the automatic translation. The fact that they are both achievable with one click or touch proves to have been a good decision. 
+\feature{Requesting a translation} is the most used interaction of the system and \feature{showing translation alternatives} is the second most used one. The six-to-one ratio between the two features (6,721 to 1,146 as in Figure \ref{fig:feature_usage}) is an indicator of the limitations of the automatic translation. The fact that they are both achievable with one click or touch proves to have been a good decision. 
  % -- these are probably the situations when learners ask for 
 
 \feature{Pronuncing a word} is he third most used interaction. On average, there are about 1.66 pronunciations for a given translation, suggesting that users are often asking for a second pronunciation after hearing it the first time. 
@@ -40,7 +40,7 @@ Based on logging every interaction of every user, Figure \ref{fig:feature_usage}
 \feature{Liking} an article that was just read by clicking the corresponding button at the bottom of an article happened 174 times. This information can be used in the future to improve article recommendations.
  % and maybe to add a social dimension to the system by providing information about how other people react to a given article.
 
-\feature{Suggestion of an alternative} allows users to contribute their own translations when they are not satisfied with the one automatically provided by the system. This interaction is used seldom and by only a minority of users. It still is to be determined whether this is due to readers being satisfied with the automatic translations and their alternatives, or due to a low involvement.
+\feature{Suggestion of an alternative} allows users to contribute their own translations when they are not satisfied with the one automatically provided by the system. This interaction is used seldom and by only a minority of users. It still is to be determined whether this is due to readers being satisfied with the automatic translations and their alternatives, or due to a low involvement. It might also be that more advanced readers would benefit more from this feature.
 % \ml{which brings me to: @Dan, what do you mean by alternatives here? :) Is it the number of times somebody selected an alternative, or the number of times they opened the menu. In any case, can we get the other number?}
 
   % \begin{figure}[h!]
@@ -60,14 +60,14 @@ Based on logging every interaction of every user, Figure \ref{fig:feature_usage}
 
 
 
-% \newpage
+\newpage
 \section{How Do Students Interact With Exercises?}
 
-The system presented four types of vocabulary practice exercises to the students. In total, during the entire duration of the study we observed 18,082 exercises being presented to the students. Figure \ref{fig:ex_interactions} presents the number of exercises which had a ``correct'' outcome (red) vs. exercises which had a ``wrong'' outcome (blue). The figure shows one student who did 3,000 exercises during one month, and about six eager students who did more than 700 exercises. 
+The system presented four types of vocabulary practice exercises to the students. In total, during the entire duration of the study we observed 18,082 attempts being submitted by the students in 14,609 exercises\footnote{Attempts include wrong submissions, and requests for hints}. Figure \ref{fig:ex_interactions} presents the number of answers which had a ``correct'' outcome (red) vs. exercises which had a ``wrong'' outcome (blue). The figure shows one student who submitted 2,865 answers during one month, and about six eager students who submitted about  700 answers each. 
 
   \begin{figure}[h!]
   \centering
-    \includegraphics[width=\columnwidth]{figures/exercise_interactions_count.png}
+    \includegraphics[width=0.9\columnwidth]{figures/exercise_interactions_count.png}
     \caption{Correct (red) and wrong (blue) exercise outcomes per student}
     \label{fig:ex_interactions}
   \end{figure}
@@ -81,7 +81,7 @@ The figure does not include one other type of outcome, {\em requesting a hint}, 
   % translate -- 7
   % match -- 6
                       & Choose  & Find & Translate & Match \\ \hline
-  Total interactions  & 7,180    & 6,249 & 2,643      & 2,010\\
+  Total attempts  & 7,180    & 6,249 & 2,643      & 2,010\\
   Hint requests       & 29      & 529  & 847       & 16 \\ \hline
   \label{tab:hints_per_ex_type}
 \end{tabular}
@@ -96,7 +96,7 @@ Figure \ref{fig:activity_per_day} shows the days when learners practice exercise
   \end{figure}
 
 
-% \begin{added}
+% % \begin{added}
 
 
 

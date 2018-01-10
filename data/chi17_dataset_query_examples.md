@@ -93,4 +93,22 @@ Preview of Result:
 				
 				group by all_together.user_id) a
 
+### Exercise details ordered by user chronologically
+
+		select exercise.id, bookmark.user_id,  user.name, bookmark.id, uw.word, outcome, exercise.time, exercise.solving_speed
+		from exercise, 
+			exercise_outcome, 
+			bookmark, 
+			bookmark_exercise_mapping, 
+			user,
+			user_word uw
+		where 
+			exercise.outcome_id = exercise_outcome.id and
+			bookmark_exercise_mapping.exercise_id = exercise.id and 
+			bookmark_exercise_mapping.bookmark_id = bookmark.id and
+			uw.id = bookmark.origin_id and
+			bookmark.user_id = user.id 
+		order by name, time
+
+
 

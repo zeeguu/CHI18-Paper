@@ -23,24 +23,23 @@ However, one of the recurring themes of the student feedback is the need for a b
 The vocabulary practice scheduler tries to optimize the times when the words are being repeated based on the state of the art in spaced repetition. However, we received multiple requests from learners who want to practice the words in a given text, once they are finished reading it, in the vein of traditional textbooks. The ideal system would allow the learners to personalize the vocabulary scheduling algorithms. 
 
 
-\subsection{Improving Text Accesibility Reporting}
+\subsection{Improving Text Difficulty Reporting}
 One of the learners reported: \squote{My level of the language is quite low for now, so I clicked to get a translation very often. Too often.}. Since the feedback was anonymous, it is not clear whether this situation came about due to the limitations of the difficulty computation, the limitations of the user interface, or because the student was simply not as advanced as their colleagues. In any case, a more personal approach to difficulty computation and reporting seems to be needed in order to steer students away from articles which are too difficult for them. 
 
 
 \subsection{Ensuring the Quality of Content}
-The advantage of a textbook is that the quality control of the texts in it is guaranteed by the editors. However, a personalized textbook like the one we present has no editors. The solution we found in our work was to limit the possible sources of articles together with the teacher. Even so, one of the students, wrote in their feedback: {\em ``I would like to avoid articles which have information about accidents with human casualties''}. Ideally, in the future, this kind of personal preferences can be specified by the readers. One possibility would be integrating  foreign language search, as Lappas and Vlachos propose \cite{Lapp12-NonNative}.
+As opposed to a traditional textbook, a personalized textbook like the one we present has no editors and no quality control. In our study we limited the possible sources of articles together with the teacher. Even so, one of the students, wrote in their feedback: {\em ``I would like to avoid articles which have information about accidents with human casualties''}. Ideally, this kind of personal preferences can be specified by the readers. One possibility would be integrating  foreign language search, as Lappas and Vlachos propose \cite{Lapp12-NonNative}. Another is crowdsourcing where learners (and teachers, or more generally, trusted advanced learners) can provide feedback on existing materials. Crowdsourcing has been identified by Heffernan et al. as one of the driving technologies in learning \cite{Heff16-crowdsourcing}. 
 
-One thing that future personalized textbooks might investigate is crowdsourcing and ``teachersourcing'' where learners and teachers (or more generally, trusted advanced learners) can provide feedback on existing materials. Crowdsourcing has been identified by Heffernan et al. as one of the driving technologies of the upcoming adaptive learning \cite{Heff16-crowdsourcing}. 
-
-Another situation where the quality of non-human-selected material matters is the automatic extraction of the context to be used in exercises. 
-Although it is practical to reuse the original context of a word in exercises, sometimes the context in which the learner looks up a word is too long, sometimes too short, sometimes too difficult, and sometimes too easy. Estimating the quality of the automatically extracted context of an exercise is a challenge for future systems.
+\subsection{Limitations of Automatically Generated Exercises}
+% Another situation where the quality of non-human-selected material matters is the automatic extraction of the context to be used in exercises. 
+Although it is practical and effective to reuse the original context of a word in exercises\cite{nagy95-context}, sometimes the context in which the learner looks up a word is too long, sometimes too short, sometimes too difficult, and sometimes too easy. Estimating the quality of the automatically extracted context of an exercise, and ensuring that it is in the {\em zone of proximal development} -- where they are not too easy, and not too hard \cite{Zaretskii09-ProximalDevelopment} -- is a challenge for future builders of similar systems. 
  % must address.
  % One measure that we are considering is: ensuring that all the words in the context are simpler than the tested word. 
 
 
 
-\subsection{An Activity Dashboard Is Important For The Teacher}
-One of the advantages of our (eco)system architecture in comparison to other alternatives for online reading (e.g. browser extensions for translations) is that it allows the teacher to gain insight into the reading activity of students. The deployed system has a teacher dashboard showing a chronological list of the words that a student looked up in context. In the interview with the teacher, they observed that the biggest missing aspect of the system is a more complete insight into student activity. 
+\subsection{Insight Into Student Activity Is Important}
+One of the advantages of our (eco)system architecture in comparison to other alternatives for online reading (e.g. browser extensions for translations) is that it allows the teacher to gain insight into the reading activity of students. The deployed system has a teacher dashboard showing a chronological list of the words that a student looked up in context. In the final interview, the teacher observed that the biggest missing aspect of the system is a more complete insight into student activity, in particular the time students spend and the quality of their work. What other kinds of information are critical for teachers and how to collect and present them is an open question.
 
 % Such a system should present more advanced analytics that could enhance the teacher's understanding of the class. This is something that is a clear opportunity when moving to a digital textbook. 
 
