@@ -1,3 +1,3 @@
-# chi17
+# As We May Study -- Towards the Web as a Personalized Language Textbook
 
-draft of paper intended for CHI'18: https://chi2018.acm.org/authors/papers/
+The preprint of paper is here: https://github.com/zeeguu-ecosystem/CHI18-Paper/blob/master/AsWeMayStudy--Preprint.pdf
