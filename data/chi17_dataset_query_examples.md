@@ -112,29 +112,29 @@ Preview of Result:
 
 
 ### Users, Their Learned Language, and Number of Read Articles
-select *
-from
-(	select q.user_id, q.learned_language_id, count(title) as articles
-	from 
-		(
-			select user_id, learned_language_id, url.title, domain_name.domain_name, bookmark.time
-			from 
-				bookmark, 
-				text, 
-				url, 
-				domain_name,
-				user
-			where 
-				text.id = text_id
-				and user.id = user_id
-				and url.id = url_id
-				and domain_name.id = domain_name_id
-			group by url.title
-			order by bookmark.time) as q
-	
-	group by q.user_id) x
+	select *
+	from
+	(	select q.user_id, q.learned_language_id, count(title) as articles
+		from 
+			(
+				select user_id, learned_language_id, url.title, domain_name.domain_name, bookmark.time
+				from 
+					bookmark, 
+					text, 
+					url, 
+					domain_name,
+					user
+				where 
+					text.id = text_id
+					and user.id = user_id
+					and url.id = url_id
+					and domain_name.id = domain_name_id
+				group by url.title
+				order by bookmark.time) as q
 
-	where x.articles > 5
-	order by learned_language_id
+		group by q.user_id) x
+
+		where x.articles > 5
+		order by learned_language_id
 
 
