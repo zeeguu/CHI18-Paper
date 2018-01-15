@@ -3,10 +3,8 @@ The contents of this folder:
 -- MySQL dump of dataset used for reporting in the paper
 chi18_dataset_anon_2018-01-15.sql.zip 
 
-
 -- Examples of queries that can be run on the dataset
 chi18_dataset_query_examples.md 
-
 
 -- User feedback exported to html
 user-evaluation--complete-answers.htm 
