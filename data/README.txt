@@ -9,11 +9,9 @@ chi18_dataset_query_examples.md
 -- User feedback exported to html
 user-evaluation--complete-answers.htm 
 
--- Transcript of interview with the teacher of the class 
-about the usage of the system
+-- Transcript of interview with the teacher of the class about the usage of the system
 teacher-interview.txt 
 
--- Feedback that the students provided to the teacher 
-about the system
+-- Feedback that the students provided to the teacher about the system
 feedback-to-the-teacher.txt 
 
