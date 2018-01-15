@@ -1,16 +1,21 @@
 The contents of this folder:
 
-chi18_dataset_anon_2018-01-15.sql.zip 
 -- MySQL dump of dataset used for reporting in the paper
+chi18_dataset_anon_2018-01-15.sql.zip 
 
+
+-- Examples of queries that can be run on the dataset
 chi18_dataset_query_examples.md 
--- examples of queries that can be run on the dataset
 
+
+-- User feedback exported to html
 user-evaluation--complete-answers.htm 
--- the user feedback exported to html
 
+-- Transcript of interview with the teacher of the class 
+about the usage of the system
 teacher-interview.txt 
--- transcript of an interview with the teacher of the class about the usage of the system in his class
 
+-- Feedback that the students provided to the teacher 
+about the system
 feedback-to-the-teacher.txt 
--- feedback that the students provided to the teacher about the system
+
