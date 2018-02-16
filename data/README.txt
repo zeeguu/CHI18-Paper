@@ -15,3 +15,6 @@ teacher-interview.txt
 -- Feedback that the students provided to the teacher about the system
 feedback-to-the-teacher.txt 
 
+-- Instructions on how to install the data in a local database and analyze it using Zeeguu
+INSTALL.md
+
