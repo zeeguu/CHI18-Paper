@@ -37,10 +37,11 @@ Create a virtual env (let's call it `zenv`) where to install the Zeeguu Core:
     python3 -m venv zenv
     source zenv/bin/activate
    
-Prepare a zeeguu config file
+Prepare a zeeguu config file (make sure to modify the `root` and `password` in the 
+second command with the ones that are used for your own MySQL server!)
 
     cd Zeeguu-Core
-    printf "SQLALCHEMY_DATABASE_URI = ("mysql://root@localhost/zeeguu_chi")\nMAX_SESSION=99999999\nSQLALCHEMY_TRACK_MODIFICATIONS=False" > zeeguu_chi.cfg 
+    printf "SQLALCHEMY_DATABASE_URI = ('mysql://root:password@localhost/zeeguu_chi')\nMAX_SESSION=99999999\nSQLALCHEMY_TRACK_MODIFICATIONS=False" > zeeguu_chi.cfg 
 
 Install all the dependencies (pip is assumed to be installed already): 
 
@@ -53,11 +54,12 @@ Once the installation steps are done, every time you want to start playing with 
 dataset in an interactive interpreter execute the following command from the current
 folder: 
 
-    source `pwd`/zenv/bin/activate && export ZEEGUU_CORE_CONFIG=`pwd`/zeeguu_chi.cfg && python
+    cd .. # change folder to the CHI18.../data folder, parent of the Zeeguu-Core
+    source `pwd`/zenv/bin/activate && export ZEEGUU_CORE_CONFIG=`pwd`/Zeeguu-Core/zeeguu_chi.cfg && python
 
-Once in the command line interpreter you can do things like: 
+Once in the command line interpreter you can do things like find all the bookmarks of a given user: 
 
-    >>> import zeeguu
     >>> from zeeguu.model import User
-    >>> User.query.all()
-
+    >>> roza = User.find('rozaalkan@email.com')
+    >>> roza.all_bookmarks()
+    
