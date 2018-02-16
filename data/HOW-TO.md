@@ -20,7 +20,7 @@ Now you can analyze the data using SQL, like you can see in the [query examples 
 
 # Analyze the Data with Zeeguu-Core
 
-It's a simple two-step thing: 
+First you must [Import the Data in a local MySQL database](https://github.com/zeeguu-ecosystem/CHI18-Paper/blob/master/data/HOW-TO.md#import-the-data-in-a-local-mysql-database) as described above. Then it's a simple two-step thing: 
 1. First you install zeeguu core in this /data folder. 
 2. Then you analyze!
 
