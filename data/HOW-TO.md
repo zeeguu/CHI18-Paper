@@ -1,5 +1,8 @@
 
 
+**Note:** All the instructions on this page assume that you have
+in the current folder the `chi18_dataset_anon_2018-01-15.sql.zip` 
+file that can be found in the current folder. 
 
 # Import the Data in a local MySQL database from the Command Line
 
