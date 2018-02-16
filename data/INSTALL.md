@@ -1,7 +1,7 @@
 
 
 
-# Importing the Data in a local MySQL database
+# Import the Data in a local MySQL database
 
 The following code assumes that your local MySQL database 
 has the user `root` and no password. If this is not the 
@@ -14,8 +14,19 @@ Uncompress the CHI database dump, and import it in the newly created database
 
     unzip chi18_dataset_anon_2018-01-15.sql.zip
     mysql -u root zeeguu_chi < chi18_dataset_anon_2018-01-15.sql
+    
+Now you can analyze the data using SQL, like you can see in the [query examples file](https://github.com/zeeguu-ecosystem/CHI18-Paper/blob/master/data/chi18_dataset_query_examples.md)
 
-# Install Zeeguu-Core
+
+# Analyze the Data with Zeeguu-Core
+
+It's a simple two-step thing: 
+1. First you install zeeguu core in this /data folder. 
+2. Then you analyze!
+
+
+## 1. Install Zeeguu-Core locally
+
 Download the Zeeguu-Core repo which will enable us to programaticaly analyze the DB
     
     git clone https://github.com/zeeguu-ecosystem/Zeeguu-Core
@@ -38,7 +49,7 @@ Install all the dependencies (pip is assumed to be installed already):
     python setup.py develop
 
 
-# Analyze the Data
+## 2. Analyze the Data
 Once the installation steps are done, every time you want to start playing with the 
 dataset in an interactive interpreter execute the following command from the current
 folder: 
