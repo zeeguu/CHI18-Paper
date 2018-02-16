@@ -1,4 +1,4 @@
-Once you import the SQL dump into your own MySQL instance
+Once you [import the SQL dump into your own MySQL server](https://github.com/zeeguu-ecosystem/CHI18-Paper/blob/master/data/HOW-TO.md)
 you can run these queries yourself
 
 ### All the exercises of all users
