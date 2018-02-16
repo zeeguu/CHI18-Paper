@@ -54,7 +54,8 @@ Install all the dependencies (pip is assumed to be installed already):
 ## 2. Analyze the Data
 Once the installation steps are done, every time you want to start playing with the 
 dataset in an interactive interpreter execute the following command from the 
-folder that is the parent of Zeeguu-Core and zenv: 
+folder that is the parent of Zeeguu-Core and zenv (where you should find yourself
+if you exercutd that last `cd ..` in the previous step): 
 
     source ~/.virtualenvs/zenv && export ZEEGUU_CORE_CONFIG=~/.config/zeeguu/chi.cfg && python3
 
