@@ -8,7 +8,7 @@ has the user `root` and no password. If this is not the
 case, then everywhere you see `mysql -u root` replace with `mysql -u <your-username> -p`.
 
 
-    echo "CREATE DATABASE zeeguu_chi;" > mysql -u root
+    echo "CREATE DATABASE zeeguu_chi;" | mysql -u root
 
 Uncompress the CHI database dump, and import it in the newly created database 
 
