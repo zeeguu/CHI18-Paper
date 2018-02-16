@@ -14,7 +14,8 @@ Uncompress the CHI database dump, and import it in the newly created database
 
     unzip chi18_dataset_anon_2018-01-15.sql.zip
     mysql -u root zeeguu_chi < chi18_dataset_anon_2018-01-15.sql
-    
+
+# Install Zeeguu-Core
 Download the Zeeguu-Core repo which will enable us to programaticaly analyze the DB
     
     git clone https://github.com/zeeguu-ecosystem/Zeeguu-Core
