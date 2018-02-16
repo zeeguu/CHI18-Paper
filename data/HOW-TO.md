@@ -55,6 +55,8 @@ folder:
 
     source zenv/bin/activate && export ZEEGUU_CORE_CONFIG=./zeeguu_chi.cfg && python
 
+Once in the command line interpreter you can do things like: 
+
     >>> import zeeguu
     >>> from zeeguu.model import User
     >>> User.query.all()
