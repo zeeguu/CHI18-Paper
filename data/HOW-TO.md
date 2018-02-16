@@ -53,7 +53,7 @@ Once the installation steps are done, every time you want to start playing with 
 dataset in an interactive interpreter execute the following command from the current
 folder: 
 
-    source zenv/bin/activate && export ZEEGUU_CORE_CONFIG=./zeeguu_chi.cfg && python
+    source `pwd`/zenv/bin/activate && export ZEEGUU_CORE_CONFIG=`pwd`/zeeguu_chi.cfg && python
 
 Once in the command line interpreter you can do things like: 
 
