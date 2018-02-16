@@ -57,9 +57,22 @@ folder that is the parent of Zeeguu-Core and zenv:
 
     source `pwd`/zenv/bin/activate && export ZEEGUU_CORE_CONFIG=`pwd`/Zeeguu-Core/zeeguu_chi.cfg && python
 
-Once in the command line interpreter you can do things like find all the bookmarks of a given user: 
+Once in the command line interpreter you can do cool things, like finding all the bookmarks of the user Roza (which is a generated name): 
 
     >>> from zeeguu.model import User
     >>> roza = User.find('rozaalkan@email.com')
     >>> roza.all_bookmarks()
+    [Bookmark[11751 of 596: semblait->appeared in 'Car dès le...']
+    , Bookmark[11742 of 596: gagnants->winners in 'Son premie...']
+    , Bookmark[11740 of 596: amorties->depreciated in 'Car dès le...']
+    , Bookmark[11721 of 596: adversaire->opponent in 'Car dès le...']
+    , Bookmark[11719 of 596: égayé->brightened in 'Car dès le...']
+    , Bookmark[11695 of 596: aggraver->aggravate in 'Le 21e mon...']
+    , Bookmark[11690 of 596: amenée->feed in 'Le tombeur...']
+    , Bookmark[11686 of 596: suffisamment d'aplomb->Sufficiently plumb in 'Le tombeur...']
+    , Bookmark[11681 of 596: suffi->enough in 'Le tombeur...']
+    , Bookmark[11678 of 596: suffisamment->enough in 'Le tombeur...']
+    , Bookmark[11675 of 596: soigner->treat in 'Le tombeur...']
+    ]
+
     
