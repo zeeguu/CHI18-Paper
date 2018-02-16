@@ -10,12 +10,15 @@ case, then everywhere you see `mysql -u root` replace with `mysql -u <your-usern
 
     echo "CREATE DATABASE zeeguu_chi;" > mysql -u root
 
+Uncompress the CHI database dump, and import it in the newly created database 
+    unzip chi18_dataset_anon_2018-01-15.sql.zip
     mysql -u root zeeguu_chi < chi18_dataset_anon_2018-01-15.sql
     
-    # Download the Zeeguu-Core repo which will enable us to programaticaly 
-    # inspect the DB
+Download the Zeeguu-Core repo which will enable us to programaticaly analyze the DB
+    
     git clone https://github.com/zeeguu-ecosystem/Zeeguu-Core
 
+    # Create 
     mkdir Zeeguu_virtenv
     virtualenv -p python3 Zeeguu_virtenv/
     source Zeeguu_virtenv/bin/activate
