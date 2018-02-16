@@ -1,8 +1,5 @@
 
 
-**Note:** All the instructions on this page assume that you have
-in the current folder the `chi18_dataset_anon_2018-01-15.sql.zip` 
-file that can be found in the current folder. 
 
 # Import the Data in a local MySQL database from the Command Line
 
@@ -11,11 +8,12 @@ file that can be found in the current folder.
 The following code assumes that your local MySQL server has the user `root` and you know it's password. 
 Change `root` to another username if needed.
 
-    export mysqlcommand='mysql -u root -p'
+    alias mysqlcommand='mysql -u root -p'
     echo "CREATE DATABASE zeeguu_chi;" | mysqlcommand
 
 Uncompress the CHI database dump, and import it in the newly created database 
 
+    wget https://github.com/zeeguu-ecosystem/CHI18-Paper/raw/master/data/chi18_dataset_anon_2018-01-15.sql.zip
     unzip chi18_dataset_anon_2018-01-15.sql.zip
     mysqlcommand zeeguu_chi < chi18_dataset_anon_2018-01-15.sql
     
@@ -36,15 +34,15 @@ Download the Zeeguu-Core repo which will enable us to programaticaly analyze the
 
 Create a virtual env (let's call it `zenv`) where to install the Zeeguu Core: 
 
-    mkdir zenv
-    python3 -m venv zenv
-    source zenv/bin/activate
+    mkdir ~/.virtualenvs/zenv
+    python3 -m venv ~/.virtualenvs/zenv
+    source ~/.virtualenvs/zenv/bin/activate
    
-Prepare a zeeguu config file (make sure to modify the `root` and `password` in the 
+Prepare a zeeguu config file (**make sure to** modify the `root` and `password` in the 
 second command with the ones that are used for your own MySQL server!)
 
     cd Zeeguu-Core
-    printf "SQLALCHEMY_DATABASE_URI = ('mysql://root:password@localhost/zeeguu_chi')\nMAX_SESSION=99999999\nSQLALCHEMY_TRACK_MODIFICATIONS=False" > zeeguu_chi.cfg 
+    printf "SQLALCHEMY_DATABASE_URI = ('mysql://root:password@localhost/zeeguu_chi')\nMAX_SESSION=99999999\nSQLALCHEMY_TRACK_MODIFICATIONS=False" > ~/.config/zeeguu/chi.cfg 
 
 Install all the dependencies (pip is assumed to be installed already): 
 
@@ -58,7 +56,7 @@ Once the installation steps are done, every time you want to start playing with 
 dataset in an interactive interpreter execute the following command from the 
 folder that is the parent of Zeeguu-Core and zenv: 
 
-    source `pwd`/zenv/bin/activate && export ZEEGUU_CORE_CONFIG=`pwd`/Zeeguu-Core/zeeguu_chi.cfg && python
+    source ~/.virtualenvs/zenv && export ZEEGUU_CORE_CONFIG=~/.config/zeeguu/chi.cfg && python3
 
 Once in the command line interpreter you can do cool things, like finding all the bookmarks of the user Roza (which is a generated name): 
 
