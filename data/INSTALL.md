@@ -32,10 +32,9 @@ Prepare a zeeguu config file
     cp testing_default.cfg zeeguu_chi.cfg
     printf "SQLALCHEMY_DATABASE_URI = ("mysql://root@localhost/zeeguu_chi")\nMAX_SESSION=99999999\nSQLALCHEMY_TRACK_MODIFICATIONS=False" > zeeguu_chi.cfg 
 
-Install all the dependencies: 
+Install all the dependencies (pip is assumed to be installed already): 
 
     pip install jieba3k coveralls
-    # (pip assumed to install modules for python 3.6.4)
     python setup.py develop
 
 
