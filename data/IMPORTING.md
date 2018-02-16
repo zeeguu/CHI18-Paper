@@ -11,6 +11,7 @@ case, then everywhere you see `mysql -u root` replace with `mysql -u <your-usern
     echo "CREATE DATABASE zeeguu_chi;" > mysql -u root
 
 Uncompress the CHI database dump, and import it in the newly created database 
+
     unzip chi18_dataset_anon_2018-01-15.sql.zip
     mysql -u root zeeguu_chi < chi18_dataset_anon_2018-01-15.sql
     
@@ -18,7 +19,8 @@ Download the Zeeguu-Core repo which will enable us to programaticaly analyze the
     
     git clone https://github.com/zeeguu-ecosystem/Zeeguu-Core
 
-    # Create 
+Create a virtual env where to install the Zeeguu Core then install it: 
+
     mkdir Zeeguu_virtenv
     virtualenv -p python3 Zeeguu_virtenv/
     source Zeeguu_virtenv/bin/activate
@@ -26,16 +28,17 @@ Download the Zeeguu-Core repo which will enable us to programaticaly analyze the
     cp testing_default.cfg zeeguu_chi.cfg
     printf "SQLALCHEMY_DATABASE_URI = ("mysql://root@localhost/zeeguu_chi")\nMAX_SESSION=99999999\nSQLALCHEMY_TRACK_MODIFICATIONS=False" > zeeguu_chi.cfg 
 
-    export ZEEGUU_CORE_CONFIG=./zeeguu_chi.cfg
 
     pip install jieba3k coveralls
     # (pip assumed to install modules for python 3.6.4)
     python setup.py develop
 
 
-# The simplest 
-    $python
-    >>import zeeguu
-    >>from zeeguu.model import User
-    >>User.query.all()
+One of the simplest way to start playing with the dataset is to open an interactive interpreter: 
+
+    export ZEEGUU_CORE_CONFIG=./zeeguu_chi.cfg && python
+
+    >>> import zeeguu
+    >>> from zeeguu.model import User
+    >>> User.query.all()
 
