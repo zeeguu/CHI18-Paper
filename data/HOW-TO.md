@@ -47,14 +47,14 @@ Install all the dependencies (pip is assumed to be installed already):
 
     pip install jieba3k coveralls nltk
     python setup.py develop
+    cd .. 
 
 
 ## 2. Analyze the Data
 Once the installation steps are done, every time you want to start playing with the 
-dataset in an interactive interpreter execute the following command from the current
-folder: 
+dataset in an interactive interpreter execute the following command from the 
+folder that is the parent of Zeeguu-Core and zenv: 
 
-    cd .. # change folder to the CHI18.../data folder, parent of the Zeeguu-Core
     source `pwd`/zenv/bin/activate && export ZEEGUU_CORE_CONFIG=`pwd`/Zeeguu-Core/zeeguu_chi.cfg && python
 
 Once in the command line interpreter you can do things like find all the bookmarks of a given user: 
