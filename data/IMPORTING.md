@@ -19,21 +19,26 @@ Download the Zeeguu-Core repo which will enable us to programaticaly analyze the
     
     git clone https://github.com/zeeguu-ecosystem/Zeeguu-Core
 
-Create a virtual env where to install the Zeeguu Core then install it: 
+Create a virtual env where to install the Zeeguu Core: 
 
     mkdir Zeeguu_virtenv
     virtualenv -p python3 Zeeguu_virtenv/
     source Zeeguu_virtenv/bin/activate
+   
+Prepare a zeeguu config file
+
     cd Zeeguu-Core
     cp testing_default.cfg zeeguu_chi.cfg
     printf "SQLALCHEMY_DATABASE_URI = ("mysql://root@localhost/zeeguu_chi")\nMAX_SESSION=99999999\nSQLALCHEMY_TRACK_MODIFICATIONS=False" > zeeguu_chi.cfg 
 
+Install all the dependencies: 
 
     pip install jieba3k coveralls
     # (pip assumed to install modules for python 3.6.4)
     python setup.py develop
 
 
+# Analyze the Data
 One of the simplest way to start playing with the dataset is to open an interactive interpreter: 
 
     export ZEEGUU_CORE_CONFIG=./zeeguu_chi.cfg && python
