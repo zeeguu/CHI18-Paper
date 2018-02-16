@@ -1,11 +1,19 @@
 
 
+
 # Importing the Data in a local MySQL database
+
+The following code assumes that your local MySQL database 
+has the user `root` and no password. If this is not the 
+case, then everywhere you see `mysql -u root` replace with `mysql -u <your-username> -p`.
+
 
     echo "CREATE DATABASE zeeguu_chi;" > mysql -u root
 
     mysql -u root zeeguu_chi < chi18_dataset_anon_2018-01-15.sql
-
+    
+    # Download the Zeeguu-Core repo which will enable us to programaticaly 
+    # inspect the DB
     git clone https://github.com/zeeguu-ecosystem/Zeeguu-Core
 
     mkdir Zeeguu_virtenv
@@ -21,6 +29,8 @@
     # (pip assumed to install modules for python 3.6.4)
     python setup.py develop
 
+
+# The simplest 
     $python
     >>import zeeguu
     >>from zeeguu.model import User
