@@ -39,9 +39,11 @@ Install all the dependencies (pip is assumed to be installed already):
 
 
 # Analyze the Data
-One of the simplest way to start playing with the dataset is to open an interactive interpreter: 
+Once the installation steps are done, every time you want to start playing with the 
+dataset in an interactive interpreter execute the following command from the current
+folder: 
 
-    export ZEEGUU_CORE_CONFIG=./zeeguu_chi.cfg && python
+    source Zeeguu_virtenv/bin/activate && export ZEEGUU_CORE_CONFIG=./zeeguu_chi.cfg && python
 
     >>> import zeeguu
     >>> from zeeguu.model import User
