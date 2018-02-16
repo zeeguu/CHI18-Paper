@@ -3,8 +3,7 @@
 
 # Import the Data in a local MySQL database 
 
-**Note**: this assumes that you have MySQL installed. 
-**Note**: this is for those who can handle mysql from the command line. 
+**Note**: this assumes that you have MySQL installed and you can use it from the command line.
 
 The following code assumes that your local MySQL server has the user `root` and you know it's password. 
 Change `root` to another username if needed.
