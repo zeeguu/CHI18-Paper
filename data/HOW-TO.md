@@ -57,7 +57,7 @@ dataset in an interactive interpreter execute the following command from the
 folder that is the parent of Zeeguu-Core and zenv (where you should find yourself
 if you exercutd that last `cd ..` in the previous step): 
 
-    source ~/.virtualenvs/zenv && export ZEEGUU_CORE_CONFIG=~/.config/zeeguu/chi.cfg && python3
+    source ~/.virtualenvs/zenv/bin/activate && export ZEEGUU_CORE_CONFIG=~/.config/zeeguu/chi.cfg && python3
 
 Once in the command line interpreter you can do cool things, like finding all the bookmarks of the user Roza (which is a generated name): 
 
