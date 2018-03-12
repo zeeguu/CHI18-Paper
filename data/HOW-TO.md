@@ -46,6 +46,11 @@ second command with the ones that are used for your own MySQL server!)
 
 Install all the dependencies (pip is assumed to be installed already): 
 
+    sudo apt-get install mysql-server
+    sudo apt-get install libmysqlclient-dev
+    sudo apt-get install python-dev libxml2-dev libxslt1-dev zlib1g-dev
+    pip install sqlalchemy
+    pip install --upgrade pillow
     pip install jieba3k coveralls nltk
     python setup.py develop
     cd .. 
@@ -78,3 +83,23 @@ Once in the command line interpreter you can do cool things, like finding all th
     ]
 
     
+# Prerequisites installation for Ubuntu
+
+Installing MySQL
+
+    sudo apt-get update
+    sudo apt-get install mysql-server
+    sudo mysql_secure_installation
+
+Installing  Python 3.6
+
+    sudo apt-get update
+    sudo apt-get install curl
+
+    curl -O https://raw.githubusercontent.com/kylepjohnson/python_bootstrap/master/install.sh
+    chmod +x install.sh
+    ./install.sh 3
+
+Verify python version
+
+    python3 --version
